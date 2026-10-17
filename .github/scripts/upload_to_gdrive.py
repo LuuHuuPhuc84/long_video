@@ -182,6 +182,31 @@ def upload_video_to_gdrive(file_path, parent_folder_id):
                     except Exception as e:
                         print(f"⚠️ Trích xuất metadata {mf} thất bại: {e}")
 
+        # 4. Tìm và Upload file Thumbnail (cho Long Video & Video có thumbnail)
+        possible_thumb_files = [
+            path.parent / f"thumbnail_{video_id}.jpg",
+            path.parent / f"thumbnail_{video_id}.png",
+            Path("output") / video_id / f"thumbnail_{video_id}.jpg",
+            Path("output") / video_id / f"thumbnail_{video_id}.png",
+            Path("remotion-video") / "output" / video_id / f"thumbnail_{video_id}.jpg",
+        ]
+        for folder_check in [path.parent, Path("output") / video_id, Path("remotion-video") / "output" / video_id]:
+            if folder_check.exists():
+                for tf in folder_check.glob("thumbnail*.*"):
+                    if tf not in possible_thumb_files:
+                        possible_thumb_files.append(tf)
+
+        uploaded_thumbs = []
+        for tf in possible_thumb_files:
+            if tf.exists() and tf not in uploaded_thumbs:
+                mtype = 'image/png' if tf.suffix.lower() == '.png' else 'image/jpeg'
+                thumb_resp = upload_file_to_folder(drive_service, tf, subfolder_id, mtype)
+                print(f"🖼️ ĐÃ TẢI THUMBNAIL LÊN DRIVE: {tf.name}")
+                uploaded_thumbs.append(tf)
+                if info_data:
+                    info_data['thumbnail_file'] = tf.name
+                    info_data['thumbnail_gdrive_url'] = thumb_resp.get('webViewLink')
+
         if info_data:
             info_data['gdrive_video_id'] = video_response.get('id')
             info_data['gdrive_video_url'] = video_response.get('webViewLink')
