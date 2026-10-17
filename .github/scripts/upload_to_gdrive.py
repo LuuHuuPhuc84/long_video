@@ -216,6 +216,48 @@ def upload_video_to_gdrive(file_path, parent_folder_id):
         else:
             print("⚠️ Không tìm thấy metadata để tạo info.json.")
 
+        # 5. Tự động đóng gói & Upload thư mục input/ lên Google Drive
+        input_folder_id = create_drive_folder(drive_service, "input", subfolder_id)
+        input_files_to_upload = []
+
+        possible_input_dirs = [
+            path.parent / "input",
+            Path("output") / video_id / "input",
+            Path("remotion-video") / "output" / video_id / "input"
+        ]
+        found_local_input = False
+        for p_in in possible_input_dirs:
+            if p_in.exists() and p_in.is_dir():
+                for f_in in p_in.iterdir():
+                    if f_in.is_file():
+                        input_files_to_upload.append(f_in)
+                found_local_input = True
+                break
+
+        if not found_local_input:
+            for mf in [Path("remotion-video") / "public" / f"video_data_{video_id}.json", Path("remotion-video") / "public" / f"{video_id}.json"]:
+                if mf.exists():
+                    input_files_to_upload.append(mf)
+                    break
+            for vf in [Path("remotion-video") / "public" / f"voiceover_{video_id}.wav", Path("remotion-video") / "public" / f"voiceover_{video_id}.mp3"]:
+                if vf.exists():
+                    input_files_to_upload.append(vf)
+                    break
+            for sf in [Path("pipeline") / f"script_{video_id}.json", Path(f"script_{video_id}.json")]:
+                if sf.exists():
+                    input_files_to_upload.append(sf)
+                    break
+
+        for src_file in input_files_to_upload:
+            ext = src_file.suffix.lower()
+            if ext == ".json": mtype = "application/json"
+            elif ext == ".wav": mtype = "audio/wav"
+            elif ext == ".mp3": mtype = "audio/mpeg"
+            elif ext == ".md": mtype = "text/markdown"
+            else: mtype = "application/octet-stream"
+            upload_file_to_folder(drive_service, src_file, input_folder_id, mtype)
+            print(f"📦 Đã tải nguyên liệu input lên Drive: {src_file.name}")
+
         print(f"\n========================================================")
         print(f"🎉 TẤT CẢ FILE CỦA '{video_id}' ĐÃ ĐƯỢC LƯU TRỌN VẸN TRÊN DRIVE!")
         print(f"📁 Thư mục Drive: https://drive.google.com/drive/folders/{subfolder_id}")
