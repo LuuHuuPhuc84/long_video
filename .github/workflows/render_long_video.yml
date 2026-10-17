@@ -49,14 +49,14 @@ jobs:
       - name: 📦 Cài đặt thư viện hệ thống cho Chromium & FFmpeg
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 libgbm1 fonts-noto-cjk
+          sudo apt-get install -y ffmpeg libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 libgbm1 fonts-noto fonts-noto-cjk fonts-roboto fonts-dejavu-core
           sudo apt-get install -y libasound2 || sudo apt-get install -y libasound2t64
 
       - name: 📦 Cài đặt Dependencies Remotion
         working-directory: remotion-video
         run: npm ci
 
-      - name: 🎥 Render Remotion Video (Full HD 1920x1080)
+      - name: 🎥 Render Remotion Video (Studio Quality Full HD 1920x1080)
         working-directory: remotion-video
         run: |
           set +e
@@ -71,7 +71,7 @@ jobs:
           ls -la public/
 
           OUT_FILE="$(pwd)/output/$VID/video_${VID}.mp4"
-          echo "🚀 Đang render video: $OUT_FILE"
+          echo "🚀 Đang render video chất lượng Studio (CRF 16, 320k audio): $OUT_FILE"
 
           SCALE_OPT=""
           SCALE_VAL="${{ github.event.inputs.scale }}"
@@ -79,7 +79,7 @@ jobs:
             SCALE_OPT="--scale=$SCALE_VAL"
           fi
 
-          npx remotion render src/index.ts TeaEssayVideo "$OUT_FILE" --props="$PROPS_FILE" $SCALE_OPT --log=verbose 2>&1 | tee render.log
+          npx remotion render src/index.ts TeaEssayVideo "$OUT_FILE" --props="$PROPS_FILE" $SCALE_OPT --crf=16 --pixel-format=yuv420p --audio-bitrate=320k --concurrency=4 --log=verbose 2>&1 | tee render.log
           RENDER_EXIT=${PIPESTATUS[0]}
           if [ $RENDER_EXIT -ne 0 ]; then
             echo "❌ Remotion render thất bại (Exit code: $RENDER_EXIT). Chi tiết lỗi:"
