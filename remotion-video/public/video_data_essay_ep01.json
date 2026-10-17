@@ -1,0 +1,174 @@
+{
+  "id": "essay_ep01",
+  "channel": "NỬA CHÉN TRÀ",
+  "slogan": "Nhìn sâu để sống nhẹ",
+  "title": "VÌ SAO CHÚNG TA DỄ NỔI NÓNG VỚI NGƯỜI THÂN NHẤT?",
+  "subtitle": "BÍ MẬT TÂM LÝ HỌC & NGHỆ THUẬT LÀM CHỦ CẢM XÚC GIA ĐÌNH",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "durationInFrames": 7124,
+  "audioFile": "voiceover_essay_ep01.wav",
+  "scenes": [
+    {
+      "scene": 1,
+      "chapter": "NGHỊCH LÝ ĐAU LÒNG",
+      "tag": "Thực trạng",
+      "text": "Có bao giờ bạn tự giật mình nhìn lại và thấy một nghịch lý kỳ lạ của chính mình?",
+      "highlight": "Lịch thiệp với người ngoài",
+      "image": "ep01_scene1.jpg",
+      "startFrame": 0,
+      "durationInFrames": 227
+    },
+    {
+      "scene": 2,
+      "chapter": "NGHỊCH LÝ ĐAU LÒNG",
+      "tag": "Đối lập",
+      "text": "Với người ngoài, ta luôn nhẫn nại, mỉm cười và cư xử lịch thiệp nhất. Nhưng chỉ cần về đến nhà, trước một câu hỏi han vụng về, ta lại buông ra những lời sắc nhọn như dao cạo?",
+      "highlight": "Cay nghiệt với người thân",
+      "image": "ep01_scene2.jpg",
+      "startFrame": 227,
+      "durationInFrames": 476
+    },
+    {
+      "scene": 3,
+      "chapter": "NGHỊCH LÝ ĐAU LÒNG",
+      "tag": "Ân hận",
+      "text": "Sau cơn giận bùng phát, cảm giác đọng lại luôn là sự ân hận và tội lỗi sâu sắc. Ta tự trách mình sao lại tệ đến thế.",
+      "highlight": "Ân hận sau những lời sát thương",
+      "image": "ep01_scene3.jpg",
+      "startFrame": 703,
+      "durationInFrames": 349
+    },
+    {
+      "scene": 4,
+      "chapter": "NGHỊCH LÝ ĐAU LÒNG",
+      "tag": "Bản chất",
+      "text": "Nhưng rồi lần sau, chuyện đó vẫn cứ lặp lại. Sự thật là, bạn không phải người xấu. Tâm lý học chỉ ra rằng, đằng sau sự cáu gắt ấy là ba cơ chế não bộ vô tình kích hoạt.",
+      "highlight": "Cơ chế não bộ bị kích hoạt sai",
+      "image": "ep01_scene4.jpg",
+      "startFrame": 1052,
+      "durationInFrames": 503
+    },
+    {
+      "scene": 5,
+      "chapter": "BA BẪY TÂM LÝ",
+      "tag": "Áo giáp",
+      "text": "Lý do đầu tiên: Bạn biết họ sẽ không bỏ rơi bạn. Cả ngày dài ngoài xã hội, bạn phải gồng mình đeo chiếc mặt nạ hoàn hảo vì sợ bị phán xét, sợ mất việc hay mất lòng người khác.",
+      "highlight": "Chiếc áo giáp mỏi mệt nơi công sở",
+      "image": "ep01_scene5.jpg",
+      "startFrame": 1555,
+      "durationInFrames": 506
+    },
+    {
+      "scene": 6,
+      "chapter": "BA BẪY TÂM LÝ",
+      "tag": "Bẫy an toàn",
+      "text": "Năng lượng kiểm soát cảm xúc bị cạn kiệt. Khi bước về nhà, bạn cởi bỏ lớp phòng thủ đó ra. Sự an toàn tuyệt đối từ gia đình lại vô tình trở thành nơi não bộ chọn để xả rác cảm xúc tích tụ.",
+      "highlight": "Biến người thân thành nơi xả rác cảm xúc",
+      "image": "ep01_scene6.jpg",
+      "startFrame": 2061,
+      "durationInFrames": 536
+    },
+    {
+      "scene": 7,
+      "chapter": "BA BẪY TÂM LÝ",
+      "tag": "Kỳ vọng",
+      "text": "Lý do thứ hai là cái bẫy của sự thấu hiểu mặc định. Với người ngoài, bạn không kỳ vọng họ hiểu mình. Nhưng với người thân, bạn ngầm đòi hỏi: Họ phải biết hôm nay mình đã mệt mỏi thế nào chứ!",
+      "highlight": "Cái bẫy đòi hỏi họ phải tự hiểu",
+      "image": "ep01_scene7.jpg",
+      "startFrame": 2597,
+      "durationInFrames": 522
+    },
+    {
+      "scene": 8,
+      "chapter": "BA BẪY TÂM LÝ",
+      "tag": "Phản xạ",
+      "text": "Khi thực tế không như kỳ vọng, một câu hỏi thăm không đúng lúc sẽ bị não bộ hiểu nhầm thành sự làm phiền, và cơn giận bùng lên như một phản xạ tự vệ.",
+      "highlight": "Kỳ vọng càng cao thất vọng càng lớn",
+      "image": "ep01_scene8.jpg",
+      "startFrame": 3119,
+      "durationInFrames": 423
+    },
+    {
+      "scene": 9,
+      "chapter": "BA BẪY TÂM LÝ",
+      "tag": "Tấm gương",
+      "text": "Và lý do sâu xa nhất: Người thân chính là tấm gương phản chiếu vết thương cũ. Họ là người nhìn thấy rõ nhất những điểm yếu, sự bất an và cả những nỗi sợ chưa lành của bạn.",
+      "highlight": "Người thân là tấm gương soi nỗi sợ",
+      "image": "ep01_scene9.jpg",
+      "startFrame": 3542,
+      "durationInFrames": 472
+    },
+    {
+      "scene": 10,
+      "chapter": "BA BẪY TÂM LÝ",
+      "tag": "Bất lực",
+      "text": "Đôi khi, bạn nổi giận với họ không phải vì những gì họ vừa nói, mà vì câu nói đó vô tình chạm đúng vào nỗi bất lực mà bạn đang cố trốn tránh bên trong chính mình.",
+      "highlight": "Cơn giận là sự bất lực với chính mình",
+      "image": "ep01_scene10.jpg",
+      "startFrame": 4014,
+      "durationInFrames": 454
+    },
+    {
+      "scene": 11,
+      "chapter": "LỜI GIẢI THỨC TỈNH",
+      "tag": "Khoa học",
+      "text": "Vậy làm sao để dừng lại? Khoa học thần kinh chứng minh: Một cơn bốc hỏa cảm xúc cần đúng sáu giây để hóa chất trong não đạt đỉnh và bắt đầu hạ nhiệt.",
+      "highlight": "Quy tắc 6 giây hạ nhiệt não bộ",
+      "image": "ep01_scene11.jpg",
+      "startFrame": 4468,
+      "durationInFrames": 417
+    },
+    {
+      "scene": 12,
+      "chapter": "LỜI GIẢI THỨC TỈNH",
+      "tag": "Khoảng dừng",
+      "text": "Lần tới, khi cảm thấy cơn giận dâng lên ở cổ họng, đừng nói gì cả. Hãy hít một hơi sâu và đếm nhẩm từ một đến sáu.",
+      "highlight": "Khoảng dừng trước khi mở lời",
+      "image": "ep01_scene12.jpg",
+      "startFrame": 4885,
+      "durationInFrames": 331
+    },
+    {
+      "scene": 13,
+      "chapter": "LỜI GIẢI THỨC TỈNH",
+      "tag": "Lý trí",
+      "text": "Sáu giây im lặng đó đủ để vùng não lý trí giành lại quyền kiểm soát từ vùng não cảm xúc.",
+      "highlight": "Lý trí giành lại quyền kiểm soát",
+      "image": "ep01_scene13.jpg",
+      "startFrame": 5216,
+      "durationInFrames": 260
+    },
+    {
+      "scene": 14,
+      "chapter": "LỜI GIẢI THỨC TỈNH",
+      "tag": "Dịu dàng",
+      "text": "Thay vì nói: Mẹ đừng hỏi nữa, phiền quá!, hãy thử thay bằng: Hôm nay con hơi mệt, con xin phép nghỉ ngơi một lát rồi nói chuyện sau nhé.",
+      "highlight": "Đổi câu gắt gỏng thành lời chia sẻ",
+      "image": "ep01_scene14.jpg",
+      "startFrame": 5476,
+      "durationInFrames": 380
+    },
+    {
+      "scene": 15,
+      "chapter": "LẮNG ĐỌNG BÊN CHÉN TRÀ",
+      "tag": "Trân trọng",
+      "text": "Người thân yêu của bạn xứng đáng nhận được sự kiên nhẫn và trân trọng, ít nhất là bằng một nửa cách bạn đang đối xử với thế giới ngoài kia.",
+      "highlight": "Dành sự tử tế trọn vẹn cho người thân",
+      "image": "ep01_scene15.jpg",
+      "startFrame": 5856,
+      "durationInFrames": 363
+    },
+    {
+      "scene": 16,
+      "chapter": "LẮNG ĐỌNG BÊN CHÉN TRÀ",
+      "tag": "Bình yên",
+      "text": "Đừng đợi đến khi những vết sẹo lời nói hằn sâu mới học cách dịu dàng. Tối nay, hãy để chiếc áo giáp mỏi mệt lại bên ngoài, và bước vào nhà bằng sự bình yên. Bạn đã bao giờ cáu giận với người thân và sau đó cảm thấy hối hận chưa? Hãy để lại bình luận chia sẻ cùng Nửa Chén Trà nhé. Cảm ơn bạn và chúc bạn một ngày an lành.",
+      "highlight": "Chia sẻ câu chuyện của bạn dưới bình luận",
+      "image": "ep01_scene16.jpg",
+      "startFrame": 6219,
+      "durationInFrames": 905
+    }
+  ]
+}
