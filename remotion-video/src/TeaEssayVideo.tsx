@@ -1,0 +1,844 @@
+import React, { useMemo } from "react";
+import {
+  AbsoluteFill,
+  Audio,
+  Img,
+  OffthreadVideo,
+  Sequence,
+  staticFile,
+  useCurrentFrame,
+  interpolate,
+  Easing,
+} from "remotion";
+
+export interface EssaySceneItem {
+  scene: number;
+  chapter?: string;
+  tag?: string;
+  text: string;
+  highlight: string;
+  image?: string;
+  video?: string;
+  media_type?: "video" | "image";
+  startFrame: number;
+  durationInFrames: number;
+}
+
+export interface TeaEssayVideoProps {
+  id?: string;
+  channel?: string;
+  slogan?: string;
+  title?: string;
+  subtitle?: string;
+  impactHook?: string;
+  fps?: number;
+  width?: number;
+  height?: number;
+  durationInFrames?: number;
+  audioFile?: string;
+  scenes?: EssaySceneItem[];
+}
+
+export const TeaEssayVideo: React.FC<TeaEssayVideoProps> = (props) => {
+  const channel = props.channel || "NỬA CHÉN TRÀ";
+  const slogan = props.slogan || "Nhìn sâu để sống nhẹ";
+  const title =
+    props.title || "VÌ SAO CHÚNG TA DỄ NỔI NÓNG VỚI NGƯỜI THÂN NHẤT?";
+  const subtitle =
+    props.subtitle || "BÍ MẬT TÂM LÝ HỌC & NGHỆ THUẬT LÀM CHỦ CẢM XÚC GIA ĐÌNH";
+  const audioFile = props.audioFile || "voiceover_essay_ep01.wav";
+  const scenes = props.scenes || [];
+  const durationInFrames = props.durationInFrames || 3600;
+
+  return (
+    <AbsoluteFill
+      style={{
+        backgroundColor: "#08090c",
+        fontFamily:
+          "'Montserrat', 'SF Pro Display', 'Segoe UI', -apple-system, sans-serif",
+        color: "#ffffff",
+        overflow: "hidden",
+      }}
+    >
+      {/* 1. Cinematic B-Roll 16:9: Hòa tan mượt mà (Cross-fade), triệt tiêu hoàn toàn màn hình đen */}
+      {scenes.map((scene: EssaySceneItem, index: number) => {
+        const nextScene = scenes[index + 1];
+        // Kéo dài ảnh phủ kín cả khoảng lặng âm thanh và gối đầu 15 frames vào cảnh sau
+        const bgDuration = nextScene
+          ? Math.max(scene.durationInFrames, nextScene.startFrame - scene.startFrame + 15)
+          : scene.durationInFrames;
+
+        return (
+          <Sequence
+            key={`bg-${scene.scene}`}
+            from={scene.startFrame}
+            durationInFrames={bgDuration}
+          >
+            <CinematicSceneBackground
+              scene={scene}
+              durationInFrames={bgDuration}
+              index={index}
+            />
+          </Sequence>
+        );
+      })}
+
+      {/* 2. Lớp phủ mềm mại: Trong trẻo ở giữa, chỉ tối nhẹ ở chân và đỉnh */}
+      <SoftCinemaOverlay />
+
+      {/* 3. Audio (Single Pre-mixed Voiceover + Ambient BGM) */}
+      <Audio src={staticFile(audioFile)} volume={1.0} />
+
+      {/* 4. Top-Left Branding Badge: NỬA CHÉN TRÀ */}
+      <TopBrandBadge channel={channel} slogan={slogan} />
+
+      {/* 5. Top-Right Dynamic Chapter Indicator */}
+      {scenes.map((scene: EssaySceneItem) => (
+        <Sequence
+          key={`chap-${scene.scene}`}
+          from={scene.startFrame}
+          durationInFrames={scene.durationInFrames}
+        >
+          <ChapterIndicator
+            chapter={scene.chapter || ""}
+            sceneIndex={scene.scene}
+            totalScenes={scenes.length}
+          />
+        </Sequence>
+      ))}
+
+      {/* 6. Floating Topic Header: Xuất hiện trang trọng ở 6s đầu mà không che B-roll */}
+      <Sequence from={0} durationInFrames={180}>
+        <FloatingTopicHeader title={title} subtitle={subtitle} />
+      </Sequence>
+
+      {/* 6b. Impact Center Typography (3 giây đầu tiên - Golden Retention Hook) */}
+      <Sequence from={0} durationInFrames={90}>
+        <ImpactCenterTypography text={props.impactHook || "AI ĐANG ĐIỀU KHIỂN TÂM TRÍ BẠN?"} />
+      </Sequence>
+
+      {/* 7. Subtitle hiển thị cuốn chiếu từng câu ngắn, chữ to rõ (42px) */}
+      {scenes.map((scene: EssaySceneItem) => (
+        <Sequence
+          key={`text-${scene.scene}`}
+          from={scene.startFrame}
+          durationInFrames={scene.durationInFrames}
+        >
+          <PacedSentenceCaption scene={scene} />
+        </Sequence>
+      ))}
+
+      {/* 8. End Card (120 frames cuối ~ 4 giây) */}
+      {durationInFrames > 150 && (
+        <Sequence from={durationInFrames - 120} durationInFrames={120}>
+          <EndChannelCard channel={channel} slogan={slogan} />
+        </Sequence>
+      )}
+
+      {/* 9. Minimalist Golden Progress Bar */}
+      <ProgressBar totalFrames={durationInFrames} />
+    </AbsoluteFill>
+  );
+};
+
+// Hiển thị B-roll: Hỗ trợ cả Video Footage (.mp4) chuyển động thực tế và Ảnh tĩnh Ken Burns
+const CinematicSceneBackground: React.FC<{
+  scene: EssaySceneItem;
+  durationInFrames: number;
+  index: number;
+}> = ({ scene, durationInFrames, index }) => {
+  const frame = useCurrentFrame();
+  const isEven = index % 2 === 0;
+
+  // Hiệu ứng hòa tan mượt mà (Cross-fade / Dissolve) 15 frames đầu mỗi cảnh (trừ cảnh đầu tiên)
+  const fadeIn =
+    index === 0
+      ? 1
+      : interpolate(frame, [0, 15], [0, 1], {
+          extrapolateRight: "clamp",
+          easing: Easing.inOut(Easing.quad),
+        });
+
+  if (scene.video) {
+    return (
+      <AbsoluteFill style={{ overflow: "hidden", opacity: fadeIn }}>
+        <OffthreadVideo
+          src={staticFile(scene.video)}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+          muted
+        />
+      </AbsoluteFill>
+    );
+  }
+
+  const scale = interpolate(
+    frame,
+    [0, durationInFrames],
+    isEven ? [1.02, 1.13] : [1.13, 1.03],
+    { extrapolateRight: "clamp", easing: Easing.bezier(0.25, 0.1, 0.25, 1) }
+  );
+
+  const translateX = interpolate(
+    frame,
+    [0, durationInFrames],
+    isEven ? [-10, 10] : [10, -10],
+    { extrapolateRight: "clamp" }
+  );
+
+  return (
+    <AbsoluteFill style={{ overflow: "hidden", opacity: fadeIn }}>
+      <Img
+        src={staticFile(scene.image || "")}
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          transform: `scale(${scale}) translate(${translateX}px, 0px)`,
+        }}
+      />
+    </AbsoluteFill>
+  );
+};
+
+// Impact Center Typography: Chữ điểm nhấn trung tâm ở 3s đầu tiên (Golden Retention Hook)
+const ImpactCenterTypography: React.FC<{ text: string }> = ({ text }) => {
+  const frame = useCurrentFrame();
+  const opacity = interpolate(frame, [0, 12, 70, 85], [0, 1, 1, 0], {
+    extrapolateRight: "clamp",
+  });
+  const scale = interpolate(frame, [0, 12, 85], [1.08, 1.0, 0.98], {
+    extrapolateRight: "clamp",
+    easing: Easing.out(Easing.cubic),
+  });
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 55,
+        opacity,
+        transform: `scale(${scale})`,
+        pointerEvents: "none",
+      }}
+    >
+      <div
+        style={{
+          padding: "18px 42px",
+          background: "rgba(10, 13, 20, 0.88)",
+          borderRadius: 18,
+          border: "1.5px solid rgba(224, 169, 109, 0.65)",
+          boxShadow:
+            "0 15px 45px rgba(0, 0, 0, 0.8), 0 0 30px rgba(224, 169, 109, 0.25)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 8,
+          backdropFilter: "blur(8px)",
+        }}
+      >
+        <div
+          style={{
+            fontSize: 13,
+            fontWeight: 700,
+            color: "#e0a96d",
+            letterSpacing: 3.5,
+            textTransform: "uppercase",
+          }}
+        >
+          ✦ CÂU HỎI TỰ THẤU HIỂU ✦
+        </div>
+        <div
+          style={{
+            fontSize: 42,
+            fontWeight: 800,
+            color: "#ffffff",
+            letterSpacing: 1.5,
+            textAlign: "center",
+            textShadow: "0 4px 20px rgba(0,0,0,0.9)",
+          }}
+        >
+          {text}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+// QUY CHUẨN MỚI (BẢO TOÀN ÁNH SÁNG GỐC 100%):
+// Bỏ hoàn toàn lớp phủ đen/gradient dìm tối toàn màn hình.
+// Chỉ duy nhất ô hộp phụ đề (PacedSentenceCaption) ở đáy màn hình là có nền kính mờ riêng để bảo đảm tương phản chữ.
+const SoftCinemaOverlay: React.FC = () => {
+  return null;
+};
+
+// Top-Left Branding Badge
+const TopBrandBadge: React.FC<{ channel: string; slogan: string }> = ({
+  channel,
+  slogan,
+}) => {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: 36,
+        left: 48,
+        display: "flex",
+        alignItems: "center",
+        gap: 14,
+        background: "rgba(18, 20, 26, 0.75)",
+        backdropFilter: "blur(12px)",
+        padding: "10px 22px",
+        borderRadius: 999,
+        border: "1px solid rgba(224, 169, 109, 0.35)",
+        boxShadow: "0 8px 24px rgba(0,0,0,0.4)",
+        zIndex: 50,
+      }}
+    >
+      <div
+        style={{
+          width: 28,
+          height: 28,
+          borderRadius: "50%",
+          background: "linear-gradient(135deg, #e0a96d 0%, #b87b42 100%)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          boxShadow: "0 2px 8px rgba(224, 169, 109, 0.4)",
+        }}
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#111"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+          <line x1="6" y1="2" x2="6" y2="4"></line>
+          <line x1="10" y1="2" x2="10" y2="4"></line>
+          <line x1="14" y1="2" x2="14" y2="4"></line>
+        </svg>
+      </div>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <span
+          style={{
+            fontSize: 16,
+            fontWeight: 800,
+            letterSpacing: 2.2,
+            color: "#f5f5f7",
+            textTransform: "uppercase",
+          }}
+        >
+          {channel}
+        </span>
+        <span
+          style={{
+            fontSize: 11,
+            color: "#e0a96d",
+            fontWeight: 500,
+            letterSpacing: 0.8,
+          }}
+        >
+          {slogan}
+        </span>
+      </div>
+    </div>
+  );
+};
+
+// Top-Right Chapter Indicator
+const ChapterIndicator: React.FC<{
+  chapter: string;
+  sceneIndex: number;
+  totalScenes: number;
+}> = ({ chapter, sceneIndex, totalScenes }) => {
+  const frame = useCurrentFrame();
+  const opacity = interpolate(frame, [0, 15], [0, 1], {
+    extrapolateRight: "clamp",
+  });
+
+  if (!chapter) return null;
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: 40,
+        right: 48,
+        display: "flex",
+        alignItems: "center",
+        gap: 12,
+        background: "rgba(10, 12, 16, 0.7)",
+        backdropFilter: "blur(10px)",
+        padding: "8px 18px",
+        borderRadius: 8,
+        border: "1px solid rgba(255, 255, 255, 0.15)",
+        opacity,
+        zIndex: 50,
+      }}
+    >
+      <span
+        style={{
+          width: 8,
+          height: 8,
+          borderRadius: "50%",
+          backgroundColor: "#e0a96d",
+          boxShadow: "0 0 10px #e0a96d",
+        }}
+      />
+      <span
+        style={{
+          fontSize: 13,
+          fontWeight: 700,
+          color: "#e2e8f0",
+          letterSpacing: 1.5,
+          textTransform: "uppercase",
+        }}
+      >
+        {chapter}
+      </span>
+      <span
+        style={{
+          fontSize: 11,
+          color: "rgba(255,255,255,0.45)",
+          fontWeight: 600,
+        }}
+      >
+        {sceneIndex}/{totalScenes}
+      </span>
+    </div>
+  );
+};
+
+// Floating Topic Header (Hiển thị trang trọng 6s đầu, không che khung hình)
+const FloatingTopicHeader: React.FC<{ title: string; subtitle: string }> = ({
+  title,
+}) => {
+  const frame = useCurrentFrame();
+
+  const opacity = interpolate(frame, [0, 15, 155, 180], [0, 1, 1, 0], {
+    extrapolateRight: "clamp",
+  });
+  const translateY = interpolate(frame, [0, 15, 155, 180], [-12, 0, 0, -12], {
+    extrapolateRight: "clamp",
+    easing: Easing.out(Easing.cubic),
+  });
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: 110,
+        left: 0,
+        right: 0,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        zIndex: 48,
+        opacity,
+        transform: `translateY(${translateY}px)`,
+        pointerEvents: "none",
+      }}
+    >
+      <div
+        style={{
+          background: "rgba(10, 13, 20, 0.85)",
+          backdropFilter: "blur(18px)",
+          border: "1.5px solid rgba(224, 169, 109, 0.55)",
+          boxShadow:
+            "0 12px 35px rgba(0, 0, 0, 0.65), 0 0 25px rgba(224, 169, 109, 0.2)",
+          borderRadius: 40,
+          padding: "12px 36px",
+          display: "flex",
+          alignItems: "center",
+          gap: 12,
+        }}
+      >
+        <span
+          style={{
+            width: 8,
+            height: 8,
+            borderRadius: "50%",
+            backgroundColor: "#e0a96d",
+            boxShadow: "0 0 10px #e0a96d",
+          }}
+        />
+        <span
+          style={{
+            color: "#ffffff",
+            fontSize: 22,
+            fontWeight: 800,
+            letterSpacing: 1.5,
+            textTransform: "uppercase",
+            textShadow: "0 2px 10px rgba(0, 0, 0, 0.8)",
+          }}
+        >
+          {title}
+        </span>
+      </div>
+    </div>
+  );
+};
+
+// Component hiển thị chữ nhảy nảy theo từng từ cho Long Video (Video Essay 16:9)
+// Tông màu vàng cát hổ phách cổ điển (#e0a96d) sang trọng, thanh lịch
+const LongVideoKaraokeText: React.FC<{
+  text: string;
+  durationInFrames: number;
+  localFrame: number;
+}> = ({ text, durationInFrames, localFrame }) => {
+  const words = useMemo(() => {
+    const rawWords = text.trim().split(/\s+/);
+    if (rawWords.length === 0) return [];
+
+    // Phân bổ trọng số theo độ dài từ và dấu câu
+    const weights = rawWords.map((w) => {
+      let weight = Math.max(w.length, 2);
+      if (/[.,!?;:…]$/.test(w)) {
+        weight += 3;
+      }
+      return weight;
+    });
+
+    const totalWeight = weights.reduce((acc, val) => acc + val, 0);
+
+    let curr = 0;
+    return rawWords.map((word, i) => {
+      const dur = Math.max(
+        3,
+        Math.round((weights[i] / totalWeight) * durationInFrames)
+      );
+      const start = curr;
+      const end = i === rawWords.length - 1 ? durationInFrames : curr + dur;
+      curr = end;
+      return { word, start, end };
+    });
+  }, [text, durationInFrames]);
+
+  return (
+    <div
+      style={{
+        fontSize: 42,
+        lineHeight: 1.5,
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        alignItems: "center",
+        rowGap: 8,
+        columnGap: 10,
+        margin: 0,
+      }}
+    >
+      {words.map((item, idx) => {
+        const isCurrent = localFrame >= item.start && localFrame < item.end;
+        const isPast = localFrame >= item.end;
+
+        let scale = 1.0;
+        let color = "rgba(255, 255, 255, 0.52)";
+        let fontWeight = 600;
+        let textShadow = "0 2px 8px rgba(0,0,0,0.85)";
+
+        if (isCurrent) {
+          const progress =
+            (localFrame - item.start) / Math.max(item.end - item.start, 1);
+          // Nảy nhẹ 1.15x sang trọng cho video dài 16:9
+          scale = interpolate(progress, [0, 0.25, 1], [1.05, 1.16, 1.08], {
+            extrapolateLeft: "clamp",
+            extrapolateRight: "clamp",
+          });
+          color = "#e0a96d"; // Vàng cát hổ phách Nửa Chén Trà
+          fontWeight = 800;
+          textShadow =
+            "0 0 25px rgba(224, 169, 109, 0.85), 0 0 10px rgba(224, 169, 109, 0.6), 0 3px 10px rgba(0,0,0,0.95)";
+        } else if (isPast) {
+          color = "#ffffff";
+          fontWeight = 600;
+        }
+
+        return (
+          <span
+            key={idx}
+            style={{
+              display: "inline-block",
+              transform: `scale(${scale})`,
+              transformOrigin: "center center",
+              color,
+              fontWeight,
+              textShadow,
+              transition: "color 0.1s ease",
+            }}
+          >
+            {item.word}
+          </span>
+        );
+      })}
+    </div>
+  );
+};
+
+// CƠ CHẾ PHỤ ĐỀ NHỊP ĐIỆU (Paced Sentence Captions) KẾT HỢP KARAOKE WORD BOUNCE:
+// Tự động ngắt đoạn văn thành các câu ngắn và hiển thị theo nhịp đọc, chữ to (42px) cực kỳ dễ đọc
+const PacedSentenceCaption: React.FC<{ scene: EssaySceneItem }> = ({
+  scene,
+}) => {
+  const frame = useCurrentFrame();
+
+  // Tách văn bản thành từng câu ngắn tự nhiên
+  const sentences = useMemo(() => {
+    const raw = scene.text || "";
+    // Ngắt theo dấu chấm, hỏi, than hoặc dấu hai chấm
+    const matches = raw.match(/[^.?!:]+[.?!:]?/g);
+    if (!matches || matches.length === 0) return [raw];
+    return matches.map((s) => s.trim()).filter((s) => s.length > 0);
+  }, [scene.text]);
+
+  // Tính toán thời gian phân bổ cho từng câu dựa theo số lượng từ
+  const sentenceRanges = useMemo(() => {
+    const totalFrames = scene.durationInFrames;
+    const wordCounts = sentences.map((s) => s.split(/\s+/).length);
+    const totalWords = wordCounts.reduce((a, b) => a + b, 0) || 1;
+
+    let currentStart = 0;
+    return sentences.map((text, i) => {
+      const share = wordCounts[i] / totalWords;
+      // Dành tối thiểu 30 frames cho mỗi câu
+      const duration = Math.max(30, Math.round(share * totalFrames));
+      const end =
+        i === sentences.length - 1 ? totalFrames : currentStart + duration;
+      const range = { text, start: currentStart, end };
+      currentStart = end;
+      return range;
+    });
+  }, [sentences, scene.durationInFrames]);
+
+  // Tìm câu đang được nói đến tại frame hiện tại
+  const currentSentence =
+    sentenceRanges.find((r) => frame >= r.start && frame < r.end)?.text ||
+    sentenceRanges[sentenceRanges.length - 1]?.text ||
+    scene.text;
+
+  // Hiệu ứng chuyển động nhẹ khi đổi câu
+  const activeRange = sentenceRanges.find(
+    (r) => frame >= r.start && frame < r.end
+  );
+  const localFrame = activeRange ? frame - activeRange.start : 0;
+  const sentenceFade = interpolate(localFrame, [0, 8], [0, 1], {
+    extrapolateRight: "clamp",
+  });
+  const sentenceSlide = interpolate(localFrame, [0, 8], [8, 0], {
+    extrapolateRight: "clamp",
+    easing: Easing.out(Easing.quad),
+  });
+
+  const currentSentenceDuration = activeRange
+    ? activeRange.end - activeRange.start
+    : scene.durationInFrames;
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        bottom: 75,
+        left: 0,
+        right: 0,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "0 100px",
+        zIndex: 45,
+      }}
+    >
+      {/* 1. Thẻ Highlight đắt giá ở trên */}
+      {scene.highlight && (
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 10,
+            padding: "8px 24px",
+            background:
+              "linear-gradient(135deg, rgba(224, 169, 109, 0.95) 0%, rgba(184, 123, 66, 0.95) 100%)",
+            borderRadius: 30,
+            boxShadow: "0 6px 20px rgba(224, 169, 109, 0.35)",
+            marginBottom: 16,
+          }}
+        >
+          <span
+            style={{
+              fontSize: 16,
+              fontWeight: 800,
+              color: "#161008",
+              letterSpacing: 0.5,
+            }}
+          >
+            ✦ {scene.highlight}
+          </span>
+        </div>
+      )}
+
+      {/* 2. Câu thoại hiện tại: Chữ to rõ (42px) kèm Karaoke Word Bounce */}
+      <div
+        style={{
+          maxWidth: 1450,
+          background: "rgba(10, 13, 20, 0.75)",
+          backdropFilter: "blur(18px)",
+          border: "1.5px solid rgba(255, 255, 255, 0.16)",
+          borderRadius: 22,
+          padding: "20px 45px",
+          textAlign: "center",
+          boxShadow: "0 18px 45px rgba(0, 0, 0, 0.65)",
+          opacity: sentenceFade,
+          transform: `translateY(${sentenceSlide}px)`,
+        }}
+      >
+        <LongVideoKaraokeText
+          text={currentSentence}
+          durationInFrames={currentSentenceDuration}
+          localFrame={localFrame}
+        />
+      </div>
+    </div>
+  );
+};
+
+// End Card tri ân & kêu gọi theo dõi
+const EndChannelCard: React.FC<{ channel: string; slogan: string }> = ({
+  channel,
+  slogan,
+}) => {
+  const frame = useCurrentFrame();
+  const opacity = interpolate(frame, [0, 20], [0, 1], {
+    extrapolateRight: "clamp",
+  });
+
+  return (
+    <AbsoluteFill
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "rgba(5, 6, 9, 0.88)",
+        backdropFilter: "blur(20px)",
+        opacity,
+        zIndex: 60,
+      }}
+    >
+      <div
+        style={{
+          width: 72,
+          height: 72,
+          borderRadius: "50%",
+          background: "linear-gradient(135deg, #e0a96d 0%, #b87b42 100%)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: 24,
+          boxShadow: "0 8px 30px rgba(224, 169, 109, 0.5)",
+        }}
+      >
+        <svg
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#111"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+          <line x1="6" y1="2" x2="6" y2="4"></line>
+          <line x1="10" y1="2" x2="10" y2="4"></line>
+          <line x1="14" y1="2" x2="14" y2="4"></line>
+        </svg>
+      </div>
+
+      <h2
+        style={{
+          fontSize: 48,
+          fontWeight: 900,
+          color: "#ffffff",
+          letterSpacing: 3,
+          margin: "0 0 8px 0",
+        }}
+      >
+        {channel}
+      </h2>
+
+      <p
+        style={{
+          fontSize: 22,
+          color: "#e0a96d",
+          fontWeight: 600,
+          letterSpacing: 1.5,
+          margin: "0 0 32px 0",
+        }}
+      >
+        {slogan}
+      </p>
+
+      <div
+        style={{
+          padding: "12px 36px",
+          borderRadius: 999,
+          background: "rgba(255, 255, 255, 0.1)",
+          border: "1px solid rgba(255, 255, 255, 0.25)",
+          color: "#ffffff",
+          fontSize: 18,
+          fontWeight: 600,
+          letterSpacing: 1,
+        }}
+      >
+        Nhấn Đăng ký để cùng ngồi lại mỗi tuần
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// Thanh tiến trình mỏng phía dưới
+const ProgressBar: React.FC<{ totalFrames: number }> = ({ totalFrames }) => {
+  const frame = useCurrentFrame();
+  const progress = (frame / Math.max(1, totalFrames)) * 100;
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        height: 6,
+        backgroundColor: "rgba(255, 255, 255, 0.08)",
+        zIndex: 55,
+      }}
+    >
+      <div
+        style={{
+          height: "100%",
+          width: `${progress}%`,
+          background: "linear-gradient(90deg, #b87b42 0%, #e0a96d 100%)",
+          boxShadow: "0 0 8px rgba(224, 169, 109, 0.6)",
+        }}
+      />
+    </div>
+  );
+};

@@ -1,0 +1,121 @@
+name: Render Long Video
+
+on:
+  push:
+    branches:
+      - 'render-*'
+  workflow_dispatch:
+    inputs:
+      video_id:
+        description: 'Mã video cần render (ví dụ: essay_ep01)'
+        required: true
+        default: 'essay_ep01'
+      scale:
+        description: 'Độ phân giải (1 = 1920x1080 Full HD, 0.5 = 720p)'
+        required: false
+        default: '1'
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    name: 🎬 Render Long Video
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🔍 Xác định video_id
+        id: parse_id
+        run: |
+          if [ -n "${{ github.event.inputs.video_id }}" ]; then
+            VID="${{ github.event.inputs.video_id }}"
+          else
+            BRANCH="${GITHUB_REF_NAME}"
+            VID="${BRANCH#render-}"
+          fi
+          echo "video_id=$VID" >> $GITHUB_OUTPUT
+          echo "Render Video ID: $VID"
+
+      - name: ⚙️ Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: remotion-video/package-lock.json
+
+      - name: 📦 Cài đặt thư viện hệ thống cho Chromium & FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 libgbm1 fonts-noto-cjk
+          sudo apt-get install -y libasound2 || sudo apt-get install -y libasound2t64
+
+      - name: 📦 Cài đặt Dependencies Remotion
+        working-directory: remotion-video
+        run: npm ci
+
+      - name: 🎥 Render Remotion Video (Full HD 1920x1080)
+        working-directory: remotion-video
+        run: |
+          set +e
+          VID="${{ steps.parse_id.outputs.video_id }}"
+          mkdir -p output/$VID
+          
+          PROPS_FILE="$(pwd)/public/video_data_${VID}.json"
+          if [ ! -f "$PROPS_FILE" ]; then
+            PROPS_FILE="$(pwd)/public/${VID}.json"
+          fi
+          echo "🔍 PROPS_FILE: $PROPS_FILE"
+          ls -la public/
+
+          OUT_FILE="$(pwd)/output/$VID/video_${VID}.mp4"
+          echo "🚀 Đang render video: $OUT_FILE"
+
+          SCALE_OPT=""
+          SCALE_VAL="${{ github.event.inputs.scale }}"
+          if [ -n "$SCALE_VAL" ] && [ "$SCALE_VAL" != "1" ]; then
+            SCALE_OPT="--scale=$SCALE_VAL"
+          fi
+
+          npx remotion render src/index.ts TeaEssayVideo "$OUT_FILE" --props="$PROPS_FILE" $SCALE_OPT --log=verbose 2>&1 | tee render.log
+          RENDER_EXIT=${PIPESTATUS[0]}
+          if [ $RENDER_EXIT -ne 0 ]; then
+            echo "❌ Remotion render thất bại (Exit code: $RENDER_EXIT). Chi tiết lỗi:"
+            cat render.log
+            exit $RENDER_EXIT
+          fi
+
+      - name: 📤 Lưu Video vào GitHub Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ steps.parse_id.outputs.video_id }}
+          path: remotion-video/output/${{ steps.parse_id.outputs.video_id }}/*.mp4
+          retention-days: 7
+
+      - name: 🚀 Tạo GitHub Release để Local tải về
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/heads/render-')
+        with:
+          tag_name: release-${{ steps.parse_id.outputs.video_id }}
+          name: Video Thành Phẩm ${{ steps.parse_id.outputs.video_id }}
+          files: remotion-video/output/${{ steps.parse_id.outputs.video_id }}/*.mp4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: ☁️ Tự động Upload sang Google Drive
+        if: success()
+        continue-on-error: true
+        env:
+          GDRIVE_SA_KEY: ${{ secrets.GDRIVE_SA_KEY }}
+          GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
+        run: |
+          if [ -n "$GDRIVE_SA_KEY" ] && [ -n "$GDRIVE_FOLDER_ID" ]; then
+            python3 -m pip install --quiet google-api-python-client google-auth
+            VID="${{ steps.parse_id.outputs.video_id }}"
+            VIDEO_PATH="remotion-video/output/$VID/video_$VID.mp4"
+            python3 .github/scripts/upload_to_gdrive.py "$VIDEO_PATH" "$GDRIVE_FOLDER_ID"
+          else
+            echo "ℹ️ Chưa cấu hình GDRIVE_SA_KEY hoặc GDRIVE_FOLDER_ID trong Secrets. Bỏ qua bước đồng bộ Drive."
+          fi
