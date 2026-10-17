@@ -108,14 +108,17 @@ jobs:
         if: success()
         continue-on-error: true
         env:
+          GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
+          GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
           GDRIVE_SA_KEY: ${{ secrets.GDRIVE_SA_KEY }}
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
         run: |
-          if [ -n "$GDRIVE_SA_KEY" ] && [ -n "$GDRIVE_FOLDER_ID" ]; then
+          if [ -n "$GDRIVE_FOLDER_ID" ] && ([ -n "$GDRIVE_REFRESH_TOKEN" ] || [ -n "$GDRIVE_SA_KEY" ]); then
             python3 -m pip install --quiet google-api-python-client google-auth
             VID="${{ steps.parse_id.outputs.video_id }}"
             VIDEO_PATH="remotion-video/output/$VID/video_$VID.mp4"
             python3 .github/scripts/upload_to_gdrive.py "$VIDEO_PATH" "$GDRIVE_FOLDER_ID"
           else
-            echo "ℹ️ Chưa cấu hình GDRIVE_SA_KEY hoặc GDRIVE_FOLDER_ID trong Secrets. Bỏ qua bước đồng bộ Drive."
+            echo "ℹ️ Chưa cấu hình GDRIVE Secrets. Bỏ qua bước đồng bộ Drive."
           fi
