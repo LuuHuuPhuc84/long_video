@@ -71,7 +71,7 @@ jobs:
           ls -la public/
 
           OUT_FILE="$(pwd)/output/$VID/video_${VID}.mp4"
-          echo "🚀 Đang render video chất lượng Studio (CRF 18 Tăng Tốc, 320k audio, 4 vCPU concurrency): $OUT_FILE"
+          echo "🚀 Đang render video chất lượng Studio (CRF 18 Tăng Tốc, 320k audio, concurrency 2 ổn định): $OUT_FILE"
 
           SCALE_OPT=""
           SCALE_VAL="${{ github.event.inputs.scale }}"
@@ -79,7 +79,7 @@ jobs:
             SCALE_OPT="--scale=$SCALE_VAL"
           fi
 
-          npx remotion render src/index.ts TeaEssayVideo "$OUT_FILE" --props="$PROPS_FILE" $SCALE_OPT --crf=18 --pixel-format=yuv420p --audio-bitrate=320k --concurrency=4 --disable-shared-memory-capture 2>&1 | tee render.log
+          npx remotion render src/index.ts TeaEssayVideo "$OUT_FILE" --props="$PROPS_FILE" $SCALE_OPT --crf=18 --pixel-format=yuv420p --audio-bitrate=320k --concurrency=2 --disable-shared-memory-capture 2>&1 | tee render.log
           RENDER_EXIT=${PIPESTATUS[0]}
           if [ $RENDER_EXIT -ne 0 ]; then
             echo "❌ Remotion render thất bại (Exit code: $RENDER_EXIT). Chi tiết lỗi:"
