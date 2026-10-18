@@ -540,7 +540,9 @@ const LongVideoKaraokeText: React.FC<{
   localFrame: number;
 }> = ({ text, durationInFrames, localFrame }) => {
   const words = useMemo(() => {
-    const rawWords = text.trim().split(/\s+/);
+    // Triệt tiêu hoàn toàn dấu "/" và ký tự ngắt nhịp trong văn bản hiển thị
+    const cleanStr = text.replace(/[\/]/g, " ").replace(/\s{2,}/g, " ").trim();
+    const rawWords = cleanStr.split(/\s+/).filter((w) => w.length > 0 && w !== "/");
     if (rawWords.length === 0) return [];
 
     // Phân bổ trọng số theo độ dài từ và dấu câu
@@ -635,13 +637,25 @@ const PacedSentenceCaption: React.FC<{ scene: EssaySceneItem }> = ({
 }) => {
   const frame = useCurrentFrame();
 
-  // Tách văn bản thành từng câu ngắn tự nhiên
+  // Tách văn bản thành từng câu ngắn tự nhiên, triệt tiêu hoàn toàn dấu "/"
   const sentences = useMemo(() => {
-    const raw = scene.text || "";
-    // Ngắt theo dấu chấm, hỏi, than hoặc dấu hai chấm
-    const matches = raw.match(/[^.?!:]+[.?!:]?/g);
-    if (!matches || matches.length === 0) return [raw];
-    return matches.map((s) => s.trim()).filter((s) => s.length > 0);
+    const raw = (scene.text || "").trim();
+    // Tách theo dấu gạch chéo "/" (ngắt ý trong kịch bản)
+    const chunks = raw.split(/\s*\/\s*/);
+    const result: string[] = [];
+    for (const chunk of chunks) {
+      const matches = chunk.match(/[^.?!:]+[.?!:]?/g);
+      if (matches && matches.length > 0) {
+        for (const m of matches) {
+          const cleaned = m.replace(/[\/]/g, "").trim();
+          if (cleaned.length > 0) result.push(cleaned);
+        }
+      } else {
+        const cleaned = chunk.replace(/[\/]/g, "").trim();
+        if (cleaned.length > 0) result.push(cleaned);
+      }
+    }
+    return result.length > 0 ? result : [raw.replace(/[\/]/g, "").trim()];
   }, [scene.text]);
 
   // Tính toán thời gian phân bổ cho từng câu dựa theo số lượng từ

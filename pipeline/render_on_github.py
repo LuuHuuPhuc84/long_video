@@ -7,6 +7,7 @@ import io
 import urllib.request
 import urllib.error
 import subprocess
+import datetime
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
@@ -43,7 +44,7 @@ def get_json_api(url):
     except Exception:
         return None
 
-def download_video_from_drive(video_id, target_path):
+def download_video_from_drive(video_id, target_path, min_created_time=None):
     """Tải video trực tiếp từ Google Drive về máy local nếu có token."""
     if not TOKEN_FILE.exists():
         return False
@@ -76,14 +77,21 @@ def download_video_from_drive(video_id, target_path):
 
         folder_id = folders[0]["id"]
 
-        # Tìm file mp4 trong folder, ưu tiên bản tạo mới nhất
-        q_file = f"'{folder_id}' in parents and name contains '.mp4' and trashed=false"
+        # Tìm file mp4 trong folder, ưu tiên bản video_{video_id}.mp4 chuẩn
+        q_file = f"'{folder_id}' in parents and name = 'video_{video_id}.mp4' and trashed=false"
         res_files = service.files().list(
             q=q_file,
             fields="files(id, name, size, createdTime)",
             orderBy="createdTime desc"
         ).execute()
         files = res_files.get("files", [])
+        if not files:
+            # Fallback nếu tên khác video_{video_id}.mp4
+            q_file_fb = f"'{folder_id}' in parents and name contains '.mp4' and trashed=false"
+            res_fb = service.files().list(q=q_file_fb, fields="files(id, name, size, createdTime)", orderBy="createdTime desc").execute()
+            files = res_fb.get("files", [])
+        if min_created_time:
+            files = [f for f in files if f.get("createdTime", "") >= min_created_time]
         if not files:
             return False
 
@@ -149,7 +157,7 @@ def get_run_status_fallback(branch_name):
         pass
     return None, None
 
-def check_video_ready_on_drive(video_id):
+def check_video_ready_on_drive(video_id, min_created_time=None):
     """Kiểm tra xem file video hoàn chỉnh đã xuất hiện trên Google Drive chưa."""
     if not TOKEN_FILE.exists():
         return False
@@ -176,13 +184,16 @@ def check_video_ready_on_drive(video_id):
             return False
 
         folder_id = folders[0]["id"]
-        q_file = f"'{folder_id}' in parents and name contains '.mp4' and trashed=false"
-        res_files = service.files().list(q=q_file, fields="files(id, name, size)").execute()
+        # Chỉ tìm file video_{video_id}.mp4 chính thức (các bản cũ đã được đổi tên thành _<random>.mp4)
+        q_file = f"'{folder_id}' in parents and name = 'video_{video_id}.mp4' and trashed=false"
+        res_files = service.files().list(q=q_file, fields="files(id, name, size, createdTime)").execute()
         files = res_files.get("files", [])
         for f in files:
             sz = int(f.get("size", 0))
-            if sz > 10 * 1024 * 1024:  # Lớn hơn 10MB là video thật
-                return True
+            created_at = f.get("createdTime", "")
+            if sz > 10 * 1024 * 1024:
+                if not min_created_time or created_at >= min_created_time:
+                    return True
         return False
     except Exception:
         return False
@@ -193,6 +204,13 @@ def render_long_video_via_github(video_id, auto_cleanup=True):
     print("☁️ Quy chuẩn: Render Cloud -> Đẩy Google Drive (Folder riêng + info.json)")
     print("✨ Bảo mật: Không lưu MP4/Release trên GitHub, tự động dọn sạch Git")
     print("========================================================")
+
+    # 0. Tiền xử lý chuẩn hóa: Đổi tên các bản render cũ trên Local & Google Drive trước khi render
+    try:
+        from pipeline.archive_render import archive_previous_renders
+        archive_previous_renders(video_id, target_filename=f"video_{video_id}.mp4")
+    except Exception as e:
+        print(f"⚠️ Pre-render archive: {e}")
 
     # 1. Kiểm tra file Metadata
     meta_path = PUBLIC_DIR / f"video_data_{video_id}.json"
