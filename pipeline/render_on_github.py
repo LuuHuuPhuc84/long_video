@@ -126,6 +126,67 @@ def download_video_from_drive(video_id, target_path):
         print(f"ℹ️ Không thể tự động tải từ Drive (sẽ dùng bản trực tiếp trên Cloud): {e}")
         return False
 
+def get_run_status_fallback(branch_name):
+    """Fallback cào trạng thái từ trang HTML của Actions khi GitHub API bị rate limit."""
+    try:
+        url = f"https://github.com/{REPO_OWNER}/{REPO_NAME}/actions"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=12) as resp:
+            html = resp.read().decode("utf-8")
+        import re
+        m = re.search(r'<script type="application/json" data-target="react-app\.embeddedData">(.*?)</script>', html)
+        if m:
+            data = json.loads(m.group(1))
+            runs = data.get('payload', {}).get('allWorkflowRunsRoute', {}).get('workflowRuns', [])
+            for r in runs:
+                b = r.get('branch', {}).get('title') or r.get('branch', {}).get('name')
+                if b and branch_name in b:
+                    state = r.get('state', {})
+                    status_str = state.get('status', '').replace('WORKFLOW_RUN_STATUS_', '').lower()
+                    conclusion_str = state.get('conclusion', '').replace('WORKFLOW_RUN_CONCLUSION_', '').lower()
+                    return status_str, conclusion_str
+    except Exception:
+        pass
+    return None, None
+
+def check_video_ready_on_drive(video_id):
+    """Kiểm tra xem file video hoàn chỉnh đã xuất hiện trên Google Drive chưa."""
+    if not TOKEN_FILE.exists():
+        return False
+    try:
+        from google.oauth2.credentials import Credentials
+        from googleapiclient.discovery import build
+
+        with open(TOKEN_FILE, "r", encoding="utf-8") as f:
+            token_data = json.load(f)
+
+        creds = Credentials(
+            None,
+            refresh_token=token_data.get("refresh_token"),
+            token_uri=token_data.get("token_uri", "https://oauth2.googleapis.com/token"),
+            client_id=token_data.get("client_id"),
+            client_secret=token_data.get("client_secret")
+        )
+        service = build("drive", "v3", credentials=creds)
+
+        q_folder = f"name='{video_id}' and mimeType='application/vnd.google-apps.folder' and trashed=false"
+        res_folders = service.files().list(q=q_folder, fields="files(id, name)").execute()
+        folders = res_folders.get("files", [])
+        if not folders:
+            return False
+
+        folder_id = folders[0]["id"]
+        q_file = f"'{folder_id}' in parents and name contains '.mp4' and trashed=false"
+        res_files = service.files().list(q=q_file, fields="files(id, name, size)").execute()
+        files = res_files.get("files", [])
+        for f in files:
+            sz = int(f.get("size", 0))
+            if sz > 10 * 1024 * 1024:  # Lớn hơn 10MB là video thật
+                return True
+        return False
+    except Exception:
+        return False
+
 def render_long_video_via_github(video_id, auto_cleanup=True):
     print("========================================================")
     print(f"🎬 BẮT ĐẦU RENDER LONG VIDEO TRÊN GITHUB ACTIONS: {video_id}")
@@ -211,18 +272,32 @@ def render_long_video_via_github(video_id, auto_cleanup=True):
         elapsed = int(time.time() - start_time)
 
         runs_data = get_json_api(f"{API_BASE}/actions/runs?branch={branch_name}")
+        status = None
+        conclusion = None
+
         if runs_data and runs_data.get("workflow_runs"):
             latest_run = runs_data["workflow_runs"][0]
             status = latest_run.get("status")
             conclusion = latest_run.get("conclusion")
+        else:
+            # Fallback cào HTML trang Actions nếu API bị rate limit (403)
+            status, conclusion = get_run_status_fallback(branch_name)
 
-            if status != last_status:
-                print(f"   [{elapsed}s] Trạng thái: {status} (Đang render & tải lên Drive)...")
-                last_status = status
+        if status and status != last_status:
+            print(f"   [{elapsed}s] Trạng thái: {status} (Đang render & tải lên Drive)...")
+            last_status = status
 
-            if status == "completed":
+        if status == "completed":
+            completed = True
+            success = (conclusion == "success")
+            break
+
+        # Kiểm tra song song trên Google Drive: nếu đã có video hoàn tất (>10MB)
+        if elapsed >= 60 and elapsed % 30 == 0:
+            if check_video_ready_on_drive(video_id):
+                print(f"   [{elapsed}s] 🎯 Đã phát hiện video render thành phẩm trên Google Drive!")
                 completed = True
-                success = (conclusion == "success")
+                success = True
                 break
 
         if elapsed > 2400:  # 40 phút timeout cho long video
