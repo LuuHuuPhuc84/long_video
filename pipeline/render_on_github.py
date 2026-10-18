@@ -238,6 +238,19 @@ def render_long_video_via_github(video_id, auto_cleanup=True):
     out_video_file = OUTPUT_DIR / str(video_id) / f"video_{video_id}.mp4"
     if success:
         download_video_from_drive(video_id, out_video_file)
+        try:
+            from pack_inputs import pack_video_input
+            pack_video_input(video_id)
+        except Exception as e:
+            print(f"⚠️ Tự động đóng gói input: {e}")
+
+        # Tự động xuất / cập nhật kịch bản vào Excel
+        try:
+            from export_scripts_excel import export_video_to_excel
+            xlsx_path = export_video_to_excel(video_id, project="long")
+            print(f"📊 Kịch bản đã tự động cập nhật vào Excel: {xlsx_path}")
+        except Exception as e:
+            print(f"⚠️ Tự động xuất Excel: {e}")
 
     # 7. Dọn dẹp trên Git (Xóa sạch branch tạm trên GitHub)
     if auto_cleanup:

@@ -20,6 +20,8 @@ export interface EssaySceneItem {
   image?: string;
   video?: string;
   media_type?: "video" | "image";
+  is_text_card?: boolean;
+  is_end_screen?: boolean;
   startFrame: number;
   durationInFrames: number;
 }
@@ -117,6 +119,25 @@ export const TeaEssayVideo: React.FC<TeaEssayVideoProps> = (props) => {
         <ImpactCenterTypography text={props.impactHook || "AI ĐANG ĐIỀU KHIỂN TÂM TRÍ BẠN?"} />
       </Sequence>
 
+      {/* 6c. Center Hero Text Card cho các cảnh THẺ CHỮ */}
+      {scenes.map((scene: EssaySceneItem) => {
+        if (!scene.is_text_card) return null;
+        return (
+          <Sequence
+            key={`hero-card-${scene.scene}`}
+            from={scene.startFrame}
+            durationInFrames={scene.durationInFrames}
+          >
+            <CenterHeroTextCard
+              highlight={scene.highlight}
+              chapter={scene.chapter}
+              tag={scene.tag}
+              durationInFrames={scene.durationInFrames}
+            />
+          </Sequence>
+        );
+      })}
+
       {/* 7. Subtitle hiển thị cuốn chiếu từng câu ngắn, chữ to rõ (42px) */}
       {scenes.map((scene: EssaySceneItem) => (
         <Sequence
@@ -128,8 +149,22 @@ export const TeaEssayVideo: React.FC<TeaEssayVideoProps> = (props) => {
         </Sequence>
       ))}
 
-      {/* 8. End Card (120 frames cuối ~ 4 giây) */}
-      {durationInFrames > 150 && (
+      {/* 7b. Interactive End Screen 15s cho cảnh kết thúc có is_end_screen */}
+      {scenes.map((scene: EssaySceneItem) => {
+        if (!scene.is_end_screen) return null;
+        return (
+          <Sequence
+            key={`endscreen-${scene.scene}`}
+            from={scene.startFrame}
+            durationInFrames={scene.durationInFrames}
+          >
+            <InteractiveEndScreen channel={channel} slogan={slogan} />
+          </Sequence>
+        );
+      })}
+
+      {/* 8. End Card (120 frames cuối ~ 4 giây nếu không có is_end_screen) */}
+      {durationInFrames > 150 && !scenes.some((s) => s.is_end_screen) && (
         <Sequence from={durationInFrames - 120} durationInFrames={120}>
           <EndChannelCard channel={channel} slogan={slogan} />
         </Sequence>
@@ -840,5 +875,296 @@ const ProgressBar: React.FC<{ totalFrames: number }> = ({ totalFrames }) => {
         }}
       />
     </div>
+  );
+};
+
+// Center Hero Text Card cho các cảnh THẺ CHỮ
+const CenterHeroTextCard: React.FC<{
+  highlight: string;
+  chapter?: string;
+  tag?: string;
+  durationInFrames: number;
+}> = ({ highlight, chapter, tag, durationInFrames }) => {
+  const frame = useCurrentFrame();
+  const opacity = interpolate(
+    frame,
+    [0, 15, durationInFrames - 15, durationInFrames],
+    [0, 1, 1, 0],
+    { extrapolateRight: "clamp" }
+  );
+  const scale = interpolate(
+    frame,
+    [0, 20, durationInFrames],
+    [0.96, 1.0, 1.02],
+    { extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) }
+  );
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 120,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 42,
+        opacity,
+        transform: `scale(${scale})`,
+        pointerEvents: "none",
+        padding: "0 60px",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: 1300,
+          padding: "36px 64px",
+          background: "rgba(10, 14, 22, 0.88)",
+          borderRadius: 28,
+          border: "2px solid rgba(224, 169, 109, 0.7)",
+          boxShadow:
+            "0 20px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(224, 169, 109, 0.3)",
+          backdropFilter: "blur(20px)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 16,
+          textAlign: "center",
+        }}
+      >
+        <div
+          style={{
+            fontSize: 15,
+            fontWeight: 800,
+            color: "#e0a96d",
+            letterSpacing: 4,
+            textTransform: "uppercase",
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+          }}
+        >
+          <span>✦</span>
+          <span>{chapter || tag || "TRIẾT LÝ ỨNG DỤNG"}</span>
+          <span>✦</span>
+        </div>
+        <div
+          style={{
+            fontSize: 52,
+            fontWeight: 900,
+            color: "#ffffff",
+            lineHeight: 1.3,
+            letterSpacing: 2,
+            textShadow:
+              "0 4px 25px rgba(0,0,0,0.9), 0 0 35px rgba(224, 169, 109, 0.5)",
+          }}
+        >
+          {highlight}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Interactive End Screen 15 giây theo quy chuẩn Shorts & Long Video
+const InteractiveEndScreen: React.FC<{
+  channel: string;
+  slogan: string;
+}> = ({ channel }) => {
+  const frame = useCurrentFrame();
+  const opacity = interpolate(frame, [0, 20], [0, 1], {
+    extrapolateRight: "clamp",
+  });
+
+  return (
+    <AbsoluteFill
+      style={{
+        zIndex: 58,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "rgba(8, 10, 16, 0.88)",
+        backdropFilter: "blur(20px)",
+        opacity,
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 60,
+          marginBottom: 30,
+        }}
+      >
+        {/* Thẻ đề xuất 1: Video Shorts */}
+        <div
+          style={{
+            width: 320,
+            height: 480,
+            borderRadius: 20,
+            border: "2px solid rgba(224, 169, 109, 0.6)",
+            background: "rgba(18, 22, 32, 0.9)",
+            boxShadow: "0 15px 40px rgba(0,0,0,0.7)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 24,
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              padding: "6px 16px",
+              borderRadius: 20,
+              background: "#e0a96d",
+              color: "#111",
+              fontSize: 13,
+              fontWeight: 800,
+              marginBottom: 20,
+            }}
+          >
+            SHORTS ĐỀ XUẤT
+          </div>
+          <div
+            style={{
+              fontSize: 22,
+              fontWeight: 800,
+              color: "#fff",
+              lineHeight: 1.4,
+              marginBottom: 16,
+            }}
+          >
+            ĐỪNG ĐÈ NÉN CƠN GIẬN
+          </div>
+          <div
+            style={{
+              fontSize: 13,
+              color: "rgba(255,255,255,0.6)",
+            }}
+          >
+            Bài học 60 giây chuyển hóa tức giận
+          </div>
+        </div>
+
+        {/* Nút tròn Đăng ký ở giữa */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 16,
+          }}
+        >
+          <div
+            style={{
+              width: 110,
+              height: 110,
+              borderRadius: "50%",
+              background: "linear-gradient(135deg, #e0a96d 0%, #b87b42 100%)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              boxShadow: "0 0 40px rgba(224, 169, 109, 0.6)",
+            }}
+          >
+            <svg
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#111"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+              <line x1="6" y1="2" x2="6" y2="4"></line>
+              <line x1="10" y1="2" x2="10" y2="4"></line>
+              <line x1="14" y1="2" x2="14" y2="4"></line>
+            </svg>
+          </div>
+          <div
+            style={{
+              fontSize: 26,
+              fontWeight: 900,
+              color: "#ffffff",
+              letterSpacing: 2,
+            }}
+          >
+            {channel}
+          </div>
+          <div
+            style={{
+              padding: "10px 28px",
+              borderRadius: 30,
+              background: "#e0a96d",
+              color: "#111",
+              fontSize: 16,
+              fontWeight: 800,
+              boxShadow: "0 4px 15px rgba(224, 169, 109, 0.4)",
+            }}
+          >
+            ĐĂNG KÝ KÊNH
+          </div>
+        </div>
+
+        {/* Thẻ đề xuất 2: Video Dài tiếp theo */}
+        <div
+          style={{
+            width: 480,
+            height: 270,
+            borderRadius: 20,
+            border: "2px solid rgba(224, 169, 109, 0.6)",
+            background: "rgba(18, 22, 32, 0.9)",
+            boxShadow: "0 15px 40px rgba(0,0,0,0.7)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 24,
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              padding: "6px 16px",
+              borderRadius: 20,
+              background: "rgba(255,255,255,0.15)",
+              color: "#e0a96d",
+              fontSize: 13,
+              fontWeight: 800,
+              marginBottom: 16,
+            }}
+          >
+            VIDEO TIẾP THEO
+          </div>
+          <div
+            style={{
+              fontSize: 22,
+              fontWeight: 800,
+              color: "#fff",
+              lineHeight: 1.4,
+              marginBottom: 12,
+            }}
+          >
+            TÂM THÁI BÌNH THƯỜNG LÀ ĐẠO
+          </div>
+          <div
+            style={{
+              fontSize: 14,
+              color: "rgba(255,255,255,0.6)",
+            }}
+          >
+            Bí quyết an yên giữa muôn ngàn biến đổi
+          </div>
+        </div>
+      </div>
+    </AbsoluteFill>
   );
 };
