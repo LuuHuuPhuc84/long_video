@@ -319,10 +319,9 @@ const SoftCinemaOverlay: React.FC = () => {
   return null;
 };
 
-// Top-Left Branding Badge
+// Top-Left Branding Badge (Watermark đài truyền hình tinh giản, sắc nét)
 const TopBrandBadge: React.FC<{ channel: string; slogan: string }> = ({
   channel,
-  slogan,
 }) => {
   return (
     <div
@@ -333,30 +332,30 @@ const TopBrandBadge: React.FC<{ channel: string; slogan: string }> = ({
         display: "flex",
         alignItems: "center",
         gap: 14,
-        background: "rgba(18, 20, 26, 0.75)",
-        backdropFilter: "blur(12px)",
-        padding: "10px 22px",
+        background: "rgba(12, 14, 20, 0.82)",
+        backdropFilter: "blur(14px)",
+        padding: "10px 24px",
         borderRadius: 999,
-        border: "1px solid rgba(224, 169, 109, 0.35)",
-        boxShadow: "0 8px 24px rgba(0,0,0,0.4)",
+        border: "1.5px solid rgba(224, 169, 109, 0.45)",
+        boxShadow: "0 8px 24px rgba(0,0,0,0.5)",
         zIndex: 50,
       }}
     >
       <div
         style={{
-          width: 28,
-          height: 28,
+          width: 32,
+          height: 32,
           borderRadius: "50%",
           background: "linear-gradient(135deg, #e0a96d 0%, #b87b42 100%)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          boxShadow: "0 2px 8px rgba(224, 169, 109, 0.4)",
+          boxShadow: "0 2px 10px rgba(224, 169, 109, 0.5)",
         }}
       >
         <svg
-          width="16"
-          height="16"
+          width="18"
+          height="18"
           viewBox="0 0 24 24"
           fill="none"
           stroke="#111"
@@ -371,95 +370,30 @@ const TopBrandBadge: React.FC<{ channel: string; slogan: string }> = ({
           <line x1="14" y1="2" x2="14" y2="4"></line>
         </svg>
       </div>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <span
-          style={{
-            fontSize: 16,
-            fontWeight: 800,
-            letterSpacing: 2.2,
-            color: "#f5f5f7",
-            textTransform: "uppercase",
-          }}
-        >
-          {channel}
-        </span>
-        <span
-          style={{
-            fontSize: 11,
-            color: "#e0a96d",
-            fontWeight: 500,
-            letterSpacing: 0.8,
-          }}
-        >
-          {slogan}
-        </span>
-      </div>
+      <span
+        style={{
+          fontSize: 22,
+          fontWeight: 800,
+          letterSpacing: 2.5,
+          color: "#ffffff",
+          textTransform: "uppercase",
+          textShadow: "0 2px 8px rgba(0,0,0,0.85)",
+          WebkitFontSmoothing: "antialiased",
+        }}
+      >
+        {channel}
+      </span>
     </div>
   );
 };
 
-// Top-Right Chapter Indicator
+// Top-Right Chapter Indicator: Đã bỏ để tối ưu không gian điện ảnh thoáng đãng
 const ChapterIndicator: React.FC<{
   chapter: string;
   sceneIndex: number;
   totalScenes: number;
-}> = ({ chapter, sceneIndex, totalScenes }) => {
-  const frame = useCurrentFrame();
-  const opacity = interpolate(frame, [0, 15], [0, 1], {
-    extrapolateRight: "clamp",
-  });
-
-  if (!chapter) return null;
-
-  return (
-    <div
-      style={{
-        position: "absolute",
-        top: 40,
-        right: 48,
-        display: "flex",
-        alignItems: "center",
-        gap: 12,
-        background: "rgba(10, 12, 16, 0.7)",
-        backdropFilter: "blur(10px)",
-        padding: "8px 18px",
-        borderRadius: 8,
-        border: "1px solid rgba(255, 255, 255, 0.15)",
-        opacity,
-        zIndex: 50,
-      }}
-    >
-      <span
-        style={{
-          width: 8,
-          height: 8,
-          borderRadius: "50%",
-          backgroundColor: "#e0a96d",
-          boxShadow: "0 0 10px #e0a96d",
-        }}
-      />
-      <span
-        style={{
-          fontSize: 13,
-          fontWeight: 700,
-          color: "#e2e8f0",
-          letterSpacing: 1.5,
-          textTransform: "uppercase",
-        }}
-      >
-        {chapter}
-      </span>
-      <span
-        style={{
-          fontSize: 11,
-          color: "rgba(255,255,255,0.45)",
-          fontWeight: 600,
-        }}
-      >
-        {sceneIndex}/{totalScenes}
-      </span>
-    </div>
-  );
+}> = () => {
+  return null;
 };
 
 // Floating Topic Header (Hiển thị trang trọng 6s đầu, không che khung hình)
@@ -714,27 +648,29 @@ const PacedSentenceCaption: React.FC<{ scene: EssaySceneItem }> = ({
         zIndex: 45,
       }}
     >
-      {/* 1. Thẻ Highlight đắt giá ở trên */}
+      {/* 1. Thẻ Highlight đắt giá ở trên: Chữ 22px to rõ, tương phản đanh thép */}
       {scene.highlight && (
         <div
           style={{
             display: "inline-flex",
             alignItems: "center",
-            gap: 10,
-            padding: "8px 24px",
+            gap: 12,
+            padding: "10px 32px",
             background:
-              "linear-gradient(135deg, rgba(224, 169, 109, 0.95) 0%, rgba(184, 123, 66, 0.95) 100%)",
-            borderRadius: 30,
-            boxShadow: "0 6px 20px rgba(224, 169, 109, 0.35)",
+              "linear-gradient(135deg, #fbbf24 0%, #e0a96d 100%)",
+            borderRadius: 40,
+            boxShadow:
+              "0 8px 25px rgba(0, 0, 0, 0.65), 0 0 15px rgba(251, 191, 36, 0.45)",
             marginBottom: 16,
           }}
         >
           <span
             style={{
-              fontSize: 16,
-              fontWeight: 800,
-              color: "#161008",
-              letterSpacing: 0.5,
+              fontSize: 22,
+              fontWeight: 900,
+              color: "#0c0e14",
+              letterSpacing: 0.8,
+              WebkitFontSmoothing: "antialiased",
             }}
           >
             ✦ {scene.highlight}
