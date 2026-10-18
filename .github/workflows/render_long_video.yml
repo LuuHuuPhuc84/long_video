@@ -104,3 +104,17 @@ jobs:
             echo "❌ Lỗi: Chưa cấu hình GDRIVE Secrets (GDRIVE_CLIENT_ID, GDRIVE_CLIENT_SECRET, GDRIVE_REFRESH_TOKEN, GDRIVE_FOLDER_ID)!"
             exit 1
           fi
+
+      - name: 📺 Tự động Upload lên YouTube (Chế độ Nháp / Draft)
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          if [ -n "$YOUTUBE_REFRESH_TOKEN" ] && [ -n "$YOUTUBE_CLIENT_ID" ]; then
+            VID="${{ steps.parse_id.outputs.video_id }}"
+            VIDEO_PATH="remotion-video/output/$VID/video_$VID.mp4"
+            python3 .github/scripts/upload_to_youtube.py "$VIDEO_PATH" "$VID"
+          else
+            echo "ℹ️ Bỏ qua upload YouTube (Chưa cấu hình YOUTUBE_REFRESH_TOKEN)."
+          fi
