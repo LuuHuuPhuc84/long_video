@@ -198,7 +198,7 @@ def check_video_ready_on_drive(video_id, min_created_time=None):
     except Exception:
         return False
 
-def render_long_video_via_github(video_id, auto_cleanup=True):
+def render_long_video_via_github(video_id, auto_cleanup=True, download_local=False):
     print("========================================================")
     print(f"🎬 BẮT ĐẦU RENDER LONG VIDEO TRÊN GITHUB ACTIONS: {video_id}")
     print("☁️ Quy chuẩn: Render Cloud -> Đẩy Google Drive (Folder riêng + info.json)")
@@ -327,15 +327,14 @@ def render_long_video_via_github(video_id, auto_cleanup=True):
     else:
         print(f"\n❌ GitHub Actions hoàn tất nhưng kết quả thất bại! Hãy kiểm tra log tại GitHub Actions.")
 
-    # 6. Đồng bộ video từ Google Drive về máy Local (nếu có thể)
+    # 6. Đồng bộ video từ Google Drive về máy Local (Tùy chọn qua cờ --download)
     out_video_file = OUTPUT_DIR / str(video_id) / f"video_{video_id}.mp4"
     if success:
-        download_video_from_drive(video_id, out_video_file)
-        try:
-            from pack_inputs import pack_video_input
-            pack_video_input(video_id)
-        except Exception as e:
-            print(f"⚠️ Tự động đóng gói input: {e}")
+        if download_local:
+            download_video_from_drive(video_id, out_video_file)
+        else:
+            print("\n💡 [0% Dung Lượng Máy] Video đã tự động lưu trữ trên Google Drive và tải lên YouTube ở chế độ Nháp (Draft).")
+            print("   (Dùng cờ '--download' nếu bạn muốn tải file MP4 về ổ cứng máy tính).")
 
         # Tự động xuất / cập nhật kịch bản vào Excel
         try:
@@ -358,9 +357,11 @@ def render_long_video_via_github(video_id, auto_cleanup=True):
 
     print("\n========================================================")
     print(f"🏁 HOÀN TẤT TOÀN BỘ QUY TRÌNH CHO: {video_id}")
+    print(f"📺 Kiểm tra video nháp tại: https://studio.youtube.com")
     print("========================================================")
     return success
 
 if __name__ == "__main__":
-    vid = sys.argv[1] if len(sys.argv) > 1 else "essay_ep01"
-    render_long_video_via_github(vid)
+    vid = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("--") else "essay_ep01"
+    dl_flag = "--download" in sys.argv
+    render_long_video_via_github(vid, download_local=dl_flag)
