@@ -79,7 +79,7 @@ jobs:
             SCALE_OPT="--scale=$SCALE_VAL"
           fi
 
-          npx remotion render src/index.ts TeaEssayVideo "$OUT_FILE" --props="$PROPS_FILE" $SCALE_OPT --crf=16 --pixel-format=yuv420p --audio-bitrate=320k --concurrency=4 --log=verbose 2>&1 | tee render.log
+          npx remotion render src/index.ts TeaEssayVideo "$OUT_FILE" --props="$PROPS_FILE" $SCALE_OPT --crf=16 --pixel-format=yuv420p --audio-bitrate=320k --concurrency=2 --chromium-options="--disable-dev-shm-usage --no-sandbox" 2>&1 | tee render.log
           RENDER_EXIT=${PIPESTATUS[0]}
           if [ $RENDER_EXIT -ne 0 ]; then
             echo "❌ Remotion render thất bại (Exit code: $RENDER_EXIT). Chi tiết lỗi:"
