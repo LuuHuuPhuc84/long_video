@@ -35,6 +35,8 @@ def get_json_api(url):
         "Accept": "application/vnd.github.v3+json"
     }
     gh_token = os.environ.get("GITHUB_TOKEN")
+    if not gh_token and (BASE_DIR / "pipeline" / "github_token.txt").exists():
+        gh_token = (BASE_DIR / "pipeline" / "github_token.txt").read_text(encoding="utf-8").strip()
     if gh_token:
         headers["Authorization"] = f"Bearer {gh_token}"
     req = urllib.request.Request(url, headers=headers)
