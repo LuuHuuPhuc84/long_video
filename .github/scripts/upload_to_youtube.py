@@ -66,6 +66,9 @@ def upload_video_to_youtube(video_path, video_id):
     description = "Nhìn sâu để sống nhẹ — Nửa Chén Trà"
     tags = ["Nửa Chén Trà", "nhìn sâu để sống nhẹ", "video essay", "chữa lành"]
 
+    privacy_status = "private"
+    schedule_str = None
+
     if info_file and info_file.exists():
         try:
             with open(info_file, "r", encoding="utf-8") as f:
@@ -77,17 +80,21 @@ def upload_video_to_youtube(video_path, video_id):
             description = d.get("description") or description
             tags = d.get("tags") or tags
             schedule_str = d.get("schedule")
+            if isinstance(d.get("status"), dict):
+                privacy_status = d["status"].get("privacyStatus", "private")
+            elif d.get("privacyStatus"):
+                privacy_status = d["privacyStatus"]
         except Exception:
             schedule_str = None
 
     status_dict = {
-        "privacyStatus": "private",
+        "privacyStatus": privacy_status,
         "selfDeclaredMadeForKids": False,
         "containsSyntheticMedia": True
     }
 
-    publish_log = "PRIVATE (Bản nháp / Draft)"
-    if schedule_str:
+    publish_log = f"{privacy_status.upper()} ({'Công khai ngay' if privacy_status == 'public' else 'Bản nháp / Draft'})"
+    if schedule_str and privacy_status != "public":
         try:
             import datetime
             s = str(schedule_str).strip()

@@ -936,12 +936,12 @@ const CenterHeroTextCard: React.FC<{
         style={{
           maxWidth: 1300,
           padding: "36px 64px",
-          background: "rgba(10, 14, 22, 0.88)",
+          background: "rgba(12, 16, 26, 0.65)",
           borderRadius: 28,
           border: "2px solid rgba(224, 169, 109, 0.7)",
           boxShadow:
-            "0 20px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(224, 169, 109, 0.3)",
-          backdropFilter: "blur(20px)",
+            "0 16px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(224, 169, 109, 0.25)",
+          backdropFilter: "blur(18px)",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
