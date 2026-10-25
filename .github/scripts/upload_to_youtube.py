@@ -69,11 +69,43 @@ def upload_video_to_youtube(video_path, video_id):
         try:
             with open(info_file, "r", encoding="utf-8") as f:
                 d = json.load(f)
+            if d.get("skip_youtube") or d.get("no_youtube"):
+                print("ℹ️ Bỏ qua upload YouTube theo cấu hình info.json (skip_youtube=True).")
+                return "SKIPPED_BY_CONFIG"
             title = d.get("title") or title
             description = d.get("description") or description
             tags = d.get("tags") or tags
+            schedule_str = d.get("schedule")
         except Exception:
-            pass
+            schedule_str = None
+
+    status_dict = {
+        "privacyStatus": "private",
+        "selfDeclaredMadeForKids": False,
+        "containsSyntheticMedia": True
+    }
+
+    publish_log = "PRIVATE (Bản nháp / Draft)"
+    if schedule_str:
+        try:
+            import datetime
+            s = str(schedule_str).strip()
+            now = datetime.datetime.now()
+            if " " in s:
+                schedule_dt = datetime.datetime.strptime(s, "%Y-%m-%d %H:%M")
+            else:
+                time_part = datetime.datetime.strptime(s, "%H:%M").time()
+                schedule_dt = datetime.datetime.combine(now.date(), time_part)
+                if schedule_dt <= now:
+                    schedule_dt += datetime.timedelta(days=1)
+            tz_vn = datetime.timezone(datetime.timedelta(hours=7))
+            schedule_dt = schedule_dt.replace(tzinfo=tz_vn)
+            utc_dt = schedule_dt.astimezone(datetime.timezone.utc)
+            iso_utc = utc_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+            status_dict["publishAt"] = iso_utc
+            publish_log = f"SCHEDULED (Hẹn giờ phát sóng lúc {schedule_str} VN -> {iso_utc})"
+        except Exception as e:
+            print(f"⚠️ Lỗi định dạng schedule '{schedule_str}': {e}. Giữ chế độ private.")
 
     body = {
         "snippet": {
@@ -84,16 +116,13 @@ def upload_video_to_youtube(video_path, video_id):
             "defaultLanguage": "vi",
             "defaultAudioLanguage": "vi"
         },
-        "status": {
-            "privacyStatus": "private",  # Chế độ Nháp / Riêng tư (Draft)
-            "selfDeclaredMadeForKids": False
-        }
+        "status": status_dict
     }
 
     print(f"\n========================================================")
     print(f"🚀 BẮT ĐẦU TẢI VIDEO LÊN YOUTUBE TỪ GITHUB ACTIONS:")
     print(f"📌 Tiêu đề: {title}")
-    print(f"📢 Chế độ: PRIVATE (Bản nháp / Draft)")
+    print(f"📢 Chế độ: {publish_log}")
     print(f"📁 Dung lượng: {round(vpath.stat().st_size / (1024*1024), 2)} MB")
     print(f"========================================================")
 
