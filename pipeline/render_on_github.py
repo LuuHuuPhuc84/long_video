@@ -13,6 +13,8 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
 REMOTION_DIR = BASE_DIR / "remotion-video"
 PUBLIC_DIR = REMOTION_DIR / "public"
 OUTPUT_DIR = BASE_DIR / "output"
@@ -310,6 +312,7 @@ def render_long_video_via_github(video_id, auto_cleanup=True, download_local=Fal
     print(f"🔗 Xem trực tiếp tại: https://github.com/{REPO_OWNER}/{REPO_NAME}/actions")
 
     start_time = time.time()
+    start_utc_iso = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     last_status = ""
     completed = False
     success = False
@@ -339,9 +342,9 @@ def render_long_video_via_github(video_id, auto_cleanup=True, download_local=Fal
             success = (conclusion == "success")
             break
 
-        # Kiểm tra song song trên Google Drive: nếu đã có video hoàn tất (>10MB)
-        if elapsed >= 60 and elapsed % 30 == 0:
-            if check_video_ready_on_drive(video_id):
+        # Kiểm tra song song trên Google Drive: nếu đã có video hoàn tất (>10MB) được tạo sau khi bắt đầu render
+        if elapsed >= 180 and elapsed % 30 == 0:
+            if check_video_ready_on_drive(video_id, min_created_time=start_utc_iso):
                 print(f"   [{elapsed}s] 🎯 Đã phát hiện video render thành phẩm trên Google Drive!")
                 completed = True
                 success = True
