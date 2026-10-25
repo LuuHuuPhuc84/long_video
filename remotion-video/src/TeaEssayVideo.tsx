@@ -38,8 +38,38 @@ export interface TeaEssayVideoProps {
   height?: number;
   durationInFrames?: number;
   audioFile?: string;
+  stylePreset?: "zen_amber" | "clean_natural" | "vintage_warm" | "film_contrast" | string;
   scenes?: EssaySceneItem[];
 }
+
+export interface StylePresetConfig {
+  filter: string;
+  washColor: string;
+  vignette: string;
+}
+
+export const STYLE_PRESETS: Record<string, StylePresetConfig> = {
+  zen_amber: {
+    filter: "contrast(1.02) saturate(0.92) sepia(0.08)",
+    washColor: "rgba(224, 169, 109, 0.04)",
+    vignette: "radial-gradient(circle at 50% 50%, transparent 68%, rgba(0, 0, 0, 0.22) 100%)",
+  },
+  clean_natural: {
+    filter: "none",
+    washColor: "transparent",
+    vignette: "none",
+  },
+  vintage_warm: {
+    filter: "contrast(1.04) saturate(0.88) sepia(0.12)",
+    washColor: "rgba(224, 169, 109, 0.06)",
+    vignette: "radial-gradient(circle at 50% 50%, transparent 64%, rgba(0, 0, 0, 0.28) 100%)",
+  },
+  film_contrast: {
+    filter: "contrast(1.06) saturate(0.95)",
+    washColor: "rgba(10, 15, 30, 0.03)",
+    vignette: "radial-gradient(circle at 50% 50%, transparent 70%, rgba(0, 0, 0, 0.20) 100%)",
+  },
+};
 
 export const TeaEssayVideo: React.FC<TeaEssayVideoProps> = (props) => {
   const channel = props.channel || "NỬA CHÉN TRÀ";
@@ -51,6 +81,8 @@ export const TeaEssayVideo: React.FC<TeaEssayVideoProps> = (props) => {
   const audioFile = props.audioFile || "voiceover_essay_ep01.wav";
   const scenes = props.scenes || [];
   const durationInFrames = props.durationInFrames || 3600;
+  const stylePresetKey = props.stylePreset || "zen_amber";
+  const preset = STYLE_PRESETS[stylePresetKey] || STYLE_PRESETS.zen_amber;
 
   return (
     <AbsoluteFill
@@ -80,13 +112,17 @@ export const TeaEssayVideo: React.FC<TeaEssayVideoProps> = (props) => {
               scene={scene}
               durationInFrames={bgDuration}
               index={index}
+              filter={preset.filter}
             />
           </Sequence>
         );
       })}
 
-      {/* 2. Lớp phủ mềm mại: Trong trẻo ở giữa, chỉ tối nhẹ ở chân và đỉnh */}
-      <SoftCinemaOverlay />
+      {/* 2. Lớp phủ mềm mại: Theo Preset Zen Amber / Clean Natural */}
+      <SoftCinemaOverlay
+        washColor={preset.washColor}
+        vignette={preset.vignette}
+      />
 
       {/* 3. Audio (Single Pre-mixed Voiceover + Ambient BGM) */}
       <Audio src={staticFile(audioFile)} volume={1.0} />
@@ -181,7 +217,8 @@ const CinematicSceneBackground: React.FC<{
   scene: EssaySceneItem;
   durationInFrames: number;
   index: number;
-}> = ({ scene, durationInFrames, index }) => {
+  filter?: string;
+}> = ({ scene, durationInFrames, index, filter }) => {
   const frame = useCurrentFrame();
   const isEven = index % 2 === 0;
 
@@ -203,6 +240,7 @@ const CinematicSceneBackground: React.FC<{
             width: "100%",
             height: "100%",
             objectFit: "cover",
+            filter: filter || "none",
           }}
           muted
         />
@@ -233,6 +271,7 @@ const CinematicSceneBackground: React.FC<{
           height: "100%",
           objectFit: "cover",
           transform: `scale(${scale}) translate(${translateX}px, 0px)`,
+          filter: filter || "none",
         }}
       />
     </AbsoluteFill>
@@ -312,11 +351,36 @@ const ImpactCenterTypography: React.FC<{ text: string }> = ({ text }) => {
 };
 
 
-// QUY CHUẨN MỚI (BẢO TOÀN ÁNH SÁNG GỐC 100%):
-// Bỏ hoàn toàn lớp phủ đen/gradient dìm tối toàn màn hình.
-// Chỉ duy nhất ô hộp phụ đề (PacedSentenceCaption) ở đáy màn hình là có nền kính mờ riêng để bảo đảm tương phản chữ.
-const SoftCinemaOverlay: React.FC = () => {
-  return null;
+// QUY CHUẨN TÔNG MÀU THEO PRESET (ZEN AMBER / CLEAN NATURAL / VINTAGE...):
+const SoftCinemaOverlay: React.FC<{
+  washColor?: string;
+  vignette?: string;
+}> = ({ washColor, vignette }) => {
+  if (!washColor && !vignette) return null;
+
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none", zIndex: 4 }}>
+      {washColor && washColor !== "transparent" && (
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundColor: washColor,
+            mixBlendMode: "color",
+          }}
+        />
+      )}
+      {vignette && vignette !== "none" && (
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: vignette,
+          }}
+        />
+      )}
+    </AbsoluteFill>
+  );
 };
 
 // Top-Left Branding Badge (Watermark đài truyền hình tinh giản, sắc nét)
