@@ -267,6 +267,9 @@ def render_long_video_via_github(video_id, auto_cleanup=True, download_local=Fal
     local_info = OUTPUT_DIR / video_id / "info.json"
     if local_info.exists() and local_info not in files_to_push:
         files_to_push.append(local_info)
+    pub_info = PUBLIC_DIR / f"info_{video_id}.json"
+    if pub_info.exists() and pub_info not in files_to_push:
+        files_to_push.append(pub_info)
 
     # Đính kèm Thumbnail chuyên biệt nếu có ở local
     local_thumb = OUTPUT_DIR / video_id / f"thumbnail_{video_id}.jpg"
@@ -276,6 +279,9 @@ def render_long_video_via_github(video_id, auto_cleanup=True, download_local=Fal
             break
     if local_thumb and local_thumb.exists() and local_thumb not in files_to_push:
         files_to_push.append(local_thumb)
+    pub_thumb = PUBLIC_DIR / f"thumbnail_{video_id}.jpg"
+    if pub_thumb.exists() and pub_thumb not in files_to_push:
+        files_to_push.append(pub_thumb)
 
     print(f"📦 Các file nguyên liệu cần đưa lên ({len(files_to_push)} files):")
     for fp in files_to_push:
