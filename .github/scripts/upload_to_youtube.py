@@ -52,6 +52,7 @@ def upload_video_to_youtube(video_path, video_id):
     info_file = None
     possible_infos = [
         vpath.parent / "info.json",
+        Path("output") / video_id / "info.json",
         Path("remotion-video/public") / f"info_{video_id}.json",
         Path("pipeline") / f"script_{video_id}.json",
         Path("remotion-video/public") / f"video_data_{video_id}.json"
@@ -151,6 +152,8 @@ def upload_video_to_youtube(video_path, video_id):
         vpath.parent / f"thumbnail_{video_id}_A.jpg",
         vpath.parent / f"thumbnail_{video_id}.jpg",
         vpath.parent / "thumbnail.jpg",
+        Path("output") / video_id / f"thumbnail_{video_id}.jpg",
+        Path("output") / video_id / "thumbnail.jpg",
         Path("remotion-video/public") / f"thumbnail_{video_id}.jpg"
     ]
     for pt in possible_thumbs:

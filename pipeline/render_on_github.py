@@ -205,7 +205,28 @@ def render_long_video_via_github(video_id, auto_cleanup=True, download_local=Fal
     print("✨ Bảo mật: Không lưu MP4/Release trên GitHub, tự động dọn sạch Git")
     print("========================================================")
 
-    # 0. Tiền xử lý chuẩn hóa: Đổi tên các bản render cũ trên Local & Google Drive trước khi render
+    # 0.1 QUY CHUẨN MỚI 1: Tự động cập nhật kịch bản vào Excel TRƯỚC KHI RENDER
+    try:
+        from pipeline.export_scripts_excel import export_video_to_excel
+        export_video_to_excel(video_id, project="long")
+    except Exception as e:
+        print(f"⚠️ Pre-render Excel: {e}")
+
+    # 0.2 QUY CHUẨN MỚI 2: Copy toàn bộ hình ảnh / video B-roll đã cắt vào output/{video_id}/input/
+    try:
+        from pipeline.pack_inputs import pack_video_input
+        pack_video_input(video_id)
+    except Exception as e:
+        print(f"⚠️ Pre-render Pack Input: {e}")
+
+    # 0.3 QUY CHUẨN MỚI 3: Copy toàn bộ thư mục input/ lên Google Drive
+    try:
+        from pipeline.sync_input_to_drive import sync_input_to_drive
+        sync_input_to_drive(video_id, project="long")
+    except Exception as e:
+        print(f"⚠️ Pre-render Sync Drive Input: {e}")
+
+    # 0.4 Tiền xử lý chuẩn hóa: Đổi tên các bản render cũ trên Local & Google Drive trước khi render
     try:
         from pipeline.archive_render import archive_previous_renders
         archive_previous_renders(video_id, target_filename=f"video_{video_id}.mp4")

@@ -50,9 +50,9 @@ export interface StylePresetConfig {
 
 export const STYLE_PRESETS: Record<string, StylePresetConfig> = {
   zen_amber: {
-    filter: "contrast(1.02) saturate(0.92) sepia(0.08)",
-    washColor: "rgba(224, 169, 109, 0.04)",
-    vignette: "radial-gradient(circle at 50% 50%, transparent 68%, rgba(0, 0, 0, 0.22) 100%)",
+    filter: "none",
+    washColor: "transparent",
+    vignette: "none",
   },
   clean_natural: {
     filter: "none",
@@ -539,7 +539,7 @@ const LongVideoKaraokeText: React.FC<{
 }> = ({ text, durationInFrames, localFrame }) => {
   const words = useMemo(() => {
     // Triệt tiêu hoàn toàn dấu "/" và ký tự ngắt nhịp trong văn bản hiển thị
-    const cleanStr = text.replace(/[\/]/g, " ").replace(/\s{2,}/g, " ").trim();
+    const cleanStr = text.replace(/[\/]/g, " ").replace(/,,/g, ",").replace(/\s{2,}/g, " ").trim();
     const rawWords = cleanStr.split(/\s+/).filter((w) => w.length > 0 && w !== "/");
     if (rawWords.length === 0) return [];
 
@@ -637,7 +637,7 @@ const PacedSentenceCaption: React.FC<{ scene: EssaySceneItem }> = ({
 
   // Tách văn bản thành từng câu ngắn tự nhiên, triệt tiêu hoàn toàn dấu "/"
   const sentences = useMemo(() => {
-    const raw = (scene.text || "").trim();
+    const raw = (scene.text || "").replace(/,,/g, ",").trim();
     // Tách theo dấu gạch chéo "/" (ngắt ý trong kịch bản)
     const chunks = raw.split(/\s*\/\s*/);
     const result: string[] = [];
@@ -645,15 +645,15 @@ const PacedSentenceCaption: React.FC<{ scene: EssaySceneItem }> = ({
       const matches = chunk.match(/[^.?!:]+[.?!:]?/g);
       if (matches && matches.length > 0) {
         for (const m of matches) {
-          const cleaned = m.replace(/[\/]/g, "").trim();
+          const cleaned = m.replace(/[\/]/g, "").replace(/,,/g, ",").trim();
           if (cleaned.length > 0) result.push(cleaned);
         }
       } else {
-        const cleaned = chunk.replace(/[\/]/g, "").trim();
+        const cleaned = chunk.replace(/[\/]/g, "").replace(/,,/g, ",").trim();
         if (cleaned.length > 0) result.push(cleaned);
       }
     }
-    return result.length > 0 ? result : [raw.replace(/[\/]/g, "").trim()];
+    return result.length > 0 ? result : [raw.replace(/[\/]/g, "").replace(/,,/g, ",").trim()];
   }, [scene.text]);
 
   // Tính toán thời gian phân bổ cho từng câu dựa theo số lượng từ
