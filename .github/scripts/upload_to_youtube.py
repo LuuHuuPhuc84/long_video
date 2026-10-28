@@ -51,11 +51,14 @@ def upload_video_to_youtube(video_path, video_id):
     # Tìm thông tin metadata (ưu tiên info.json, sau đó là video_data_*.json)
     info_file = None
     possible_infos = [
-        vpath.parent / "info.json",
         Path("output") / video_id / "info.json",
+        Path("output") / video_id / "input" / "info.json",
+        vpath.parent / "info.json",
+        vpath.parent / "input" / "info.json",
+        Path("remotion-video/public") / "info.json",
         Path("remotion-video/public") / f"info_{video_id}.json",
-        Path("pipeline") / f"script_{video_id}.json",
-        Path("remotion-video/public") / f"video_data_{video_id}.json"
+        Path("remotion-video/public") / f"video_data_{video_id}.json",
+        Path("pipeline") / f"script_{video_id}.json"
     ]
     for p in possible_infos:
         if p.exists():
@@ -71,7 +74,7 @@ def upload_video_to_youtube(video_path, video_id):
 
     if info_file and info_file.exists():
         try:
-            with open(info_file, "r", encoding="utf-8") as f:
+            with open(info_file, "r", encoding="utf-8-sig") as f:
                 d = json.load(f)
             if d.get("skip_youtube") or d.get("no_youtube"):
                 print("ℹ️ Bỏ qua upload YouTube theo cấu hình info.json (skip_youtube=True).")
