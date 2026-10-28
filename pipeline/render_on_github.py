@@ -250,7 +250,7 @@ def render_long_video_via_github(video_id, auto_cleanup=True, download_local=Fal
 
     # 2. Thu thập danh sách file cần thiết của riêng video này
     files_to_push = [meta_path]
-    audio_file = meta_data.get("audioFile", "")
+    audio_file = meta_data.get("audioFile") or meta_data.get("audio_file") or f"voiceover_{video_id}.wav"
     if audio_file:
         audio_path = PUBLIC_DIR / audio_file
         if audio_path.exists():
