@@ -82,7 +82,7 @@ def upload_video_to_youtube(video_path, video_id):
             title = d.get("title") or title
             description = d.get("description") or description
             tags = d.get("tags") or tags
-            schedule_str = d.get("schedule")
+            schedule_str = d.get("schedule") or d.get("schedule_time")
             if isinstance(d.get("status"), dict):
                 privacy_status = d["status"].get("privacyStatus", "private")
             elif d.get("privacyStatus"):
