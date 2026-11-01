@@ -11,6 +11,12 @@ import {
   Easing,
 } from "remotion";
 
+export interface WordTiming {
+  word: string;
+  startFrame: number;
+  endFrame: number;
+}
+
 export interface EssaySceneItem {
   scene: number;
   chapter?: string;
@@ -24,6 +30,7 @@ export interface EssaySceneItem {
   is_end_screen?: boolean;
   startFrame: number;
   durationInFrames: number;
+  words?: WordTiming[];
 }
 
 export interface TeaEssayVideoProps {
@@ -628,12 +635,231 @@ const LongVideoKaraokeText: React.FC<{
   );
 };
 
+interface SentenceGroup {
+  words: WordTiming[];
+  startFrame: number;
+  endFrame: number;
+  appearFrame: number;
+  disappearFrame: number;
+}
+
+// Phụ đề Karaoke chuẩn từng từ (Exact Word-level Karaoke): Khớp từng mili-giây theo Whisper
+const ExactWordKaraokeCaption: React.FC<{
+  scene: EssaySceneItem;
+  frame: number;
+}> = ({ scene, frame }) => {
+  const groups: SentenceGroup[] = useMemo(() => {
+    const rawWords = scene.words || [];
+    if (rawWords.length === 0) return [];
+
+    const result: SentenceGroup[] = [];
+    let currentWords: WordTiming[] = [];
+
+    for (let i = 0; i < rawWords.length; i++) {
+      const w = rawWords[i];
+      currentWords.push(w);
+
+      const nextW = rawWords[i + 1];
+      const isPunctuationEnd =
+        /[.?!:]$/.test(w.word) || (/[.,;]$/.test(w.word) && currentWords.length >= 12);
+      const isLargeGap = nextW && nextW.startFrame - w.endFrame >= 18;
+      const isLast = i === rawWords.length - 1;
+
+      if (isPunctuationEnd || isLargeGap || isLast) {
+        const sStart = currentWords[0].startFrame;
+        const sEnd = currentWords[currentWords.length - 1].endFrame;
+        result.push({
+          words: currentWords,
+          startFrame: sStart,
+          endFrame: sEnd,
+          appearFrame: sStart,
+          disappearFrame: sEnd,
+        });
+        currentWords = [];
+      }
+    }
+
+    if (currentWords.length > 0) {
+      const sStart = currentWords[0].startFrame;
+      const sEnd = currentWords[currentWords.length - 1].endFrame;
+      result.push({
+        words: currentWords,
+        startFrame: sStart,
+        endFrame: sEnd,
+        appearFrame: sStart,
+        disappearFrame: sEnd,
+      });
+    }
+
+    // Thiết lập appearFrame & disappearFrame êm ái
+    for (let i = 0; i < result.length; i++) {
+      const prev = result[i - 1];
+      const next = result[i + 1];
+
+      if (i === 0) {
+        result[i].appearFrame = 0;
+      } else {
+        result[i].appearFrame = prev.disappearFrame;
+      }
+
+      if (next) {
+        const midPoint = Math.max(result[i].endFrame + 8, next.startFrame - 4);
+        result[i].disappearFrame = midPoint;
+      } else {
+        result[i].disappearFrame = scene.durationInFrames;
+      }
+    }
+
+    return result;
+  }, [scene.words, scene.durationInFrames]);
+
+  const activeGroup =
+    groups.find((g) => frame >= g.appearFrame && frame < g.disappearFrame) ||
+    groups[groups.length - 1];
+
+  if (!activeGroup) return null;
+
+  const localSentenceFrame = Math.max(0, frame - activeGroup.appearFrame);
+  const sentenceFade = interpolate(localSentenceFrame, [0, 8], [0, 1], {
+    extrapolateRight: "clamp",
+  });
+  const sentenceSlide = interpolate(localSentenceFrame, [0, 8], [8, 0], {
+    extrapolateRight: "clamp",
+    easing: Easing.out(Easing.quad),
+  });
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        bottom: 75,
+        left: 0,
+        right: 0,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "0 100px",
+        zIndex: 45,
+      }}
+    >
+      {/* 1. Thẻ Highlight đắt giá ở trên */}
+      {scene.highlight && (
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 12,
+            padding: "10px 32px",
+            background: "linear-gradient(135deg, #fbbf24 0%, #e0a96d 100%)",
+            borderRadius: 40,
+            boxShadow:
+              "0 8px 25px rgba(0, 0, 0, 0.65), 0 0 15px rgba(251, 191, 36, 0.45)",
+            marginBottom: 16,
+          }}
+        >
+          <span
+            style={{
+              fontSize: 22,
+              fontWeight: 900,
+              color: "#0c0e14",
+              letterSpacing: 0.8,
+              WebkitFontSmoothing: "antialiased",
+            }}
+          >
+            ✦ {scene.highlight}
+          </span>
+        </div>
+      )}
+
+      {/* 2. Khung phụ đề Karaoke chuẩn từng từ (Exact Word-level Bounce) */}
+      <div
+        style={{
+          maxWidth: 1450,
+          background: "rgba(10, 13, 20, 0.75)",
+          backdropFilter: "blur(18px)",
+          border: "1.5px solid rgba(255, 255, 255, 0.16)",
+          borderRadius: 22,
+          padding: "20px 45px",
+          textAlign: "center",
+          boxShadow: "0 18px 45px rgba(0, 0, 0, 0.65)",
+          opacity: sentenceFade,
+          transform: `translateY(${sentenceSlide}px)`,
+        }}
+      >
+        <div
+          style={{
+            fontSize: 42,
+            lineHeight: 1.6,
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center",
+            rowGap: 10,
+            columnGap: 14,
+            margin: 0,
+          }}
+        >
+          {activeGroup.words.map((item, idx) => {
+            const isCurrent = frame >= item.startFrame && frame < item.endFrame;
+            const isPast = frame >= item.endFrame;
+
+            let scale = 1.0;
+            let color = "rgba(255, 255, 255, 0.52)";
+            let fontWeight = 600;
+            let textShadow = "0 2px 8px rgba(0,0,0,0.85)";
+
+            if (isCurrent) {
+              const progress =
+                (frame - item.startFrame) /
+                Math.max(item.endFrame - item.startFrame, 1);
+              scale = interpolate(progress, [0, 0.3, 1], [1.02, 1.08, 1.04], {
+                extrapolateLeft: "clamp",
+                extrapolateRight: "clamp",
+              });
+              color = "#e0a96d"; // Vàng hổ phách Nửa Chén Trà
+              fontWeight = 800;
+              textShadow =
+                "0 0 25px rgba(224, 169, 109, 0.85), 0 0 10px rgba(224, 169, 109, 0.6), 0 3px 10px rgba(0,0,0,0.95)";
+            } else if (isPast) {
+              color = "#ffffff";
+              fontWeight = 600;
+            }
+
+            return (
+              <span
+                key={idx}
+                style={{
+                  display: "inline-block",
+                  transform: `scale(${scale})`,
+                  transformOrigin: "center center",
+                  color,
+                  fontWeight,
+                  textShadow,
+                  margin: "0 4px",
+                  transition: "color 0.1s ease, transform 0.1s ease",
+                }}
+              >
+                {item.word}
+              </span>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // CƠ CHẾ PHỤ ĐỀ NHỊP ĐIỆU (Paced Sentence Captions) KẾT HỢP KARAOKE WORD BOUNCE:
 // Tự động ngắt đoạn văn thành các câu ngắn và hiển thị theo nhịp đọc, chữ to (42px) cực kỳ dễ đọc
 const PacedSentenceCaption: React.FC<{ scene: EssaySceneItem }> = ({
   scene,
 }) => {
   const frame = useCurrentFrame();
+
+  // ƯU TIÊN SỐ 1: Sử dụng mốc thời gian từng từ chính xác từ Whisper (Text Lock)
+  if (scene.words && scene.words.length > 0) {
+    return <ExactWordKaraokeCaption scene={scene} frame={frame} />;
+  }
 
   // Tách văn bản thành từng câu ngắn tự nhiên, triệt tiêu hoàn toàn dấu "/"
   const sentences = useMemo(() => {
