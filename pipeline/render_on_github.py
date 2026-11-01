@@ -393,7 +393,10 @@ def render_long_video_via_github(video_id, auto_cleanup=True, download_local=Fal
     print("========================================================")
     return success
 
+render_via_github = render_long_video_via_github
+
 if __name__ == "__main__":
+
     vid = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("--") else "essay_ep01"
     dl_flag = "--download" in sys.argv
     render_long_video_via_github(vid, download_local=dl_flag)
