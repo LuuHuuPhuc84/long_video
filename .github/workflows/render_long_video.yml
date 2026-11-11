@@ -48,10 +48,13 @@ jobs:
           cache-dependency-path: remotion-video/package-lock.json
 
       - name: 📦 Cài đặt thư viện hệ thống cho Chromium & FFmpeg
+        timeout-minutes: 5
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 libgbm1 fonts-noto fonts-noto-cjk fonts-roboto fonts-dejavu-core
-          sudo apt-get install -y libasound2 || sudo apt-get install -y libasound2t64
+          sudo apt-get update -o Acquire::Retries=3 -o Acquire::http::Timeout=20
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+            ffmpeg libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 libxkbcommon0 \
+            libxcomposite1 libxdamage1 libxrandr2 libgbm1 fonts-noto fonts-roboto fonts-dejavu-core
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y libasound2 || sudo DEBIAN_FRONTEND=noninteractive apt-get install -y libasound2t64
 
       - name: 📦 Cài đặt Dependencies Remotion
         working-directory: remotion-video
