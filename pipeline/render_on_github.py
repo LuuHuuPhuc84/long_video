@@ -20,12 +20,15 @@ PUBLIC_DIR = REMOTION_DIR / "public"
 OUTPUT_DIR = BASE_DIR / "output"
 TOKEN_FILE = BASE_DIR / "pipeline" / "gdrive_token.json"
 
+GIT_CMD = r"D:\Programs\git\cmd\git.exe" if Path(r"D:\Programs\git\cmd\git.exe").exists() else "git"
+os.environ["PATH"] = r"D:\Programs\git\cmd;D:\Programs\nodejs;D:\Programs\ffmpeg\bin;" + os.environ.get("PATH", "")
+
 REPO_OWNER = "LuuHuuPhuc84"
 REPO_NAME = "long_video"
 API_BASE = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}"
 
 def run_git(cmd_list, check=True):
-    res = subprocess.run(["git"] + cmd_list, cwd=str(BASE_DIR), capture_output=True, text=True, encoding="utf-8")
+    res = subprocess.run([GIT_CMD] + cmd_list, cwd=str(BASE_DIR), capture_output=True, text=True, encoding="utf-8")
     if check and res.returncode != 0:
         print(f"❌ Git error: {res.stderr.strip()}")
         raise RuntimeError(res.stderr.strip())
