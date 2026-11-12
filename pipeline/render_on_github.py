@@ -233,7 +233,17 @@ def render_long_video_via_github(video_id, auto_cleanup=True, download_local=Fal
     except Exception as e:
         print(f"⚠️ Pre-render archive: {e}")
 
-    # 1. Kiểm tra file Metadata
+    # 1. Đồng bộ toàn bộ các tệp nguyên liệu từ output/{video_id}/input/ sang PUBLIC_DIR
+    input_dir = OUTPUT_DIR / video_id / "input"
+    if input_dir.exists():
+        for f in input_dir.glob("*.*"):
+            shutil.copy2(f, PUBLIC_DIR / f.name)
+        if (input_dir / "video_data.json").exists():
+            shutil.copy2(input_dir / "video_data.json", PUBLIC_DIR / f"video_data_{video_id}.json")
+        if (input_dir / "voiceover.wav").exists():
+            shutil.copy2(input_dir / "voiceover.wav", PUBLIC_DIR / f"voiceover_{video_id}.wav")
+
+    # 1b. Kiểm tra file Metadata
     meta_path = PUBLIC_DIR / f"video_data_{video_id}.json"
     if not meta_path.exists():
         meta_path = PUBLIC_DIR / f"{video_id}.json"
