@@ -1,0 +1,6919 @@
+{
+  "id": "essay_ep12",
+  "video_id": "essay_ep12",
+  "title": "5 Vết Nứt Âm Thầm Dưới Một Mái Nhà Bình Yên",
+  "title_hook": "NGỒI CẠNH NHAU... SAO LÒNG LẠNH NGẮT?",
+  "channel": "Nửa Chén Trà",
+  "slogan": "Nhìn sâu để sống nhẹ",
+  "schedule": "2026-11-12 19:30",
+  "schedule_time": "2026-11-12 19:30",
+  "status": "Đã lên lịch",
+  "speed": 1.25,
+  "pause": 0.35,
+  "voice": "giong6",
+  "containsSyntheticMedia": true,
+  "total_duration": 382.0,
+  "description": "Vì sao hai người từng yêu nhau tha thiết, khi về chung một nhà lại thấy cô đơn hơn cả lúc độc thân? 5 vết nứt âm thầm rút cạn hơi ấm hôn nhân và quy tắc 3 phút mỗi tối giúp hàn gắn tổ ấm bình yên. #nuachentra #nhinsaoudesongnhe #nct_ep12",
+  "tags": [
+    "nửa chén trà",
+    "hôn nhân gia đình",
+    "cô đơn trong hôn nhân",
+    "tâm lý học",
+    "chữa lành",
+    "triết lý sống",
+    "nhìn sâu để sống nhẹ"
+  ],
+  "scenes": [
+    {
+      "scene": 1,
+      "tag": "Căn bếp lúc 9h tối",
+      "text": "Chín giờ tối,, chị Lan đứng rửa nốt chồng bát đĩa cuối cùng trong bồn nước lạnh. Cách đó chỉ đúng ba mét,, trên chiếc ghế sofa ngoài phòng khách,, anh Tuấn chồng chị đang cười rất tươi... nhưng là cười với một đoạn video trên màn hình điện thoại. Trong căn nhà rộng sáu mươi mét vuông,, chỉ có tiếng nước chảy róc rách và tiếng tivi mở nhỏ không ai xem.",
+      "highlight": "CÁCH NHAU BA MÉT · HAI THẾ GIỚI",
+      "visual_type": "AI_IMAGE",
+      "visual": "essay_ep12_scene1.jpg",
+      "duration": 18.0,
+      "start": 0.0,
+      "end": 18.0,
+      "startFrame": 0,
+      "durationInFrames": 572,
+      "words": [
+        {
+          "word": "Chín",
+          "startFrame": 0,
+          "endFrame": 6
+        },
+        {
+          "word": "giờ",
+          "startFrame": 6,
+          "endFrame": 11
+        },
+        {
+          "word": "tối,,",
+          "startFrame": 11,
+          "endFrame": 19
+        },
+        {
+          "word": "chị",
+          "startFrame": 33,
+          "endFrame": 35
+        },
+        {
+          "word": "Lan",
+          "startFrame": 35,
+          "endFrame": 40
+        },
+        {
+          "word": "đứng",
+          "startFrame": 40,
+          "endFrame": 50
+        },
+        {
+          "word": "rửa",
+          "startFrame": 50,
+          "endFrame": 55
+        },
+        {
+          "word": "nốt",
+          "startFrame": 55,
+          "endFrame": 59
+        },
+        {
+          "word": "chồng",
+          "startFrame": 59,
+          "endFrame": 67
+        },
+        {
+          "word": "bát",
+          "startFrame": 67,
+          "endFrame": 76
+        },
+        {
+          "word": "đĩa",
+          "startFrame": 76,
+          "endFrame": 84
+        },
+        {
+          "word": "cuối",
+          "startFrame": 84,
+          "endFrame": 91
+        },
+        {
+          "word": "cùng",
+          "startFrame": 91,
+          "endFrame": 96
+        },
+        {
+          "word": "trong",
+          "startFrame": 96,
+          "endFrame": 104
+        },
+        {
+          "word": "bồn",
+          "startFrame": 104,
+          "endFrame": 112
+        },
+        {
+          "word": "nước",
+          "startFrame": 112,
+          "endFrame": 116
+        },
+        {
+          "word": "lạnh.",
+          "startFrame": 116,
+          "endFrame": 122
+        },
+        {
+          "word": "Cách",
+          "startFrame": 139,
+          "endFrame": 144
+        },
+        {
+          "word": "đó",
+          "startFrame": 144,
+          "endFrame": 149
+        },
+        {
+          "word": "chỉ",
+          "startFrame": 149,
+          "endFrame": 156
+        },
+        {
+          "word": "đúng",
+          "startFrame": 156,
+          "endFrame": 162
+        },
+        {
+          "word": "ba",
+          "startFrame": 162,
+          "endFrame": 168
+        },
+        {
+          "word": "mét,,",
+          "startFrame": 168,
+          "endFrame": 176
+        },
+        {
+          "word": "trên",
+          "startFrame": 176,
+          "endFrame": 185
+        },
+        {
+          "word": "chiếc",
+          "startFrame": 185,
+          "endFrame": 192
+        },
+        {
+          "word": "ghế",
+          "startFrame": 192,
+          "endFrame": 196
+        },
+        {
+          "word": "sofa",
+          "startFrame": 196,
+          "endFrame": 205
+        },
+        {
+          "word": "ngoài",
+          "startFrame": 205,
+          "endFrame": 217
+        },
+        {
+          "word": "phòng",
+          "startFrame": 217,
+          "endFrame": 223
+        },
+        {
+          "word": "khách,,",
+          "startFrame": 223,
+          "endFrame": 229
+        },
+        {
+          "word": "anh",
+          "startFrame": 242,
+          "endFrame": 246
+        },
+        {
+          "word": "Tuấn",
+          "startFrame": 246,
+          "endFrame": 252
+        },
+        {
+          "word": "chồng",
+          "startFrame": 252,
+          "endFrame": 258
+        },
+        {
+          "word": "chị",
+          "startFrame": 258,
+          "endFrame": 264
+        },
+        {
+          "word": "đang",
+          "startFrame": 264,
+          "endFrame": 271
+        },
+        {
+          "word": "cười",
+          "startFrame": 271,
+          "endFrame": 278
+        },
+        {
+          "word": "rất",
+          "startFrame": 278,
+          "endFrame": 283
+        },
+        {
+          "word": "tươi...",
+          "startFrame": 283,
+          "endFrame": 292
+        },
+        {
+          "word": "nhưng",
+          "startFrame": 307,
+          "endFrame": 310
+        },
+        {
+          "word": "là",
+          "startFrame": 310,
+          "endFrame": 316
+        },
+        {
+          "word": "cười",
+          "startFrame": 316,
+          "endFrame": 323
+        },
+        {
+          "word": "với",
+          "startFrame": 323,
+          "endFrame": 327
+        },
+        {
+          "word": "một",
+          "startFrame": 327,
+          "endFrame": 332
+        },
+        {
+          "word": "đoạn",
+          "startFrame": 332,
+          "endFrame": 338
+        },
+        {
+          "word": "video",
+          "startFrame": 338,
+          "endFrame": 347
+        },
+        {
+          "word": "trên",
+          "startFrame": 347,
+          "endFrame": 355
+        },
+        {
+          "word": "màn",
+          "startFrame": 355,
+          "endFrame": 362
+        },
+        {
+          "word": "hình",
+          "startFrame": 362,
+          "endFrame": 365
+        },
+        {
+          "word": "điện",
+          "startFrame": 365,
+          "endFrame": 371
+        },
+        {
+          "word": "thoại.",
+          "startFrame": 371,
+          "endFrame": 377
+        },
+        {
+          "word": "Trong",
+          "startFrame": 390,
+          "endFrame": 395
+        },
+        {
+          "word": "căn",
+          "startFrame": 395,
+          "endFrame": 403
+        },
+        {
+          "word": "nhà",
+          "startFrame": 403,
+          "endFrame": 408
+        },
+        {
+          "word": "rộng",
+          "startFrame": 408,
+          "endFrame": 418
+        },
+        {
+          "word": "sáu",
+          "startFrame": 418,
+          "endFrame": 428
+        },
+        {
+          "word": "mươi",
+          "startFrame": 428,
+          "endFrame": 437
+        },
+        {
+          "word": "mét",
+          "startFrame": 437,
+          "endFrame": 443
+        },
+        {
+          "word": "vuông,,",
+          "startFrame": 458,
+          "endFrame": 461
+        },
+        {
+          "word": "chỉ",
+          "startFrame": 461,
+          "endFrame": 467
+        },
+        {
+          "word": "có",
+          "startFrame": 467,
+          "endFrame": 475
+        },
+        {
+          "word": "tiếng",
+          "startFrame": 475,
+          "endFrame": 478
+        },
+        {
+          "word": "nước",
+          "startFrame": 478,
+          "endFrame": 487
+        },
+        {
+          "word": "chảy",
+          "startFrame": 487,
+          "endFrame": 493
+        },
+        {
+          "word": "róc",
+          "startFrame": 493,
+          "endFrame": 499
+        },
+        {
+          "word": "rách",
+          "startFrame": 499,
+          "endFrame": 508
+        },
+        {
+          "word": "và",
+          "startFrame": 508,
+          "endFrame": 517
+        },
+        {
+          "word": "tiếng",
+          "startFrame": 517,
+          "endFrame": 524
+        },
+        {
+          "word": "tivi",
+          "startFrame": 524,
+          "endFrame": 533
+        },
+        {
+          "word": "mở",
+          "startFrame": 533,
+          "endFrame": 539
+        },
+        {
+          "word": "nhỏ",
+          "startFrame": 539,
+          "endFrame": 547
+        },
+        {
+          "word": "không",
+          "startFrame": 547,
+          "endFrame": 553
+        },
+        {
+          "word": "ai",
+          "startFrame": 553,
+          "endFrame": 558
+        },
+        {
+          "word": "xem.",
+          "startFrame": 558,
+          "endFrame": 564
+        }
+      ],
+      "image": "essay_ep12_scene1.jpg",
+      "media_type": "image"
+    },
+    {
+      "scene": 2,
+      "tag": "Nghịch lý của những cuộc hôn nhân \"bình thường\"",
+      "text": "Họ không ngoại tình. Không đập bàn quát tháo. Nhìn từ bên ngoài vào,, ai cũng bảo gia đình chị Lan yên ấm. Nhưng chỉ người ở bên trong mới hiểu,, bầu không khí ấy đặc quánh và ngột ngạt đến mức nào. Vì sao hai con người từng thức trắng đêm chỉ để nhắn tin cho nhau,, giờ nằm chung một chiếc giường lại thấy cô đơn hơn cả lúc độc thân?",
+      "highlight": "KHÔNG CÃI VÃ · NHƯNG NGỘT NGẠT",
+      "visual_type": "AI_IMAGE",
+      "visual": "essay_ep12_scene2.jpg",
+      "duration": 17.0,
+      "start": 18.0,
+      "end": 35.0,
+      "startFrame": 582,
+      "durationInFrames": 571,
+      "words": [
+        {
+          "word": "Họ",
+          "startFrame": 0,
+          "endFrame": 3
+        },
+        {
+          "word": "không",
+          "startFrame": 3,
+          "endFrame": 9
+        },
+        {
+          "word": "ngoại",
+          "startFrame": 9,
+          "endFrame": 15
+        },
+        {
+          "word": "tình.",
+          "startFrame": 15,
+          "endFrame": 21
+        },
+        {
+          "word": "Không",
+          "startFrame": 38,
+          "endFrame": 42
+        },
+        {
+          "word": "đập",
+          "startFrame": 42,
+          "endFrame": 46
+        },
+        {
+          "word": "bàn",
+          "startFrame": 46,
+          "endFrame": 52
+        },
+        {
+          "word": "quát",
+          "startFrame": 52,
+          "endFrame": 59
+        },
+        {
+          "word": "tháo.",
+          "startFrame": 59,
+          "endFrame": 66
+        },
+        {
+          "word": "Nhìn",
+          "startFrame": 81,
+          "endFrame": 85
+        },
+        {
+          "word": "từ",
+          "startFrame": 85,
+          "endFrame": 91
+        },
+        {
+          "word": "bên",
+          "startFrame": 91,
+          "endFrame": 93
+        },
+        {
+          "word": "ngoài",
+          "startFrame": 93,
+          "endFrame": 101
+        },
+        {
+          "word": "vào,,",
+          "startFrame": 101,
+          "endFrame": 106
+        },
+        {
+          "word": "ai",
+          "startFrame": 119,
+          "endFrame": 122
+        },
+        {
+          "word": "cũng",
+          "startFrame": 122,
+          "endFrame": 126
+        },
+        {
+          "word": "bảo",
+          "startFrame": 126,
+          "endFrame": 134
+        },
+        {
+          "word": "gia",
+          "startFrame": 134,
+          "endFrame": 138
+        },
+        {
+          "word": "đình",
+          "startFrame": 138,
+          "endFrame": 143
+        },
+        {
+          "word": "chị",
+          "startFrame": 143,
+          "endFrame": 149
+        },
+        {
+          "word": "Lan",
+          "startFrame": 149,
+          "endFrame": 154
+        },
+        {
+          "word": "yên",
+          "startFrame": 154,
+          "endFrame": 160
+        },
+        {
+          "word": "ấm.",
+          "startFrame": 160,
+          "endFrame": 167
+        },
+        {
+          "word": "Nhưng",
+          "startFrame": 167,
+          "endFrame": 191
+        },
+        {
+          "word": "chỉ",
+          "startFrame": 191,
+          "endFrame": 197
+        },
+        {
+          "word": "người",
+          "startFrame": 197,
+          "endFrame": 202
+        },
+        {
+          "word": "ở",
+          "startFrame": 202,
+          "endFrame": 209
+        },
+        {
+          "word": "bên",
+          "startFrame": 209,
+          "endFrame": 212
+        },
+        {
+          "word": "trong",
+          "startFrame": 212,
+          "endFrame": 218
+        },
+        {
+          "word": "mới",
+          "startFrame": 218,
+          "endFrame": 224
+        },
+        {
+          "word": "hiểu,,",
+          "startFrame": 224,
+          "endFrame": 231
+        },
+        {
+          "word": "bầu",
+          "startFrame": 245,
+          "endFrame": 248
+        },
+        {
+          "word": "không",
+          "startFrame": 248,
+          "endFrame": 252
+        },
+        {
+          "word": "khí",
+          "startFrame": 252,
+          "endFrame": 258
+        },
+        {
+          "word": "ấy",
+          "startFrame": 258,
+          "endFrame": 263
+        },
+        {
+          "word": "đặc",
+          "startFrame": 263,
+          "endFrame": 268
+        },
+        {
+          "word": "quánh",
+          "startFrame": 268,
+          "endFrame": 275
+        },
+        {
+          "word": "và",
+          "startFrame": 275,
+          "endFrame": 287
+        },
+        {
+          "word": "ngột",
+          "startFrame": 287,
+          "endFrame": 294
+        },
+        {
+          "word": "ngạt",
+          "startFrame": 294,
+          "endFrame": 300
+        },
+        {
+          "word": "đến",
+          "startFrame": 300,
+          "endFrame": 307
+        },
+        {
+          "word": "mức",
+          "startFrame": 307,
+          "endFrame": 313
+        },
+        {
+          "word": "nào.",
+          "startFrame": 313,
+          "endFrame": 319
+        },
+        {
+          "word": "Vì",
+          "startFrame": 334,
+          "endFrame": 343
+        },
+        {
+          "word": "sao",
+          "startFrame": 343,
+          "endFrame": 354
+        },
+        {
+          "word": "hai",
+          "startFrame": 354,
+          "endFrame": 358
+        },
+        {
+          "word": "con",
+          "startFrame": 358,
+          "endFrame": 368
+        },
+        {
+          "word": "người",
+          "startFrame": 368,
+          "endFrame": 383
+        },
+        {
+          "word": "từng",
+          "startFrame": 383,
+          "endFrame": 388
+        },
+        {
+          "word": "thức",
+          "startFrame": 388,
+          "endFrame": 395
+        },
+        {
+          "word": "trắng",
+          "startFrame": 395,
+          "endFrame": 402
+        },
+        {
+          "word": "đêm",
+          "startFrame": 402,
+          "endFrame": 408
+        },
+        {
+          "word": "chỉ",
+          "startFrame": 408,
+          "endFrame": 413
+        },
+        {
+          "word": "để",
+          "startFrame": 413,
+          "endFrame": 419
+        },
+        {
+          "word": "nhắn",
+          "startFrame": 419,
+          "endFrame": 425
+        },
+        {
+          "word": "tin",
+          "startFrame": 425,
+          "endFrame": 431
+        },
+        {
+          "word": "cho",
+          "startFrame": 431,
+          "endFrame": 438
+        },
+        {
+          "word": "nhau,,",
+          "startFrame": 453,
+          "endFrame": 461
+        },
+        {
+          "word": "giờ",
+          "startFrame": 461,
+          "endFrame": 467
+        },
+        {
+          "word": "nằm",
+          "startFrame": 467,
+          "endFrame": 474
+        },
+        {
+          "word": "chung",
+          "startFrame": 474,
+          "endFrame": 479
+        },
+        {
+          "word": "một",
+          "startFrame": 479,
+          "endFrame": 486
+        },
+        {
+          "word": "chiếc",
+          "startFrame": 486,
+          "endFrame": 493
+        },
+        {
+          "word": "giường",
+          "startFrame": 493,
+          "endFrame": 508
+        },
+        {
+          "word": "lại",
+          "startFrame": 508,
+          "endFrame": 516
+        },
+        {
+          "word": "thấy",
+          "startFrame": 516,
+          "endFrame": 523
+        },
+        {
+          "word": "cô",
+          "startFrame": 523,
+          "endFrame": 529
+        },
+        {
+          "word": "đơn",
+          "startFrame": 529,
+          "endFrame": 534
+        },
+        {
+          "word": "hơn",
+          "startFrame": 534,
+          "endFrame": 541
+        },
+        {
+          "word": "cả",
+          "startFrame": 541,
+          "endFrame": 546
+        },
+        {
+          "word": "lúc",
+          "startFrame": 546,
+          "endFrame": 554
+        },
+        {
+          "word": "độc",
+          "startFrame": 554,
+          "endFrame": 558
+        },
+        {
+          "word": "thân?",
+          "startFrame": 558,
+          "endFrame": 564
+        }
+      ],
+      "image": "essay_ep12_scene2.jpg",
+      "media_type": "image"
+    },
+    {
+      "scene": 3,
+      "tag": "Ba lời hứa mở đầu",
+      "text": "Hôm nay,, bên Nửa Chén Trà,, chúng ta sẽ không nói những lời khuyên sáo rỗng. Tôi muốn cùng bạn nhìn thật sâu vào năm vết nứt âm thầm đang rút cạn hơi ấm của những cặp vợ chồng lâu năm,, và một quy tắc ba phút mỗi tối để tìm lại người bạn đời mà ta đã vô tình đánh lạc mất.",
+      "highlight": "5 VẾT NỨT VÔ HÌNH · QUY TẮC 3 PHÚT",
+      "visual_type": "USER_VIDEO",
+      "visual": "essay_ep12_broll_3.mp4",
+      "duration": 16.0,
+      "start": 35.0,
+      "end": 51.0,
+      "startFrame": 1164,
+      "durationInFrames": 498,
+      "words": [
+        {
+          "word": "Hôm",
+          "startFrame": 0,
+          "endFrame": 5
+        },
+        {
+          "word": "nay,,",
+          "startFrame": 5,
+          "endFrame": 12
+        },
+        {
+          "word": "bên",
+          "startFrame": 23,
+          "endFrame": 26
+        },
+        {
+          "word": "Nửa",
+          "startFrame": 26,
+          "endFrame": 36
+        },
+        {
+          "word": "Chén",
+          "startFrame": 36,
+          "endFrame": 41
+        },
+        {
+          "word": "Trà,,",
+          "startFrame": 41,
+          "endFrame": 50
+        },
+        {
+          "word": "chúng",
+          "startFrame": 61,
+          "endFrame": 64
+        },
+        {
+          "word": "ta",
+          "startFrame": 64,
+          "endFrame": 71
+        },
+        {
+          "word": "sẽ",
+          "startFrame": 71,
+          "endFrame": 77
+        },
+        {
+          "word": "không",
+          "startFrame": 77,
+          "endFrame": 82
+        },
+        {
+          "word": "nói",
+          "startFrame": 82,
+          "endFrame": 89
+        },
+        {
+          "word": "những",
+          "startFrame": 89,
+          "endFrame": 93
+        },
+        {
+          "word": "lời",
+          "startFrame": 93,
+          "endFrame": 101
+        },
+        {
+          "word": "khuyên",
+          "startFrame": 101,
+          "endFrame": 107
+        },
+        {
+          "word": "sáo",
+          "startFrame": 107,
+          "endFrame": 116
+        },
+        {
+          "word": "rỗng.",
+          "startFrame": 116,
+          "endFrame": 122
+        },
+        {
+          "word": "Tôi",
+          "startFrame": 134,
+          "endFrame": 140
+        },
+        {
+          "word": "muốn",
+          "startFrame": 140,
+          "endFrame": 146
+        },
+        {
+          "word": "cùng",
+          "startFrame": 146,
+          "endFrame": 152
+        },
+        {
+          "word": "bạn",
+          "startFrame": 152,
+          "endFrame": 158
+        },
+        {
+          "word": "nhìn",
+          "startFrame": 158,
+          "endFrame": 166
+        },
+        {
+          "word": "thật",
+          "startFrame": 166,
+          "endFrame": 171
+        },
+        {
+          "word": "sâu",
+          "startFrame": 171,
+          "endFrame": 182
+        },
+        {
+          "word": "vào",
+          "startFrame": 182,
+          "endFrame": 196
+        },
+        {
+          "word": "năm",
+          "startFrame": 196,
+          "endFrame": 201
+        },
+        {
+          "word": "vết",
+          "startFrame": 201,
+          "endFrame": 211
+        },
+        {
+          "word": "nứt",
+          "startFrame": 211,
+          "endFrame": 215
+        },
+        {
+          "word": "âm",
+          "startFrame": 215,
+          "endFrame": 227
+        },
+        {
+          "word": "thầm",
+          "startFrame": 227,
+          "endFrame": 235
+        },
+        {
+          "word": "đang",
+          "startFrame": 235,
+          "endFrame": 248
+        },
+        {
+          "word": "rút",
+          "startFrame": 248,
+          "endFrame": 257
+        },
+        {
+          "word": "cạn",
+          "startFrame": 257,
+          "endFrame": 266
+        },
+        {
+          "word": "hơi",
+          "startFrame": 266,
+          "endFrame": 270
+        },
+        {
+          "word": "ấm",
+          "startFrame": 270,
+          "endFrame": 278
+        },
+        {
+          "word": "của",
+          "startFrame": 278,
+          "endFrame": 283
+        },
+        {
+          "word": "những",
+          "startFrame": 283,
+          "endFrame": 287
+        },
+        {
+          "word": "cặp",
+          "startFrame": 287,
+          "endFrame": 296
+        },
+        {
+          "word": "vợ",
+          "startFrame": 296,
+          "endFrame": 302
+        },
+        {
+          "word": "chồng",
+          "startFrame": 302,
+          "endFrame": 305
+        },
+        {
+          "word": "lâu",
+          "startFrame": 305,
+          "endFrame": 313
+        },
+        {
+          "word": "năm,,",
+          "startFrame": 313,
+          "endFrame": 319
+        },
+        {
+          "word": "và",
+          "startFrame": 319,
+          "endFrame": 335
+        },
+        {
+          "word": "một",
+          "startFrame": 335,
+          "endFrame": 340
+        },
+        {
+          "word": "quy",
+          "startFrame": 340,
+          "endFrame": 346
+        },
+        {
+          "word": "tắc",
+          "startFrame": 346,
+          "endFrame": 353
+        },
+        {
+          "word": "ba",
+          "startFrame": 353,
+          "endFrame": 361
+        },
+        {
+          "word": "phút",
+          "startFrame": 361,
+          "endFrame": 370
+        },
+        {
+          "word": "mỗi",
+          "startFrame": 370,
+          "endFrame": 377
+        },
+        {
+          "word": "tối",
+          "startFrame": 377,
+          "endFrame": 386
+        },
+        {
+          "word": "để",
+          "startFrame": 386,
+          "endFrame": 400
+        },
+        {
+          "word": "tìm",
+          "startFrame": 400,
+          "endFrame": 406
+        },
+        {
+          "word": "lại",
+          "startFrame": 406,
+          "endFrame": 410
+        },
+        {
+          "word": "người",
+          "startFrame": 410,
+          "endFrame": 417
+        },
+        {
+          "word": "bạn",
+          "startFrame": 417,
+          "endFrame": 423
+        },
+        {
+          "word": "đời",
+          "startFrame": 423,
+          "endFrame": 433
+        },
+        {
+          "word": "mà",
+          "startFrame": 433,
+          "endFrame": 443
+        },
+        {
+          "word": "ta",
+          "startFrame": 443,
+          "endFrame": 449
+        },
+        {
+          "word": "đã",
+          "startFrame": 449,
+          "endFrame": 455
+        },
+        {
+          "word": "vô",
+          "startFrame": 455,
+          "endFrame": 462
+        },
+        {
+          "word": "tình",
+          "startFrame": 462,
+          "endFrame": 469
+        },
+        {
+          "word": "đánh",
+          "startFrame": 469,
+          "endFrame": 476
+        },
+        {
+          "word": "lạc",
+          "startFrame": 476,
+          "endFrame": 483
+        },
+        {
+          "word": "mất.",
+          "startFrame": 483,
+          "endFrame": 488
+        }
+      ],
+      "video": "essay_ep12_broll_3.mp4",
+      "media_type": "video"
+    },
+    {
+      "scene": 4,
+      "tag": "Vết nứt 1: Khi lòng tốt bị coi là nghĩa vụ",
+      "text": "Vết nứt đầu tiên,, mang tên: Coi sự hy sinh là điều hiển nhiên. Bạn có để ý không,, ngoài xã hội,, một người lạ giữ giúp cánh cửa thang máy,, ta cúi đầu cảm ơn rối rít. Nhưng ở nhà,, người bạn đời nấu cho ta cả nghìn bữa cơm,, ủi phẳng từng chiếc áo sơ mi,, dọn dẹp từng góc nhà,, ta lại lặng lẽ hưởng thụ mà chẳng nói lấy một lời ghi nhận.",
+      "highlight": "NGƯỜI NGOÀI CẢM ƠN · NGƯỜI NHÀ IM LẶNG",
+      "visual_type": "B_ROLL",
+      "visual": "essay_ep12_scene4.jpg",
+      "duration": 22.0,
+      "start": 51.0,
+      "end": 73.0,
+      "startFrame": 1758,
+      "durationInFrames": 626,
+      "words": [
+        {
+          "word": "Vết",
+          "startFrame": 0,
+          "endFrame": 5
+        },
+        {
+          "word": "nứt",
+          "startFrame": 5,
+          "endFrame": 10
+        },
+        {
+          "word": "đầu",
+          "startFrame": 10,
+          "endFrame": 16
+        },
+        {
+          "word": "tiên,,",
+          "startFrame": 16,
+          "endFrame": 25
+        },
+        {
+          "word": "mang",
+          "startFrame": 38,
+          "endFrame": 41
+        },
+        {
+          "word": "tên:",
+          "startFrame": 41,
+          "endFrame": 49
+        },
+        {
+          "word": "Coi",
+          "startFrame": 65,
+          "endFrame": 70
+        },
+        {
+          "word": "sự",
+          "startFrame": 70,
+          "endFrame": 74
+        },
+        {
+          "word": "hy",
+          "startFrame": 74,
+          "endFrame": 79
+        },
+        {
+          "word": "sinh",
+          "startFrame": 79,
+          "endFrame": 91
+        },
+        {
+          "word": "là",
+          "startFrame": 91,
+          "endFrame": 107
+        },
+        {
+          "word": "điều",
+          "startFrame": 107,
+          "endFrame": 112
+        },
+        {
+          "word": "hiển",
+          "startFrame": 112,
+          "endFrame": 118
+        },
+        {
+          "word": "nhiên.",
+          "startFrame": 118,
+          "endFrame": 125
+        },
+        {
+          "word": "Bạn",
+          "startFrame": 152,
+          "endFrame": 158
+        },
+        {
+          "word": "có",
+          "startFrame": 158,
+          "endFrame": 163
+        },
+        {
+          "word": "để",
+          "startFrame": 163,
+          "endFrame": 167
+        },
+        {
+          "word": "ý",
+          "startFrame": 167,
+          "endFrame": 172
+        },
+        {
+          "word": "không,,",
+          "startFrame": 172,
+          "endFrame": 178
+        },
+        {
+          "word": "ngoài",
+          "startFrame": 189,
+          "endFrame": 193
+        },
+        {
+          "word": "xã",
+          "startFrame": 193,
+          "endFrame": 199
+        },
+        {
+          "word": "hội,,",
+          "startFrame": 199,
+          "endFrame": 205
+        },
+        {
+          "word": "một",
+          "startFrame": 216,
+          "endFrame": 219
+        },
+        {
+          "word": "người",
+          "startFrame": 219,
+          "endFrame": 226
+        },
+        {
+          "word": "lạ",
+          "startFrame": 226,
+          "endFrame": 230
+        },
+        {
+          "word": "giữ",
+          "startFrame": 230,
+          "endFrame": 237
+        },
+        {
+          "word": "giúp",
+          "startFrame": 237,
+          "endFrame": 242
+        },
+        {
+          "word": "cánh",
+          "startFrame": 242,
+          "endFrame": 250
+        },
+        {
+          "word": "cửa",
+          "startFrame": 250,
+          "endFrame": 257
+        },
+        {
+          "word": "thang",
+          "startFrame": 257,
+          "endFrame": 260
+        },
+        {
+          "word": "máy,,",
+          "startFrame": 260,
+          "endFrame": 268
+        },
+        {
+          "word": "ta",
+          "startFrame": 278,
+          "endFrame": 285
+        },
+        {
+          "word": "cúi",
+          "startFrame": 285,
+          "endFrame": 293
+        },
+        {
+          "word": "đầu",
+          "startFrame": 293,
+          "endFrame": 298
+        },
+        {
+          "word": "cảm",
+          "startFrame": 298,
+          "endFrame": 309
+        },
+        {
+          "word": "ơn",
+          "startFrame": 309,
+          "endFrame": 313
+        },
+        {
+          "word": "rối",
+          "startFrame": 313,
+          "endFrame": 320
+        },
+        {
+          "word": "rít.",
+          "startFrame": 320,
+          "endFrame": 327
+        },
+        {
+          "word": "Nhưng",
+          "startFrame": 336,
+          "endFrame": 343
+        },
+        {
+          "word": "ở",
+          "startFrame": 343,
+          "endFrame": 347
+        },
+        {
+          "word": "nhà,,",
+          "startFrame": 347,
+          "endFrame": 355
+        },
+        {
+          "word": "người",
+          "startFrame": 367,
+          "endFrame": 370
+        },
+        {
+          "word": "bạn",
+          "startFrame": 370,
+          "endFrame": 376
+        },
+        {
+          "word": "đời",
+          "startFrame": 376,
+          "endFrame": 382
+        },
+        {
+          "word": "nấu",
+          "startFrame": 382,
+          "endFrame": 386
+        },
+        {
+          "word": "cho",
+          "startFrame": 386,
+          "endFrame": 391
+        },
+        {
+          "word": "ta",
+          "startFrame": 391,
+          "endFrame": 395
+        },
+        {
+          "word": "cả",
+          "startFrame": 395,
+          "endFrame": 400
+        },
+        {
+          "word": "nghìn",
+          "startFrame": 400,
+          "endFrame": 407
+        },
+        {
+          "word": "bữa",
+          "startFrame": 407,
+          "endFrame": 412
+        },
+        {
+          "word": "cơm,,",
+          "startFrame": 412,
+          "endFrame": 420
+        },
+        {
+          "word": "ủi",
+          "startFrame": 428,
+          "endFrame": 431
+        },
+        {
+          "word": "phẳng",
+          "startFrame": 431,
+          "endFrame": 437
+        },
+        {
+          "word": "từng",
+          "startFrame": 437,
+          "endFrame": 447
+        },
+        {
+          "word": "chiếc",
+          "startFrame": 447,
+          "endFrame": 451
+        },
+        {
+          "word": "áo",
+          "startFrame": 451,
+          "endFrame": 458
+        },
+        {
+          "word": "sơ",
+          "startFrame": 458,
+          "endFrame": 469
+        },
+        {
+          "word": "mi,,",
+          "startFrame": 488,
+          "endFrame": 490
+        },
+        {
+          "word": "dọn",
+          "startFrame": 490,
+          "endFrame": 497
+        },
+        {
+          "word": "dẹp",
+          "startFrame": 497,
+          "endFrame": 506
+        },
+        {
+          "word": "từng",
+          "startFrame": 506,
+          "endFrame": 509
+        },
+        {
+          "word": "góc",
+          "startFrame": 509,
+          "endFrame": 516
+        },
+        {
+          "word": "nhà,,",
+          "startFrame": 516,
+          "endFrame": 531
+        },
+        {
+          "word": "ta",
+          "startFrame": 531,
+          "endFrame": 536
+        },
+        {
+          "word": "lại",
+          "startFrame": 536,
+          "endFrame": 543
+        },
+        {
+          "word": "lặng",
+          "startFrame": 543,
+          "endFrame": 547
+        },
+        {
+          "word": "lẽ",
+          "startFrame": 547,
+          "endFrame": 554
+        },
+        {
+          "word": "hưởng",
+          "startFrame": 554,
+          "endFrame": 561
+        },
+        {
+          "word": "thụ",
+          "startFrame": 561,
+          "endFrame": 577
+        },
+        {
+          "word": "mà",
+          "startFrame": 577,
+          "endFrame": 586
+        },
+        {
+          "word": "chẳng",
+          "startFrame": 586,
+          "endFrame": 589
+        },
+        {
+          "word": "nói",
+          "startFrame": 589,
+          "endFrame": 594
+        },
+        {
+          "word": "lấy",
+          "startFrame": 594,
+          "endFrame": 598
+        },
+        {
+          "word": "một",
+          "startFrame": 598,
+          "endFrame": 605
+        },
+        {
+          "word": "lời",
+          "startFrame": 605,
+          "endFrame": 610
+        },
+        {
+          "word": "ghi",
+          "startFrame": 610,
+          "endFrame": 615
+        },
+        {
+          "word": "nhận.",
+          "startFrame": 615,
+          "endFrame": 621
+        }
+      ],
+      "image": "essay_ep12_scene4.jpg",
+      "media_type": "image"
+    },
+    {
+      "scene": 5,
+      "tag": "Hệ quả của sự vô hình",
+      "text": "Người phụ nữ hay người đàn ông đều không sợ vất vả. Thứ làm họ kiệt sức chính là cảm giác công sức của mình bị tàng hình. Khi lời cảm ơn biến mất khỏi mâm cơm,, người gánh vác sẽ dần thu mình lại,, trở thành một cái bóng lầm lũi trong chính tổ ấm của mình.",
+      "highlight": "TRỞ THÀNH CÁI BÓNG · TRONG CHÍNH NGÔI NHÀ",
+      "visual_type": "AI_IMAGE",
+      "visual": "essay_ep12_scene5.jpg",
+      "duration": 19.0,
+      "start": 73.0,
+      "end": 92.0,
+      "startFrame": 2395,
+      "durationInFrames": 448,
+      "words": [
+        {
+          "word": "Người",
+          "startFrame": 0,
+          "endFrame": 6
+        },
+        {
+          "word": "phụ",
+          "startFrame": 6,
+          "endFrame": 11
+        },
+        {
+          "word": "nữ",
+          "startFrame": 11,
+          "endFrame": 15
+        },
+        {
+          "word": "hay",
+          "startFrame": 15,
+          "endFrame": 20
+        },
+        {
+          "word": "người",
+          "startFrame": 20,
+          "endFrame": 26
+        },
+        {
+          "word": "đàn",
+          "startFrame": 26,
+          "endFrame": 32
+        },
+        {
+          "word": "ông",
+          "startFrame": 32,
+          "endFrame": 38
+        },
+        {
+          "word": "đều",
+          "startFrame": 50,
+          "endFrame": 53
+        },
+        {
+          "word": "không",
+          "startFrame": 53,
+          "endFrame": 58
+        },
+        {
+          "word": "sợ",
+          "startFrame": 58,
+          "endFrame": 65
+        },
+        {
+          "word": "vất",
+          "startFrame": 65,
+          "endFrame": 71
+        },
+        {
+          "word": "vả.",
+          "startFrame": 71,
+          "endFrame": 77
+        },
+        {
+          "word": "Thứ",
+          "startFrame": 96,
+          "endFrame": 103
+        },
+        {
+          "word": "làm",
+          "startFrame": 103,
+          "endFrame": 106
+        },
+        {
+          "word": "họ",
+          "startFrame": 106,
+          "endFrame": 112
+        },
+        {
+          "word": "kiệt",
+          "startFrame": 112,
+          "endFrame": 118
+        },
+        {
+          "word": "sức",
+          "startFrame": 118,
+          "endFrame": 125
+        },
+        {
+          "word": "chính",
+          "startFrame": 134,
+          "endFrame": 136
+        },
+        {
+          "word": "là",
+          "startFrame": 136,
+          "endFrame": 143
+        },
+        {
+          "word": "cảm",
+          "startFrame": 143,
+          "endFrame": 148
+        },
+        {
+          "word": "giác",
+          "startFrame": 148,
+          "endFrame": 157
+        },
+        {
+          "word": "công",
+          "startFrame": 157,
+          "endFrame": 163
+        },
+        {
+          "word": "sức",
+          "startFrame": 163,
+          "endFrame": 171
+        },
+        {
+          "word": "của",
+          "startFrame": 171,
+          "endFrame": 175
+        },
+        {
+          "word": "mình",
+          "startFrame": 175,
+          "endFrame": 180
+        },
+        {
+          "word": "bị",
+          "startFrame": 180,
+          "endFrame": 189
+        },
+        {
+          "word": "tàng",
+          "startFrame": 189,
+          "endFrame": 196
+        },
+        {
+          "word": "hình.",
+          "startFrame": 196,
+          "endFrame": 202
+        },
+        {
+          "word": "Khi",
+          "startFrame": 229,
+          "endFrame": 236
+        },
+        {
+          "word": "lời",
+          "startFrame": 236,
+          "endFrame": 241
+        },
+        {
+          "word": "cảm",
+          "startFrame": 241,
+          "endFrame": 246
+        },
+        {
+          "word": "ơn",
+          "startFrame": 246,
+          "endFrame": 253
+        },
+        {
+          "word": "biến",
+          "startFrame": 256,
+          "endFrame": 260
+        },
+        {
+          "word": "mất",
+          "startFrame": 260,
+          "endFrame": 267
+        },
+        {
+          "word": "khỏi",
+          "startFrame": 267,
+          "endFrame": 272
+        },
+        {
+          "word": "mâm",
+          "startFrame": 272,
+          "endFrame": 278
+        },
+        {
+          "word": "cơm,,",
+          "startFrame": 278,
+          "endFrame": 289
+        },
+        {
+          "word": "người",
+          "startFrame": 304,
+          "endFrame": 308
+        },
+        {
+          "word": "gánh",
+          "startFrame": 308,
+          "endFrame": 314
+        },
+        {
+          "word": "vác",
+          "startFrame": 314,
+          "endFrame": 321
+        },
+        {
+          "word": "sẽ",
+          "startFrame": 321,
+          "endFrame": 326
+        },
+        {
+          "word": "dần",
+          "startFrame": 326,
+          "endFrame": 332
+        },
+        {
+          "word": "thu",
+          "startFrame": 332,
+          "endFrame": 337
+        },
+        {
+          "word": "mình",
+          "startFrame": 337,
+          "endFrame": 341
+        },
+        {
+          "word": "lại,,",
+          "startFrame": 341,
+          "endFrame": 349
+        },
+        {
+          "word": "trở",
+          "startFrame": 364,
+          "endFrame": 366
+        },
+        {
+          "word": "thành",
+          "startFrame": 366,
+          "endFrame": 372
+        },
+        {
+          "word": "một",
+          "startFrame": 372,
+          "endFrame": 379
+        },
+        {
+          "word": "cái",
+          "startFrame": 379,
+          "endFrame": 382
+        },
+        {
+          "word": "bóng",
+          "startFrame": 382,
+          "endFrame": 389
+        },
+        {
+          "word": "lầm",
+          "startFrame": 389,
+          "endFrame": 394
+        },
+        {
+          "word": "lũi",
+          "startFrame": 394,
+          "endFrame": 401
+        },
+        {
+          "word": "trong",
+          "startFrame": 401,
+          "endFrame": 405
+        },
+        {
+          "word": "chính",
+          "startFrame": 405,
+          "endFrame": 412
+        },
+        {
+          "word": "tổ",
+          "startFrame": 412,
+          "endFrame": 419
+        },
+        {
+          "word": "ấm",
+          "startFrame": 419,
+          "endFrame": 425
+        },
+        {
+          "word": "của",
+          "startFrame": 425,
+          "endFrame": 430
+        },
+        {
+          "word": "mình.",
+          "startFrame": 430,
+          "endFrame": 435
+        }
+      ],
+      "image": "essay_ep12_scene5.jpg",
+      "media_type": "image"
+    },
+    {
+      "scene": 6,
+      "tag": "Vết nứt 2: Hai chữ \"Gì cũng được\"",
+      "text": "Vết nứt thứ hai,, ẩn sau hai chữ tưởng chừng rất dễ tính: \"Gì cũng được\". Tối nay ăn gì anh? Gì cũng được. Cuối tuần cho con đi đâu chơi? Tùy em. Màu sơn phòng này chọn màu nào? Sao cũng được. Nghe qua thì giống như sự chiều chuộng,, nhưng nhìn sâu vào,, đó là sự thoái thác trách nhiệm cảm xúc.",
+      "highlight": "\"GÌ CŨNG ĐƯỢC\" · SỰ VÔ TÂM LỊCH SỰ",
+      "visual_type": "AI_IMAGE",
+      "visual": "essay_ep12_scene6.jpg",
+      "duration": 20.0,
+      "start": 92.0,
+      "end": 112.0,
+      "startFrame": 2926,
+      "durationInFrames": 540,
+      "words": [
+        {
+          "word": "Vết",
+          "startFrame": 0,
+          "endFrame": 7
+        },
+        {
+          "word": "nứt",
+          "startFrame": 7,
+          "endFrame": 10
+        },
+        {
+          "word": "thứ",
+          "startFrame": 10,
+          "endFrame": 15
+        },
+        {
+          "word": "hai,,",
+          "startFrame": 15,
+          "endFrame": 21
+        },
+        {
+          "word": "ẩn",
+          "startFrame": 33,
+          "endFrame": 36
+        },
+        {
+          "word": "sau",
+          "startFrame": 36,
+          "endFrame": 43
+        },
+        {
+          "word": "hai",
+          "startFrame": 43,
+          "endFrame": 51
+        },
+        {
+          "word": "chữ",
+          "startFrame": 51,
+          "endFrame": 57
+        },
+        {
+          "word": "tưởng",
+          "startFrame": 57,
+          "endFrame": 65
+        },
+        {
+          "word": "chừng",
+          "startFrame": 65,
+          "endFrame": 73
+        },
+        {
+          "word": "rất",
+          "startFrame": 73,
+          "endFrame": 77
+        },
+        {
+          "word": "dễ",
+          "startFrame": 77,
+          "endFrame": 85
+        },
+        {
+          "word": "tính:",
+          "startFrame": 85,
+          "endFrame": 92
+        },
+        {
+          "word": "\"Gì",
+          "startFrame": 103,
+          "endFrame": 110
+        },
+        {
+          "word": "cũng",
+          "startFrame": 110,
+          "endFrame": 116
+        },
+        {
+          "word": "được\".",
+          "startFrame": 116,
+          "endFrame": 121
+        },
+        {
+          "word": "Tối",
+          "startFrame": 121,
+          "endFrame": 145
+        },
+        {
+          "word": "nay",
+          "startFrame": 145,
+          "endFrame": 149
+        },
+        {
+          "word": "ăn",
+          "startFrame": 149,
+          "endFrame": 156
+        },
+        {
+          "word": "gì",
+          "startFrame": 156,
+          "endFrame": 161
+        },
+        {
+          "word": "anh?",
+          "startFrame": 161,
+          "endFrame": 167
+        },
+        {
+          "word": "Gì",
+          "startFrame": 181,
+          "endFrame": 184
+        },
+        {
+          "word": "cũng",
+          "startFrame": 184,
+          "endFrame": 189
+        },
+        {
+          "word": "được.",
+          "startFrame": 189,
+          "endFrame": 194
+        },
+        {
+          "word": "Cuối",
+          "startFrame": 203,
+          "endFrame": 208
+        },
+        {
+          "word": "tuần",
+          "startFrame": 208,
+          "endFrame": 214
+        },
+        {
+          "word": "cho",
+          "startFrame": 214,
+          "endFrame": 219
+        },
+        {
+          "word": "con",
+          "startFrame": 219,
+          "endFrame": 225
+        },
+        {
+          "word": "đi",
+          "startFrame": 225,
+          "endFrame": 229
+        },
+        {
+          "word": "đâu",
+          "startFrame": 229,
+          "endFrame": 234
+        },
+        {
+          "word": "chơi?",
+          "startFrame": 234,
+          "endFrame": 242
+        },
+        {
+          "word": "Tùy",
+          "startFrame": 260,
+          "endFrame": 268
+        },
+        {
+          "word": "em.",
+          "startFrame": 268,
+          "endFrame": 275
+        },
+        {
+          "word": "Màu",
+          "startFrame": 287,
+          "endFrame": 290
+        },
+        {
+          "word": "sơn",
+          "startFrame": 290,
+          "endFrame": 296
+        },
+        {
+          "word": "phòng",
+          "startFrame": 296,
+          "endFrame": 302
+        },
+        {
+          "word": "này",
+          "startFrame": 302,
+          "endFrame": 308
+        },
+        {
+          "word": "chọn",
+          "startFrame": 308,
+          "endFrame": 314
+        },
+        {
+          "word": "màu",
+          "startFrame": 314,
+          "endFrame": 317
+        },
+        {
+          "word": "nào?",
+          "startFrame": 317,
+          "endFrame": 322
+        },
+        {
+          "word": "Sao",
+          "startFrame": 322,
+          "endFrame": 327
+        },
+        {
+          "word": "cũng",
+          "startFrame": 346,
+          "endFrame": 350
+        },
+        {
+          "word": "được.",
+          "startFrame": 350,
+          "endFrame": 355
+        },
+        {
+          "word": "Nghe",
+          "startFrame": 355,
+          "endFrame": 361
+        },
+        {
+          "word": "qua",
+          "startFrame": 375,
+          "endFrame": 379
+        },
+        {
+          "word": "thì",
+          "startFrame": 379,
+          "endFrame": 386
+        },
+        {
+          "word": "giống",
+          "startFrame": 386,
+          "endFrame": 394
+        },
+        {
+          "word": "như",
+          "startFrame": 394,
+          "endFrame": 401
+        },
+        {
+          "word": "sự",
+          "startFrame": 401,
+          "endFrame": 404
+        },
+        {
+          "word": "chiều",
+          "startFrame": 404,
+          "endFrame": 410
+        },
+        {
+          "word": "chuộng,,",
+          "startFrame": 410,
+          "endFrame": 417
+        },
+        {
+          "word": "nhưng",
+          "startFrame": 417,
+          "endFrame": 428
+        },
+        {
+          "word": "nhìn",
+          "startFrame": 439,
+          "endFrame": 442
+        },
+        {
+          "word": "sâu",
+          "startFrame": 442,
+          "endFrame": 449
+        },
+        {
+          "word": "vào,,",
+          "startFrame": 449,
+          "endFrame": 455
+        },
+        {
+          "word": "đó",
+          "startFrame": 455,
+          "endFrame": 462
+        },
+        {
+          "word": "là",
+          "startFrame": 476,
+          "endFrame": 482
+        },
+        {
+          "word": "sự",
+          "startFrame": 482,
+          "endFrame": 488
+        },
+        {
+          "word": "thoái",
+          "startFrame": 488,
+          "endFrame": 492
+        },
+        {
+          "word": "thác",
+          "startFrame": 492,
+          "endFrame": 500
+        },
+        {
+          "word": "trách",
+          "startFrame": 500,
+          "endFrame": 505
+        },
+        {
+          "word": "nhiệm",
+          "startFrame": 505,
+          "endFrame": 512
+        },
+        {
+          "word": "cảm",
+          "startFrame": 512,
+          "endFrame": 518
+        },
+        {
+          "word": "xúc.",
+          "startFrame": 518,
+          "endFrame": 524
+        }
+      ],
+      "image": "essay_ep12_scene6.jpg",
+      "media_type": "image"
+    },
+    {
+      "scene": 7,
+      "tag": "Gánh nặng của người phải quyết định",
+      "text": "Mỗi câu \"gì cũng được\" được thốt ra,, là một lần bạn đẩy toàn bộ sức nặng của việc suy nghĩ,, vun vén sang đôi vai người kia. Lâu dần,, người hỏi sẽ không muốn hỏi nữa. Bởi vì họ hiểu rằng,, hỏi cũng chỉ nhận lại một bức tường lạnh ngắt.",
+      "highlight": "BỎ MẶC NGƯỜI KIA · TỰ XOAY XỞ",
+      "visual_type": "B_ROLL",
+      "visual": "essay_ep12_broll_7.mp4",
+      "duration": 18.0,
+      "start": 112.0,
+      "end": 130.0,
+      "startFrame": 3476,
+      "durationInFrames": 399,
+      "words": [
+        {
+          "word": "Mỗi",
+          "startFrame": 0,
+          "endFrame": 6
+        },
+        {
+          "word": "câu",
+          "startFrame": 6,
+          "endFrame": 12
+        },
+        {
+          "word": "\"gì",
+          "startFrame": 12,
+          "endFrame": 15
+        },
+        {
+          "word": "cũng",
+          "startFrame": 15,
+          "endFrame": 21
+        },
+        {
+          "word": "được\"",
+          "startFrame": 21,
+          "endFrame": 26
+        },
+        {
+          "word": "được",
+          "startFrame": 26,
+          "endFrame": 31
+        },
+        {
+          "word": "thốt",
+          "startFrame": 31,
+          "endFrame": 37
+        },
+        {
+          "word": "ra,,",
+          "startFrame": 37,
+          "endFrame": 43
+        },
+        {
+          "word": "là",
+          "startFrame": 43,
+          "endFrame": 60
+        },
+        {
+          "word": "một",
+          "startFrame": 60,
+          "endFrame": 65
+        },
+        {
+          "word": "lần",
+          "startFrame": 65,
+          "endFrame": 72
+        },
+        {
+          "word": "bạn",
+          "startFrame": 72,
+          "endFrame": 79
+        },
+        {
+          "word": "đẩy",
+          "startFrame": 79,
+          "endFrame": 88
+        },
+        {
+          "word": "toàn",
+          "startFrame": 88,
+          "endFrame": 93
+        },
+        {
+          "word": "bộ",
+          "startFrame": 93,
+          "endFrame": 97
+        },
+        {
+          "word": "sức",
+          "startFrame": 97,
+          "endFrame": 105
+        },
+        {
+          "word": "nặng",
+          "startFrame": 105,
+          "endFrame": 112
+        },
+        {
+          "word": "của",
+          "startFrame": 112,
+          "endFrame": 119
+        },
+        {
+          "word": "việc",
+          "startFrame": 119,
+          "endFrame": 126
+        },
+        {
+          "word": "suy",
+          "startFrame": 126,
+          "endFrame": 132
+        },
+        {
+          "word": "nghĩ,,",
+          "startFrame": 132,
+          "endFrame": 138
+        },
+        {
+          "word": "vun",
+          "startFrame": 156,
+          "endFrame": 160
+        },
+        {
+          "word": "vén",
+          "startFrame": 160,
+          "endFrame": 168
+        },
+        {
+          "word": "sang",
+          "startFrame": 168,
+          "endFrame": 173
+        },
+        {
+          "word": "đôi",
+          "startFrame": 173,
+          "endFrame": 179
+        },
+        {
+          "word": "vai",
+          "startFrame": 179,
+          "endFrame": 186
+        },
+        {
+          "word": "người",
+          "startFrame": 186,
+          "endFrame": 190
+        },
+        {
+          "word": "kia.",
+          "startFrame": 190,
+          "endFrame": 198
+        },
+        {
+          "word": "Lâu",
+          "startFrame": 221,
+          "endFrame": 227
+        },
+        {
+          "word": "dần,,",
+          "startFrame": 227,
+          "endFrame": 234
+        },
+        {
+          "word": "người",
+          "startFrame": 246,
+          "endFrame": 249
+        },
+        {
+          "word": "hỏi",
+          "startFrame": 249,
+          "endFrame": 255
+        },
+        {
+          "word": "sẽ",
+          "startFrame": 255,
+          "endFrame": 261
+        },
+        {
+          "word": "không",
+          "startFrame": 261,
+          "endFrame": 267
+        },
+        {
+          "word": "muốn",
+          "startFrame": 267,
+          "endFrame": 271
+        },
+        {
+          "word": "hỏi",
+          "startFrame": 271,
+          "endFrame": 279
+        },
+        {
+          "word": "nữa.",
+          "startFrame": 279,
+          "endFrame": 283
+        },
+        {
+          "word": "Bởi",
+          "startFrame": 301,
+          "endFrame": 304
+        },
+        {
+          "word": "vì",
+          "startFrame": 304,
+          "endFrame": 309
+        },
+        {
+          "word": "họ",
+          "startFrame": 309,
+          "endFrame": 314
+        },
+        {
+          "word": "hiểu",
+          "startFrame": 314,
+          "endFrame": 321
+        },
+        {
+          "word": "rằng,,",
+          "startFrame": 321,
+          "endFrame": 326
+        },
+        {
+          "word": "hỏi",
+          "startFrame": 337,
+          "endFrame": 342
+        },
+        {
+          "word": "cũng",
+          "startFrame": 342,
+          "endFrame": 346
+        },
+        {
+          "word": "chỉ",
+          "startFrame": 346,
+          "endFrame": 352
+        },
+        {
+          "word": "nhận",
+          "startFrame": 352,
+          "endFrame": 359
+        },
+        {
+          "word": "lại",
+          "startFrame": 359,
+          "endFrame": 363
+        },
+        {
+          "word": "một",
+          "startFrame": 363,
+          "endFrame": 367
+        },
+        {
+          "word": "bức",
+          "startFrame": 367,
+          "endFrame": 374
+        },
+        {
+          "word": "tường",
+          "startFrame": 374,
+          "endFrame": 378
+        },
+        {
+          "word": "lạnh",
+          "startFrame": 378,
+          "endFrame": 384
+        },
+        {
+          "word": "ngắt.",
+          "startFrame": 384,
+          "endFrame": 392
+        }
+      ],
+      "video": "essay_ep12_broll_7.mp4",
+      "media_type": "video"
+    },
+    {
+      "scene": 8,
+      "tag": "Vết nứt 3: Nỗi cô đơn mang tên đồng tiền",
+      "text": "Vết nứt thứ ba,, chạm vào góc khuất nhạy cảm nhất: Tiền bạc và lòng tự trọng. Có những người vợ,, mua cho chồng cho con món đồ tiền triệu chẳng tiếc tay,, nhưng đứng trước chiếc áo hai trăm nghìn của bản thân lại nâng lên đặt xuống cả chục lần. Có những người chồng,, tháng lương đưa hết về nhà,, nhưng lúc cần chút tiền biếu bố mẹ ruột lại phải ngập ngừng giải trình như một đứa trẻ có lỗi.",
+      "highlight": "CHIẾC ÁO 200 NGHÌN · ĐẮN ĐO NHƯ ĐI XIN",
+      "visual_type": "AI_IMAGE",
+      "visual": "essay_ep12_scene8.jpg",
+      "duration": 22.0,
+      "start": 130.0,
+      "end": 152.0,
+      "startFrame": 3960,
+      "durationInFrames": 577,
+      "words": [
+        {
+          "word": "Vết",
+          "startFrame": 0,
+          "endFrame": 6
+        },
+        {
+          "word": "nứt",
+          "startFrame": 6,
+          "endFrame": 9
+        },
+        {
+          "word": "thứ",
+          "startFrame": 9,
+          "endFrame": 14
+        },
+        {
+          "word": "ba,,",
+          "startFrame": 14,
+          "endFrame": 22
+        },
+        {
+          "word": "chạm",
+          "startFrame": 35,
+          "endFrame": 39
+        },
+        {
+          "word": "vào",
+          "startFrame": 39,
+          "endFrame": 42
+        },
+        {
+          "word": "góc",
+          "startFrame": 42,
+          "endFrame": 47
+        },
+        {
+          "word": "khuất",
+          "startFrame": 47,
+          "endFrame": 52
+        },
+        {
+          "word": "nhạy",
+          "startFrame": 52,
+          "endFrame": 61
+        },
+        {
+          "word": "cảm",
+          "startFrame": 61,
+          "endFrame": 64
+        },
+        {
+          "word": "nhất:",
+          "startFrame": 64,
+          "endFrame": 71
+        },
+        {
+          "word": "Tiền",
+          "startFrame": 79,
+          "endFrame": 81
+        },
+        {
+          "word": "bạc",
+          "startFrame": 80,
+          "endFrame": 87
+        },
+        {
+          "word": "và",
+          "startFrame": 87,
+          "endFrame": 95
+        },
+        {
+          "word": "lòng",
+          "startFrame": 95,
+          "endFrame": 99
+        },
+        {
+          "word": "tự",
+          "startFrame": 99,
+          "endFrame": 105
+        },
+        {
+          "word": "trọng.",
+          "startFrame": 105,
+          "endFrame": 113
+        },
+        {
+          "word": "Có",
+          "startFrame": 124,
+          "endFrame": 127
+        },
+        {
+          "word": "những",
+          "startFrame": 127,
+          "endFrame": 130
+        },
+        {
+          "word": "người",
+          "startFrame": 130,
+          "endFrame": 135
+        },
+        {
+          "word": "vợ,,",
+          "startFrame": 135,
+          "endFrame": 142
+        },
+        {
+          "word": "mua",
+          "startFrame": 153,
+          "endFrame": 158
+        },
+        {
+          "word": "cho",
+          "startFrame": 158,
+          "endFrame": 162
+        },
+        {
+          "word": "chồng",
+          "startFrame": 162,
+          "endFrame": 167
+        },
+        {
+          "word": "cho",
+          "startFrame": 167,
+          "endFrame": 173
+        },
+        {
+          "word": "con",
+          "startFrame": 173,
+          "endFrame": 178
+        },
+        {
+          "word": "món",
+          "startFrame": 178,
+          "endFrame": 183
+        },
+        {
+          "word": "đồ",
+          "startFrame": 183,
+          "endFrame": 188
+        },
+        {
+          "word": "tiền",
+          "startFrame": 188,
+          "endFrame": 194
+        },
+        {
+          "word": "triệu",
+          "startFrame": 194,
+          "endFrame": 202
+        },
+        {
+          "word": "chẳng",
+          "startFrame": 202,
+          "endFrame": 212
+        },
+        {
+          "word": "tiếc",
+          "startFrame": 212,
+          "endFrame": 216
+        },
+        {
+          "word": "tay,,",
+          "startFrame": 216,
+          "endFrame": 222
+        },
+        {
+          "word": "nhưng",
+          "startFrame": 237,
+          "endFrame": 240
+        },
+        {
+          "word": "đứng",
+          "startFrame": 240,
+          "endFrame": 247
+        },
+        {
+          "word": "trước",
+          "startFrame": 247,
+          "endFrame": 250
+        },
+        {
+          "word": "chiếc",
+          "startFrame": 250,
+          "endFrame": 257
+        },
+        {
+          "word": "áo",
+          "startFrame": 257,
+          "endFrame": 264
+        },
+        {
+          "word": "hai",
+          "startFrame": 264,
+          "endFrame": 272
+        },
+        {
+          "word": "trăm",
+          "startFrame": 272,
+          "endFrame": 279
+        },
+        {
+          "word": "nghìn",
+          "startFrame": 279,
+          "endFrame": 286
+        },
+        {
+          "word": "của",
+          "startFrame": 286,
+          "endFrame": 291
+        },
+        {
+          "word": "bản",
+          "startFrame": 291,
+          "endFrame": 299
+        },
+        {
+          "word": "thân",
+          "startFrame": 299,
+          "endFrame": 312
+        },
+        {
+          "word": "lại",
+          "startFrame": 312,
+          "endFrame": 321
+        },
+        {
+          "word": "nâng",
+          "startFrame": 321,
+          "endFrame": 324
+        },
+        {
+          "word": "lên",
+          "startFrame": 324,
+          "endFrame": 332
+        },
+        {
+          "word": "đặt",
+          "startFrame": 332,
+          "endFrame": 339
+        },
+        {
+          "word": "xuống",
+          "startFrame": 339,
+          "endFrame": 344
+        },
+        {
+          "word": "cả",
+          "startFrame": 344,
+          "endFrame": 352
+        },
+        {
+          "word": "chục",
+          "startFrame": 352,
+          "endFrame": 357
+        },
+        {
+          "word": "lần.",
+          "startFrame": 372,
+          "endFrame": 375
+        },
+        {
+          "word": "Có",
+          "startFrame": 375,
+          "endFrame": 379
+        },
+        {
+          "word": "những",
+          "startFrame": 379,
+          "endFrame": 386
+        },
+        {
+          "word": "người",
+          "startFrame": 386,
+          "endFrame": 395
+        },
+        {
+          "word": "chồng,,",
+          "startFrame": 405,
+          "endFrame": 408
+        },
+        {
+          "word": "tháng",
+          "startFrame": 408,
+          "endFrame": 414
+        },
+        {
+          "word": "lương",
+          "startFrame": 414,
+          "endFrame": 420
+        },
+        {
+          "word": "đưa",
+          "startFrame": 420,
+          "endFrame": 423
+        },
+        {
+          "word": "hết",
+          "startFrame": 423,
+          "endFrame": 427
+        },
+        {
+          "word": "về",
+          "startFrame": 427,
+          "endFrame": 435
+        },
+        {
+          "word": "nhà,,",
+          "startFrame": 447,
+          "endFrame": 449
+        },
+        {
+          "word": "nhưng",
+          "startFrame": 449,
+          "endFrame": 456
+        },
+        {
+          "word": "lúc",
+          "startFrame": 456,
+          "endFrame": 460
+        },
+        {
+          "word": "cần",
+          "startFrame": 460,
+          "endFrame": 466
+        },
+        {
+          "word": "chút",
+          "startFrame": 466,
+          "endFrame": 472
+        },
+        {
+          "word": "tiền",
+          "startFrame": 472,
+          "endFrame": 479
+        },
+        {
+          "word": "biếu",
+          "startFrame": 479,
+          "endFrame": 483
+        },
+        {
+          "word": "bố",
+          "startFrame": 483,
+          "endFrame": 488
+        },
+        {
+          "word": "mẹ",
+          "startFrame": 488,
+          "endFrame": 497
+        },
+        {
+          "word": "ruột",
+          "startFrame": 497,
+          "endFrame": 501
+        },
+        {
+          "word": "lại",
+          "startFrame": 501,
+          "endFrame": 506
+        },
+        {
+          "word": "phải",
+          "startFrame": 506,
+          "endFrame": 512
+        },
+        {
+          "word": "ngập",
+          "startFrame": 512,
+          "endFrame": 517
+        },
+        {
+          "word": "ngừng",
+          "startFrame": 517,
+          "endFrame": 525
+        },
+        {
+          "word": "giải",
+          "startFrame": 525,
+          "endFrame": 530
+        },
+        {
+          "word": "trình",
+          "startFrame": 530,
+          "endFrame": 537
+        },
+        {
+          "word": "như",
+          "startFrame": 537,
+          "endFrame": 545
+        },
+        {
+          "word": "một",
+          "startFrame": 545,
+          "endFrame": 548
+        },
+        {
+          "word": "đứa",
+          "startFrame": 548,
+          "endFrame": 554
+        },
+        {
+          "word": "trẻ",
+          "startFrame": 554,
+          "endFrame": 560
+        },
+        {
+          "word": "có",
+          "startFrame": 560,
+          "endFrame": 566
+        },
+        {
+          "word": "lỗi.",
+          "startFrame": 566,
+          "endFrame": 572
+        }
+      ],
+      "image": "essay_ep12_scene8.jpg",
+      "media_type": "image"
+    },
+    {
+      "scene": 9,
+      "tag": "Sự bình đẳng trong tâm hồn",
+      "text": "Khi đồng tiền đi kèm với sự săm soi hoặc thiếu thấu cảm,, nó sẽ bào mòn lòng tự trọng rất nhanh. Một cuộc hôn nhân nhẹ nhàng là nơi mà dù ai làm ra nhiều tiền hơn,, người kia vẫn luôn cảm thấy mình có giá trị và được tôn trọng trọn vẹn.",
+      "highlight": "TÌNH YÊU CẦN · SỰ TÔN TRỌNG VỊ THẾ",
+      "visual_type": "B_ROLL",
+      "visual": "essay_ep12_broll_9.mp4",
+      "duration": 18.0,
+      "start": 152.0,
+      "end": 170.0,
+      "startFrame": 4547,
+      "durationInFrames": 444,
+      "words": [
+        {
+          "word": "Khi",
+          "startFrame": 0,
+          "endFrame": 5
+        },
+        {
+          "word": "đồng",
+          "startFrame": 5,
+          "endFrame": 10
+        },
+        {
+          "word": "tiền",
+          "startFrame": 10,
+          "endFrame": 17
+        },
+        {
+          "word": "đi",
+          "startFrame": 17,
+          "endFrame": 22
+        },
+        {
+          "word": "kèm",
+          "startFrame": 22,
+          "endFrame": 31
+        },
+        {
+          "word": "với",
+          "startFrame": 31,
+          "endFrame": 34
+        },
+        {
+          "word": "sự",
+          "startFrame": 34,
+          "endFrame": 39
+        },
+        {
+          "word": "săm",
+          "startFrame": 39,
+          "endFrame": 47
+        },
+        {
+          "word": "soi",
+          "startFrame": 47,
+          "endFrame": 56
+        },
+        {
+          "word": "hoặc",
+          "startFrame": 56,
+          "endFrame": 71
+        },
+        {
+          "word": "thiếu",
+          "startFrame": 71,
+          "endFrame": 77
+        },
+        {
+          "word": "thấu",
+          "startFrame": 77,
+          "endFrame": 82
+        },
+        {
+          "word": "cảm,,",
+          "startFrame": 82,
+          "endFrame": 87
+        },
+        {
+          "word": "nó",
+          "startFrame": 103,
+          "endFrame": 106
+        },
+        {
+          "word": "sẽ",
+          "startFrame": 106,
+          "endFrame": 111
+        },
+        {
+          "word": "bào",
+          "startFrame": 111,
+          "endFrame": 118
+        },
+        {
+          "word": "mòn",
+          "startFrame": 118,
+          "endFrame": 122
+        },
+        {
+          "word": "lòng",
+          "startFrame": 122,
+          "endFrame": 131
+        },
+        {
+          "word": "tự",
+          "startFrame": 131,
+          "endFrame": 136
+        },
+        {
+          "word": "trọng",
+          "startFrame": 136,
+          "endFrame": 146
+        },
+        {
+          "word": "rất",
+          "startFrame": 155,
+          "endFrame": 158
+        },
+        {
+          "word": "nhanh.",
+          "startFrame": 158,
+          "endFrame": 170
+        },
+        {
+          "word": "Một",
+          "startFrame": 200,
+          "endFrame": 212
+        },
+        {
+          "word": "cuộc",
+          "startFrame": 212,
+          "endFrame": 218
+        },
+        {
+          "word": "hôn",
+          "startFrame": 218,
+          "endFrame": 223
+        },
+        {
+          "word": "nhân",
+          "startFrame": 223,
+          "endFrame": 227
+        },
+        {
+          "word": "nhẹ",
+          "startFrame": 227,
+          "endFrame": 235
+        },
+        {
+          "word": "nhàng",
+          "startFrame": 235,
+          "endFrame": 245
+        },
+        {
+          "word": "là",
+          "startFrame": 245,
+          "endFrame": 259
+        },
+        {
+          "word": "nơi",
+          "startFrame": 259,
+          "endFrame": 267
+        },
+        {
+          "word": "mà",
+          "startFrame": 267,
+          "endFrame": 273
+        },
+        {
+          "word": "dù",
+          "startFrame": 273,
+          "endFrame": 278
+        },
+        {
+          "word": "ai",
+          "startFrame": 278,
+          "endFrame": 285
+        },
+        {
+          "word": "làm",
+          "startFrame": 285,
+          "endFrame": 290
+        },
+        {
+          "word": "ra",
+          "startFrame": 290,
+          "endFrame": 295
+        },
+        {
+          "word": "nhiều",
+          "startFrame": 295,
+          "endFrame": 301
+        },
+        {
+          "word": "tiền",
+          "startFrame": 301,
+          "endFrame": 308
+        },
+        {
+          "word": "hơn,,",
+          "startFrame": 308,
+          "endFrame": 316
+        },
+        {
+          "word": "người",
+          "startFrame": 329,
+          "endFrame": 331
+        },
+        {
+          "word": "kia",
+          "startFrame": 331,
+          "endFrame": 339
+        },
+        {
+          "word": "vẫn",
+          "startFrame": 339,
+          "endFrame": 343
+        },
+        {
+          "word": "luôn",
+          "startFrame": 343,
+          "endFrame": 349
+        },
+        {
+          "word": "cảm",
+          "startFrame": 349,
+          "endFrame": 355
+        },
+        {
+          "word": "thấy",
+          "startFrame": 355,
+          "endFrame": 362
+        },
+        {
+          "word": "mình",
+          "startFrame": 362,
+          "endFrame": 369
+        },
+        {
+          "word": "có",
+          "startFrame": 369,
+          "endFrame": 376
+        },
+        {
+          "word": "giá",
+          "startFrame": 376,
+          "endFrame": 382
+        },
+        {
+          "word": "trị",
+          "startFrame": 382,
+          "endFrame": 388
+        },
+        {
+          "word": "và",
+          "startFrame": 388,
+          "endFrame": 400
+        },
+        {
+          "word": "được",
+          "startFrame": 400,
+          "endFrame": 403
+        },
+        {
+          "word": "tôn",
+          "startFrame": 403,
+          "endFrame": 410
+        },
+        {
+          "word": "trọng",
+          "startFrame": 410,
+          "endFrame": 419
+        },
+        {
+          "word": "trọn",
+          "startFrame": 419,
+          "endFrame": 427
+        },
+        {
+          "word": "vẹn.",
+          "startFrame": 427,
+          "endFrame": 431
+        }
+      ],
+      "video": "essay_ep12_broll_9.mp4",
+      "media_type": "video"
+    },
+    {
+      "scene": 10,
+      "tag": "Vết nứt 4: Sự đứt gãy của những cuộc trò chuyện",
+      "text": "Vết nứt thứ tư,, chúng ta chỉ còn giao tiếp như những người cùng phòng. Bạn hãy thử mở lại tin nhắn giữa hai vợ chồng trong một tuần qua xem. Có phải toàn là: Mua hộ em chai nước mắm,, đón con chưa,, đóng tiền điện nhé? Chúng ta nói với nhau mọi thứ về việc nhà,, nhưng lại tuyệt nhiên không nói một câu nào về nỗi buồn hay sự mệt mỏi trong lòng mình.",
+      "highlight": "CHỈ NÓI VIỆC NHÀ · QUÊN NÓI CHUYỆN LÒNG",
+      "visual_type": "AI_IMAGE",
+      "visual": "essay_ep12_scene10.jpg",
+      "duration": 21.0,
+      "start": 170.0,
+      "end": 191.0,
+      "startFrame": 5075,
+      "durationInFrames": 590,
+      "words": [
+        {
+          "word": "Vết",
+          "startFrame": 0,
+          "endFrame": 6
+        },
+        {
+          "word": "nứt",
+          "startFrame": 6,
+          "endFrame": 8
+        },
+        {
+          "word": "thứ",
+          "startFrame": 8,
+          "endFrame": 13
+        },
+        {
+          "word": "tư,,",
+          "startFrame": 13,
+          "endFrame": 21
+        },
+        {
+          "word": "chúng",
+          "startFrame": 36,
+          "endFrame": 39
+        },
+        {
+          "word": "ta",
+          "startFrame": 39,
+          "endFrame": 44
+        },
+        {
+          "word": "chỉ",
+          "startFrame": 44,
+          "endFrame": 51
+        },
+        {
+          "word": "còn",
+          "startFrame": 51,
+          "endFrame": 55
+        },
+        {
+          "word": "giao",
+          "startFrame": 55,
+          "endFrame": 63
+        },
+        {
+          "word": "tiếp",
+          "startFrame": 63,
+          "endFrame": 67
+        },
+        {
+          "word": "như",
+          "startFrame": 67,
+          "endFrame": 75
+        },
+        {
+          "word": "những",
+          "startFrame": 75,
+          "endFrame": 81
+        },
+        {
+          "word": "người",
+          "startFrame": 81,
+          "endFrame": 87
+        },
+        {
+          "word": "cùng",
+          "startFrame": 87,
+          "endFrame": 91
+        },
+        {
+          "word": "phòng.",
+          "startFrame": 91,
+          "endFrame": 100
+        },
+        {
+          "word": "Bạn",
+          "startFrame": 115,
+          "endFrame": 117
+        },
+        {
+          "word": "hãy",
+          "startFrame": 117,
+          "endFrame": 123
+        },
+        {
+          "word": "thử",
+          "startFrame": 123,
+          "endFrame": 128
+        },
+        {
+          "word": "mở",
+          "startFrame": 128,
+          "endFrame": 135
+        },
+        {
+          "word": "lại",
+          "startFrame": 135,
+          "endFrame": 139
+        },
+        {
+          "word": "tin",
+          "startFrame": 139,
+          "endFrame": 147
+        },
+        {
+          "word": "nhắn",
+          "startFrame": 147,
+          "endFrame": 150
+        },
+        {
+          "word": "giữa",
+          "startFrame": 150,
+          "endFrame": 157
+        },
+        {
+          "word": "hai",
+          "startFrame": 157,
+          "endFrame": 163
+        },
+        {
+          "word": "vợ",
+          "startFrame": 163,
+          "endFrame": 168
+        },
+        {
+          "word": "chồng",
+          "startFrame": 168,
+          "endFrame": 175
+        },
+        {
+          "word": "trong",
+          "startFrame": 175,
+          "endFrame": 191
+        },
+        {
+          "word": "một",
+          "startFrame": 191,
+          "endFrame": 196
+        },
+        {
+          "word": "tuần",
+          "startFrame": 196,
+          "endFrame": 202
+        },
+        {
+          "word": "qua",
+          "startFrame": 202,
+          "endFrame": 209
+        },
+        {
+          "word": "xem.",
+          "startFrame": 209,
+          "endFrame": 216
+        },
+        {
+          "word": "Có",
+          "startFrame": 232,
+          "endFrame": 237
+        },
+        {
+          "word": "phải",
+          "startFrame": 237,
+          "endFrame": 241
+        },
+        {
+          "word": "toàn",
+          "startFrame": 241,
+          "endFrame": 249
+        },
+        {
+          "word": "là:",
+          "startFrame": 249,
+          "endFrame": 257
+        },
+        {
+          "word": "Mua",
+          "startFrame": 267,
+          "endFrame": 270
+        },
+        {
+          "word": "hộ",
+          "startFrame": 270,
+          "endFrame": 274
+        },
+        {
+          "word": "em",
+          "startFrame": 274,
+          "endFrame": 279
+        },
+        {
+          "word": "chai",
+          "startFrame": 279,
+          "endFrame": 285
+        },
+        {
+          "word": "nước",
+          "startFrame": 285,
+          "endFrame": 288
+        },
+        {
+          "word": "mắm,,",
+          "startFrame": 288,
+          "endFrame": 296
+        },
+        {
+          "word": "đón",
+          "startFrame": 308,
+          "endFrame": 313
+        },
+        {
+          "word": "con",
+          "startFrame": 313,
+          "endFrame": 317
+        },
+        {
+          "word": "chưa,,",
+          "startFrame": 317,
+          "endFrame": 322
+        },
+        {
+          "word": "đóng",
+          "startFrame": 339,
+          "endFrame": 343
+        },
+        {
+          "word": "tiền",
+          "startFrame": 343,
+          "endFrame": 348
+        },
+        {
+          "word": "điện",
+          "startFrame": 348,
+          "endFrame": 354
+        },
+        {
+          "word": "nhé?",
+          "startFrame": 354,
+          "endFrame": 361
+        },
+        {
+          "word": "Chúng",
+          "startFrame": 374,
+          "endFrame": 378
+        },
+        {
+          "word": "ta",
+          "startFrame": 378,
+          "endFrame": 383
+        },
+        {
+          "word": "nói",
+          "startFrame": 383,
+          "endFrame": 390
+        },
+        {
+          "word": "với",
+          "startFrame": 390,
+          "endFrame": 394
+        },
+        {
+          "word": "nhau",
+          "startFrame": 394,
+          "endFrame": 401
+        },
+        {
+          "word": "mọi",
+          "startFrame": 401,
+          "endFrame": 414
+        },
+        {
+          "word": "thứ",
+          "startFrame": 414,
+          "endFrame": 420
+        },
+        {
+          "word": "về",
+          "startFrame": 420,
+          "endFrame": 426
+        },
+        {
+          "word": "việc",
+          "startFrame": 426,
+          "endFrame": 430
+        },
+        {
+          "word": "nhà,,",
+          "startFrame": 430,
+          "endFrame": 436
+        },
+        {
+          "word": "nhưng",
+          "startFrame": 436,
+          "endFrame": 453
+        },
+        {
+          "word": "lại",
+          "startFrame": 453,
+          "endFrame": 460
+        },
+        {
+          "word": "tuyệt",
+          "startFrame": 460,
+          "endFrame": 468
+        },
+        {
+          "word": "nhiên",
+          "startFrame": 468,
+          "endFrame": 474
+        },
+        {
+          "word": "không",
+          "startFrame": 474,
+          "endFrame": 480
+        },
+        {
+          "word": "nói",
+          "startFrame": 480,
+          "endFrame": 486
+        },
+        {
+          "word": "một",
+          "startFrame": 486,
+          "endFrame": 491
+        },
+        {
+          "word": "câu",
+          "startFrame": 491,
+          "endFrame": 499
+        },
+        {
+          "word": "nào",
+          "startFrame": 499,
+          "endFrame": 504
+        },
+        {
+          "word": "về",
+          "startFrame": 504,
+          "endFrame": 520
+        },
+        {
+          "word": "nỗi",
+          "startFrame": 520,
+          "endFrame": 528
+        },
+        {
+          "word": "buồn",
+          "startFrame": 528,
+          "endFrame": 535
+        },
+        {
+          "word": "hay",
+          "startFrame": 535,
+          "endFrame": 541
+        },
+        {
+          "word": "sự",
+          "startFrame": 541,
+          "endFrame": 546
+        },
+        {
+          "word": "mệt",
+          "startFrame": 546,
+          "endFrame": 552
+        },
+        {
+          "word": "mỏi",
+          "startFrame": 552,
+          "endFrame": 559
+        },
+        {
+          "word": "trong",
+          "startFrame": 559,
+          "endFrame": 567
+        },
+        {
+          "word": "lòng",
+          "startFrame": 567,
+          "endFrame": 573
+        },
+        {
+          "word": "mình.",
+          "startFrame": 573,
+          "endFrame": 577
+        }
+      ],
+      "image": "essay_ep12_scene10.jpg",
+      "media_type": "image"
+    },
+    {
+      "scene": 11,
+      "tag": "Vì sao ta ngừng tâm sự?",
+      "text": "Không phải ta hết chuyện để kể. Mà vì có những lần ta vừa mở lời than mệt,, người kia đã vội gạt đi: \"Có thế thôi cũng kêu,, tôi còn mệt gấp vạn đây này\". Chính câu nói ấy đã đóng sập cánh cửa lòng lại. Từ đó về sau,, ai có bão giông người nấy tự chịu.",
+      "highlight": "SỢ BỊ PHÁN XÉT · HƠN SỢ CÔ ĐƠN",
+      "visual_type": "B_ROLL",
+      "visual": "essay_ep12_broll_11.mp4",
+      "duration": 19.0,
+      "start": 191.0,
+      "end": 210.0,
+      "startFrame": 5675,
+      "durationInFrames": 457,
+      "words": [
+        {
+          "word": "Không",
+          "startFrame": 0,
+          "endFrame": 3
+        },
+        {
+          "word": "phải",
+          "startFrame": 3,
+          "endFrame": 9
+        },
+        {
+          "word": "ta",
+          "startFrame": 9,
+          "endFrame": 15
+        },
+        {
+          "word": "hết",
+          "startFrame": 15,
+          "endFrame": 19
+        },
+        {
+          "word": "chuyện",
+          "startFrame": 19,
+          "endFrame": 26
+        },
+        {
+          "word": "để",
+          "startFrame": 26,
+          "endFrame": 31
+        },
+        {
+          "word": "kể.",
+          "startFrame": 31,
+          "endFrame": 38
+        },
+        {
+          "word": "Mà",
+          "startFrame": 53,
+          "endFrame": 55
+        },
+        {
+          "word": "vì",
+          "startFrame": 55,
+          "endFrame": 60
+        },
+        {
+          "word": "có",
+          "startFrame": 60,
+          "endFrame": 68
+        },
+        {
+          "word": "những",
+          "startFrame": 68,
+          "endFrame": 71
+        },
+        {
+          "word": "lần",
+          "startFrame": 71,
+          "endFrame": 77
+        },
+        {
+          "word": "ta",
+          "startFrame": 77,
+          "endFrame": 85
+        },
+        {
+          "word": "vừa",
+          "startFrame": 85,
+          "endFrame": 93
+        },
+        {
+          "word": "mở",
+          "startFrame": 93,
+          "endFrame": 99
+        },
+        {
+          "word": "lời",
+          "startFrame": 99,
+          "endFrame": 106
+        },
+        {
+          "word": "than",
+          "startFrame": 106,
+          "endFrame": 116
+        },
+        {
+          "word": "mệt,,",
+          "startFrame": 116,
+          "endFrame": 119
+        },
+        {
+          "word": "người",
+          "startFrame": 132,
+          "endFrame": 136
+        },
+        {
+          "word": "kia",
+          "startFrame": 136,
+          "endFrame": 143
+        },
+        {
+          "word": "đã",
+          "startFrame": 143,
+          "endFrame": 147
+        },
+        {
+          "word": "vội",
+          "startFrame": 147,
+          "endFrame": 153
+        },
+        {
+          "word": "gạt",
+          "startFrame": 153,
+          "endFrame": 159
+        },
+        {
+          "word": "đi:",
+          "startFrame": 159,
+          "endFrame": 165
+        },
+        {
+          "word": "\"Có",
+          "startFrame": 177,
+          "endFrame": 179
+        },
+        {
+          "word": "thế",
+          "startFrame": 179,
+          "endFrame": 185
+        },
+        {
+          "word": "thôi",
+          "startFrame": 185,
+          "endFrame": 192
+        },
+        {
+          "word": "cũng",
+          "startFrame": 192,
+          "endFrame": 198
+        },
+        {
+          "word": "kêu,,",
+          "startFrame": 198,
+          "endFrame": 206
+        },
+        {
+          "word": "tôi",
+          "startFrame": 218,
+          "endFrame": 221
+        },
+        {
+          "word": "còn",
+          "startFrame": 221,
+          "endFrame": 227
+        },
+        {
+          "word": "mệt",
+          "startFrame": 227,
+          "endFrame": 234
+        },
+        {
+          "word": "gấp",
+          "startFrame": 234,
+          "endFrame": 240
+        },
+        {
+          "word": "vạn",
+          "startFrame": 240,
+          "endFrame": 247
+        },
+        {
+          "word": "đây",
+          "startFrame": 247,
+          "endFrame": 251
+        },
+        {
+          "word": "này\".",
+          "startFrame": 251,
+          "endFrame": 257
+        },
+        {
+          "word": "Chính",
+          "startFrame": 273,
+          "endFrame": 276
+        },
+        {
+          "word": "câu",
+          "startFrame": 276,
+          "endFrame": 283
+        },
+        {
+          "word": "nói",
+          "startFrame": 283,
+          "endFrame": 286
+        },
+        {
+          "word": "ấy",
+          "startFrame": 286,
+          "endFrame": 291
+        },
+        {
+          "word": "đã",
+          "startFrame": 291,
+          "endFrame": 296
+        },
+        {
+          "word": "đóng",
+          "startFrame": 296,
+          "endFrame": 302
+        },
+        {
+          "word": "sập",
+          "startFrame": 302,
+          "endFrame": 306
+        },
+        {
+          "word": "cánh",
+          "startFrame": 306,
+          "endFrame": 314
+        },
+        {
+          "word": "cửa",
+          "startFrame": 314,
+          "endFrame": 321
+        },
+        {
+          "word": "lòng",
+          "startFrame": 321,
+          "endFrame": 324
+        },
+        {
+          "word": "lại.",
+          "startFrame": 324,
+          "endFrame": 330
+        },
+        {
+          "word": "Từ",
+          "startFrame": 360,
+          "endFrame": 368
+        },
+        {
+          "word": "đó",
+          "startFrame": 368,
+          "endFrame": 374
+        },
+        {
+          "word": "về",
+          "startFrame": 374,
+          "endFrame": 378
+        },
+        {
+          "word": "sau,,",
+          "startFrame": 378,
+          "endFrame": 386
+        },
+        {
+          "word": "ai",
+          "startFrame": 401,
+          "endFrame": 405
+        },
+        {
+          "word": "có",
+          "startFrame": 405,
+          "endFrame": 409
+        },
+        {
+          "word": "bão",
+          "startFrame": 409,
+          "endFrame": 415
+        },
+        {
+          "word": "giông",
+          "startFrame": 415,
+          "endFrame": 422
+        },
+        {
+          "word": "người",
+          "startFrame": 422,
+          "endFrame": 427
+        },
+        {
+          "word": "nấy",
+          "startFrame": 427,
+          "endFrame": 433
+        },
+        {
+          "word": "tự",
+          "startFrame": 433,
+          "endFrame": 438
+        },
+        {
+          "word": "chịu.",
+          "startFrame": 438,
+          "endFrame": 447
+        }
+      ],
+      "video": "essay_ep12_broll_11.mp4",
+      "media_type": "video"
+    },
+    {
+      "scene": 12,
+      "tag": "Vết nứt 5: Hiệu ứng giọt nước tràn ly",
+      "text": "Và vết nứt thứ năm,, cũng là vết nứt nguy hiểm nhất: Sự im lặng tích tụ. Trong tâm lý học,, người ta nhận ra rằng các cặp đôi hiếm khi tan vỡ vì một biến cố chấn động. Họ rời xa nhau vì một nghìn lần chiếc khăn ướt vứt trên giường,, một nghìn lần gọi ăn cơm mà mắt vẫn dán vào điện thoại,, một nghìn lần hứa rồi lại quên.",
+      "highlight": "KHÔNG VỠ VÌ MỘT LẦN · VỠ VÌ NGHÌN LẦN",
+      "visual_type": "AI_IMAGE",
+      "visual": "essay_ep12_scene12.jpg",
+      "duration": 20.0,
+      "start": 210.0,
+      "end": 230.0,
+      "startFrame": 6216,
+      "durationInFrames": 569,
+      "words": [
+        {
+          "word": "Và",
+          "startFrame": 0,
+          "endFrame": 5
+        },
+        {
+          "word": "vết",
+          "startFrame": 5,
+          "endFrame": 13
+        },
+        {
+          "word": "nứt",
+          "startFrame": 13,
+          "endFrame": 16
+        },
+        {
+          "word": "thứ",
+          "startFrame": 16,
+          "endFrame": 22
+        },
+        {
+          "word": "năm,,",
+          "startFrame": 22,
+          "endFrame": 29
+        },
+        {
+          "word": "cũng",
+          "startFrame": 29,
+          "endFrame": 42
+        },
+        {
+          "word": "là",
+          "startFrame": 42,
+          "endFrame": 49
+        },
+        {
+          "word": "vết",
+          "startFrame": 49,
+          "endFrame": 57
+        },
+        {
+          "word": "nứt",
+          "startFrame": 57,
+          "endFrame": 61
+        },
+        {
+          "word": "nguy",
+          "startFrame": 69,
+          "endFrame": 73
+        },
+        {
+          "word": "hiểm",
+          "startFrame": 73,
+          "endFrame": 81
+        },
+        {
+          "word": "nhất:",
+          "startFrame": 81,
+          "endFrame": 87
+        },
+        {
+          "word": "Sự",
+          "startFrame": 96,
+          "endFrame": 99
+        },
+        {
+          "word": "im",
+          "startFrame": 99,
+          "endFrame": 104
+        },
+        {
+          "word": "lặng",
+          "startFrame": 104,
+          "endFrame": 114
+        },
+        {
+          "word": "tích",
+          "startFrame": 114,
+          "endFrame": 118
+        },
+        {
+          "word": "tụ.",
+          "startFrame": 118,
+          "endFrame": 124
+        },
+        {
+          "word": "Trong",
+          "startFrame": 142,
+          "endFrame": 150
+        },
+        {
+          "word": "tâm",
+          "startFrame": 150,
+          "endFrame": 157
+        },
+        {
+          "word": "lý",
+          "startFrame": 157,
+          "endFrame": 162
+        },
+        {
+          "word": "học,,",
+          "startFrame": 162,
+          "endFrame": 168
+        },
+        {
+          "word": "người",
+          "startFrame": 183,
+          "endFrame": 186
+        },
+        {
+          "word": "ta",
+          "startFrame": 186,
+          "endFrame": 190
+        },
+        {
+          "word": "nhận",
+          "startFrame": 190,
+          "endFrame": 196
+        },
+        {
+          "word": "ra",
+          "startFrame": 196,
+          "endFrame": 201
+        },
+        {
+          "word": "rằng",
+          "startFrame": 201,
+          "endFrame": 208
+        },
+        {
+          "word": "các",
+          "startFrame": 208,
+          "endFrame": 225
+        },
+        {
+          "word": "cặp",
+          "startFrame": 225,
+          "endFrame": 232
+        },
+        {
+          "word": "đôi",
+          "startFrame": 232,
+          "endFrame": 238
+        },
+        {
+          "word": "hiếm",
+          "startFrame": 238,
+          "endFrame": 244
+        },
+        {
+          "word": "khi",
+          "startFrame": 244,
+          "endFrame": 249
+        },
+        {
+          "word": "tan",
+          "startFrame": 249,
+          "endFrame": 255
+        },
+        {
+          "word": "vỡ",
+          "startFrame": 255,
+          "endFrame": 263
+        },
+        {
+          "word": "vì",
+          "startFrame": 263,
+          "endFrame": 277
+        },
+        {
+          "word": "một",
+          "startFrame": 277,
+          "endFrame": 283
+        },
+        {
+          "word": "biến",
+          "startFrame": 283,
+          "endFrame": 288
+        },
+        {
+          "word": "cố",
+          "startFrame": 288,
+          "endFrame": 294
+        },
+        {
+          "word": "chấn",
+          "startFrame": 294,
+          "endFrame": 300
+        },
+        {
+          "word": "động.",
+          "startFrame": 300,
+          "endFrame": 304
+        },
+        {
+          "word": "Họ",
+          "startFrame": 319,
+          "endFrame": 322
+        },
+        {
+          "word": "rời",
+          "startFrame": 322,
+          "endFrame": 330
+        },
+        {
+          "word": "xa",
+          "startFrame": 330,
+          "endFrame": 336
+        },
+        {
+          "word": "nhau",
+          "startFrame": 336,
+          "endFrame": 343
+        },
+        {
+          "word": "vì",
+          "startFrame": 343,
+          "endFrame": 354
+        },
+        {
+          "word": "một",
+          "startFrame": 354,
+          "endFrame": 360
+        },
+        {
+          "word": "nghìn",
+          "startFrame": 360,
+          "endFrame": 366
+        },
+        {
+          "word": "lần",
+          "startFrame": 366,
+          "endFrame": 370
+        },
+        {
+          "word": "chiếc",
+          "startFrame": 370,
+          "endFrame": 379
+        },
+        {
+          "word": "khăn",
+          "startFrame": 379,
+          "endFrame": 385
+        },
+        {
+          "word": "ướt",
+          "startFrame": 385,
+          "endFrame": 394
+        },
+        {
+          "word": "vứt",
+          "startFrame": 394,
+          "endFrame": 400
+        },
+        {
+          "word": "trên",
+          "startFrame": 400,
+          "endFrame": 405
+        },
+        {
+          "word": "giường,,",
+          "startFrame": 405,
+          "endFrame": 412
+        },
+        {
+          "word": "một",
+          "startFrame": 428,
+          "endFrame": 430
+        },
+        {
+          "word": "nghìn",
+          "startFrame": 430,
+          "endFrame": 439
+        },
+        {
+          "word": "lần",
+          "startFrame": 439,
+          "endFrame": 444
+        },
+        {
+          "word": "gọi",
+          "startFrame": 444,
+          "endFrame": 451
+        },
+        {
+          "word": "ăn",
+          "startFrame": 451,
+          "endFrame": 456
+        },
+        {
+          "word": "cơm",
+          "startFrame": 456,
+          "endFrame": 463
+        },
+        {
+          "word": "mà",
+          "startFrame": 463,
+          "endFrame": 466
+        },
+        {
+          "word": "mắt",
+          "startFrame": 466,
+          "endFrame": 472
+        },
+        {
+          "word": "vẫn",
+          "startFrame": 472,
+          "endFrame": 478
+        },
+        {
+          "word": "dán",
+          "startFrame": 478,
+          "endFrame": 484
+        },
+        {
+          "word": "vào",
+          "startFrame": 484,
+          "endFrame": 488
+        },
+        {
+          "word": "điện",
+          "startFrame": 488,
+          "endFrame": 493
+        },
+        {
+          "word": "thoại,,",
+          "startFrame": 493,
+          "endFrame": 501
+        },
+        {
+          "word": "một",
+          "startFrame": 514,
+          "endFrame": 516
+        },
+        {
+          "word": "nghìn",
+          "startFrame": 516,
+          "endFrame": 523
+        },
+        {
+          "word": "lần",
+          "startFrame": 523,
+          "endFrame": 529
+        },
+        {
+          "word": "hứa",
+          "startFrame": 529,
+          "endFrame": 537
+        },
+        {
+          "word": "rồi",
+          "startFrame": 537,
+          "endFrame": 542
+        },
+        {
+          "word": "lại",
+          "startFrame": 542,
+          "endFrame": 548
+        },
+        {
+          "word": "quên.",
+          "startFrame": 548,
+          "endFrame": 555
+        }
+      ],
+      "image": "essay_ep12_scene12.jpg",
+      "media_type": "image"
+    },
+    {
+      "scene": 13,
+      "tag": "Sự im lặng đáng sợ nhất",
+      "text": "Khi một người còn cằn nhằn,, còn trách móc,, nghĩa là họ còn hy vọng bạn thay đổi. Khoảnh khắc đáng sợ nhất trong hôn nhân không phải là tiếng bát đĩa vỡ,, mà là khi một người bỗng dưng hiền lành lạ thường,, không còn đòi hỏi,, cũng chẳng còn giận hờn. Đó là lúc tâm họ đã nguội lạnh.",
+      "highlight": "KHI PHỤ NỮ IM LẶNG · LÀ LÚC HỌ RỜI ĐI",
+      "visual_type": "B_ROLL",
+      "visual": "essay_ep12_broll_13.mp4",
+      "duration": 17.0,
+      "start": 230.0,
+      "end": 247.0,
+      "startFrame": 6796,
+      "durationInFrames": 476,
+      "words": [
+        {
+          "word": "Khi",
+          "startFrame": 0,
+          "endFrame": 5
+        },
+        {
+          "word": "một",
+          "startFrame": 5,
+          "endFrame": 10
+        },
+        {
+          "word": "người",
+          "startFrame": 10,
+          "endFrame": 16
+        },
+        {
+          "word": "còn",
+          "startFrame": 16,
+          "endFrame": 23
+        },
+        {
+          "word": "cằn",
+          "startFrame": 23,
+          "endFrame": 31
+        },
+        {
+          "word": "nhằn,,",
+          "startFrame": 31,
+          "endFrame": 35
+        },
+        {
+          "word": "còn",
+          "startFrame": 47,
+          "endFrame": 51
+        },
+        {
+          "word": "trách",
+          "startFrame": 51,
+          "endFrame": 59
+        },
+        {
+          "word": "móc,,",
+          "startFrame": 59,
+          "endFrame": 66
+        },
+        {
+          "word": "nghĩa",
+          "startFrame": 79,
+          "endFrame": 85
+        },
+        {
+          "word": "là",
+          "startFrame": 85,
+          "endFrame": 90
+        },
+        {
+          "word": "họ",
+          "startFrame": 90,
+          "endFrame": 97
+        },
+        {
+          "word": "còn",
+          "startFrame": 97,
+          "endFrame": 105
+        },
+        {
+          "word": "hy",
+          "startFrame": 105,
+          "endFrame": 109
+        },
+        {
+          "word": "vọng",
+          "startFrame": 109,
+          "endFrame": 115
+        },
+        {
+          "word": "bạn",
+          "startFrame": 115,
+          "endFrame": 120
+        },
+        {
+          "word": "thay",
+          "startFrame": 120,
+          "endFrame": 127
+        },
+        {
+          "word": "đổi.",
+          "startFrame": 127,
+          "endFrame": 133
+        },
+        {
+          "word": "Khoảnh",
+          "startFrame": 155,
+          "endFrame": 158
+        },
+        {
+          "word": "khắc",
+          "startFrame": 158,
+          "endFrame": 164
+        },
+        {
+          "word": "đáng",
+          "startFrame": 164,
+          "endFrame": 173
+        },
+        {
+          "word": "sợ",
+          "startFrame": 173,
+          "endFrame": 178
+        },
+        {
+          "word": "nhất",
+          "startFrame": 178,
+          "endFrame": 183
+        },
+        {
+          "word": "trong",
+          "startFrame": 183,
+          "endFrame": 189
+        },
+        {
+          "word": "hôn",
+          "startFrame": 189,
+          "endFrame": 194
+        },
+        {
+          "word": "nhân",
+          "startFrame": 194,
+          "endFrame": 198
+        },
+        {
+          "word": "không",
+          "startFrame": 198,
+          "endFrame": 205
+        },
+        {
+          "word": "phải",
+          "startFrame": 205,
+          "endFrame": 211
+        },
+        {
+          "word": "là",
+          "startFrame": 211,
+          "endFrame": 216
+        },
+        {
+          "word": "tiếng",
+          "startFrame": 216,
+          "endFrame": 221
+        },
+        {
+          "word": "bát",
+          "startFrame": 221,
+          "endFrame": 227
+        },
+        {
+          "word": "đĩa",
+          "startFrame": 227,
+          "endFrame": 235
+        },
+        {
+          "word": "vỡ,,",
+          "startFrame": 235,
+          "endFrame": 238
+        },
+        {
+          "word": "mà",
+          "startFrame": 251,
+          "endFrame": 259
+        },
+        {
+          "word": "là",
+          "startFrame": 259,
+          "endFrame": 264
+        },
+        {
+          "word": "khi",
+          "startFrame": 264,
+          "endFrame": 271
+        },
+        {
+          "word": "một",
+          "startFrame": 271,
+          "endFrame": 276
+        },
+        {
+          "word": "người",
+          "startFrame": 276,
+          "endFrame": 283
+        },
+        {
+          "word": "bỗng",
+          "startFrame": 283,
+          "endFrame": 290
+        },
+        {
+          "word": "dưng",
+          "startFrame": 290,
+          "endFrame": 295
+        },
+        {
+          "word": "hiền",
+          "startFrame": 295,
+          "endFrame": 301
+        },
+        {
+          "word": "lành",
+          "startFrame": 301,
+          "endFrame": 306
+        },
+        {
+          "word": "lạ",
+          "startFrame": 306,
+          "endFrame": 312
+        },
+        {
+          "word": "thường,,",
+          "startFrame": 312,
+          "endFrame": 320
+        },
+        {
+          "word": "không",
+          "startFrame": 338,
+          "endFrame": 341
+        },
+        {
+          "word": "còn",
+          "startFrame": 341,
+          "endFrame": 348
+        },
+        {
+          "word": "đòi",
+          "startFrame": 348,
+          "endFrame": 353
+        },
+        {
+          "word": "hỏi,,",
+          "startFrame": 353,
+          "endFrame": 360
+        },
+        {
+          "word": "cũng",
+          "startFrame": 375,
+          "endFrame": 379
+        },
+        {
+          "word": "chẳng",
+          "startFrame": 379,
+          "endFrame": 387
+        },
+        {
+          "word": "còn",
+          "startFrame": 387,
+          "endFrame": 394
+        },
+        {
+          "word": "giận",
+          "startFrame": 394,
+          "endFrame": 401
+        },
+        {
+          "word": "hờn.",
+          "startFrame": 401,
+          "endFrame": 407
+        },
+        {
+          "word": "Đó",
+          "startFrame": 407,
+          "endFrame": 428
+        },
+        {
+          "word": "là",
+          "startFrame": 428,
+          "endFrame": 431
+        },
+        {
+          "word": "lúc",
+          "startFrame": 431,
+          "endFrame": 437
+        },
+        {
+          "word": "tâm",
+          "startFrame": 437,
+          "endFrame": 442
+        },
+        {
+          "word": "họ",
+          "startFrame": 442,
+          "endFrame": 446
+        },
+        {
+          "word": "đã",
+          "startFrame": 446,
+          "endFrame": 453
+        },
+        {
+          "word": "nguội",
+          "startFrame": 453,
+          "endFrame": 458
+        },
+        {
+          "word": "lạnh.",
+          "startFrame": 458,
+          "endFrame": 466
+        }
+      ],
+      "video": "essay_ep12_broll_13.mp4",
+      "media_type": "video"
+    },
+    {
+      "scene": 14,
+      "tag": "Góc nhìn cổ nhân: Tương kính như tân",
+      "text": "Người xưa có bốn chữ rất sâu sắc về đạo vợ chồng: \"Tương kính như tân\",, nghĩa là dù đã sống với nhau đầu bạc răng long,, vẫn phải giữ sự tôn trọng nhau như thuở mới quen. Quen thuộc quá dễ sinh ra suồng sã. Càng là người gần gũi nhất,, lẽ ra càng phải dùng những lời dịu dàng nhất để đối đãi.",
+      "highlight": "TƯƠNG KÍNH NHƯ TÂN · TÔN TRỌNG NHƯ THUỞ ĐẦU",
+      "visual_type": "AI_IMAGE",
+      "visual": "essay_ep12_scene14.jpg",
+      "duration": 21.0,
+      "start": 247.0,
+      "end": 268.0,
+      "startFrame": 7368,
+      "durationInFrames": 520,
+      "words": [
+        {
+          "word": "Người",
+          "startFrame": 0,
+          "endFrame": 7
+        },
+        {
+          "word": "xưa",
+          "startFrame": 7,
+          "endFrame": 14
+        },
+        {
+          "word": "có",
+          "startFrame": 14,
+          "endFrame": 20
+        },
+        {
+          "word": "bốn",
+          "startFrame": 20,
+          "endFrame": 25
+        },
+        {
+          "word": "chữ",
+          "startFrame": 25,
+          "endFrame": 30
+        },
+        {
+          "word": "rất",
+          "startFrame": 30,
+          "endFrame": 37
+        },
+        {
+          "word": "sâu",
+          "startFrame": 37,
+          "endFrame": 47
+        },
+        {
+          "word": "sắc",
+          "startFrame": 47,
+          "endFrame": 54
+        },
+        {
+          "word": "về",
+          "startFrame": 54,
+          "endFrame": 60
+        },
+        {
+          "word": "đạo",
+          "startFrame": 60,
+          "endFrame": 66
+        },
+        {
+          "word": "vợ",
+          "startFrame": 66,
+          "endFrame": 71
+        },
+        {
+          "word": "chồng:",
+          "startFrame": 71,
+          "endFrame": 78
+        },
+        {
+          "word": "\"Tương",
+          "startFrame": 94,
+          "endFrame": 97
+        },
+        {
+          "word": "kính",
+          "startFrame": 97,
+          "endFrame": 105
+        },
+        {
+          "word": "như",
+          "startFrame": 105,
+          "endFrame": 109
+        },
+        {
+          "word": "tân\",,",
+          "startFrame": 109,
+          "endFrame": 118
+        },
+        {
+          "word": "nghĩa",
+          "startFrame": 133,
+          "endFrame": 137
+        },
+        {
+          "word": "là",
+          "startFrame": 137,
+          "endFrame": 140
+        },
+        {
+          "word": "dù",
+          "startFrame": 140,
+          "endFrame": 146
+        },
+        {
+          "word": "đã",
+          "startFrame": 146,
+          "endFrame": 150
+        },
+        {
+          "word": "sống",
+          "startFrame": 150,
+          "endFrame": 157
+        },
+        {
+          "word": "với",
+          "startFrame": 157,
+          "endFrame": 161
+        },
+        {
+          "word": "nhau",
+          "startFrame": 161,
+          "endFrame": 170
+        },
+        {
+          "word": "đầu",
+          "startFrame": 170,
+          "endFrame": 175
+        },
+        {
+          "word": "bạc",
+          "startFrame": 175,
+          "endFrame": 184
+        },
+        {
+          "word": "răng",
+          "startFrame": 184,
+          "endFrame": 190
+        },
+        {
+          "word": "long,,",
+          "startFrame": 190,
+          "endFrame": 194
+        },
+        {
+          "word": "vẫn",
+          "startFrame": 211,
+          "endFrame": 213
+        },
+        {
+          "word": "phải",
+          "startFrame": 212,
+          "endFrame": 219
+        },
+        {
+          "word": "giữ",
+          "startFrame": 219,
+          "endFrame": 226
+        },
+        {
+          "word": "sự",
+          "startFrame": 226,
+          "endFrame": 231
+        },
+        {
+          "word": "tôn",
+          "startFrame": 231,
+          "endFrame": 238
+        },
+        {
+          "word": "trọng",
+          "startFrame": 238,
+          "endFrame": 246
+        },
+        {
+          "word": "nhau",
+          "startFrame": 246,
+          "endFrame": 253
+        },
+        {
+          "word": "như",
+          "startFrame": 263,
+          "endFrame": 269
+        },
+        {
+          "word": "thuở",
+          "startFrame": 269,
+          "endFrame": 278
+        },
+        {
+          "word": "mới",
+          "startFrame": 278,
+          "endFrame": 282
+        },
+        {
+          "word": "quen.",
+          "startFrame": 282,
+          "endFrame": 290
+        },
+        {
+          "word": "Quen",
+          "startFrame": 307,
+          "endFrame": 311
+        },
+        {
+          "word": "thuộc",
+          "startFrame": 311,
+          "endFrame": 319
+        },
+        {
+          "word": "quá",
+          "startFrame": 319,
+          "endFrame": 325
+        },
+        {
+          "word": "dễ",
+          "startFrame": 325,
+          "endFrame": 331
+        },
+        {
+          "word": "sinh",
+          "startFrame": 331,
+          "endFrame": 340
+        },
+        {
+          "word": "ra",
+          "startFrame": 340,
+          "endFrame": 344
+        },
+        {
+          "word": "suồng",
+          "startFrame": 344,
+          "endFrame": 351
+        },
+        {
+          "word": "sã.",
+          "startFrame": 351,
+          "endFrame": 358
+        },
+        {
+          "word": "Càng",
+          "startFrame": 372,
+          "endFrame": 378
+        },
+        {
+          "word": "là",
+          "startFrame": 378,
+          "endFrame": 384
+        },
+        {
+          "word": "người",
+          "startFrame": 384,
+          "endFrame": 390
+        },
+        {
+          "word": "gần",
+          "startFrame": 390,
+          "endFrame": 395
+        },
+        {
+          "word": "gũi",
+          "startFrame": 395,
+          "endFrame": 400
+        },
+        {
+          "word": "nhất,,",
+          "startFrame": 400,
+          "endFrame": 406
+        },
+        {
+          "word": "lẽ",
+          "startFrame": 427,
+          "endFrame": 431
+        },
+        {
+          "word": "ra",
+          "startFrame": 431,
+          "endFrame": 436
+        },
+        {
+          "word": "càng",
+          "startFrame": 436,
+          "endFrame": 445
+        },
+        {
+          "word": "phải",
+          "startFrame": 445,
+          "endFrame": 450
+        },
+        {
+          "word": "dùng",
+          "startFrame": 450,
+          "endFrame": 457
+        },
+        {
+          "word": "những",
+          "startFrame": 457,
+          "endFrame": 460
+        },
+        {
+          "word": "lời",
+          "startFrame": 460,
+          "endFrame": 467
+        },
+        {
+          "word": "dịu",
+          "startFrame": 467,
+          "endFrame": 475
+        },
+        {
+          "word": "dàng",
+          "startFrame": 475,
+          "endFrame": 480
+        },
+        {
+          "word": "nhất",
+          "startFrame": 480,
+          "endFrame": 488
+        },
+        {
+          "word": "để",
+          "startFrame": 488,
+          "endFrame": 497
+        },
+        {
+          "word": "đối",
+          "startFrame": 497,
+          "endFrame": 503
+        },
+        {
+          "word": "đãi.",
+          "startFrame": 503,
+          "endFrame": 510
+        }
+      ],
+      "image": "essay_ep12_scene14.jpg",
+      "media_type": "image"
+    },
+    {
+      "scene": 15,
+      "tag": "Triết lý Nửa Chén Trà trong hôn nhân",
+      "text": "Hôn nhân cũng giống như việc thưởng thức Nửa Chén Trà. Nếu ta cứ đổ đầy vào đó những kỳ vọng hoàn hảo,, những đòi hỏi đối phương phải tự hiểu ý mình,, chiếc chén sẽ tràn và làm bỏng tay cả hai. Chỉ khi ta biết chừa lại nửa phần vơi của sự bao dung và chấp nhận bất toàn,, hương trà mới có không gian để đọng lại.",
+      "highlight": "CHỪA LẠI KHOẢNG VƠI · CHO SỰ BAO DUNG",
+      "visual_type": "USER_VIDEO",
+      "visual": "essay_ep12_broll_15.mp4",
+      "duration": 20.0,
+      "start": 268.0,
+      "end": 288.0,
+      "startFrame": 7898,
+      "durationInFrames": 548,
+      "words": [
+        {
+          "word": "Hôn",
+          "startFrame": 0,
+          "endFrame": 5
+        },
+        {
+          "word": "nhân",
+          "startFrame": 5,
+          "endFrame": 9
+        },
+        {
+          "word": "cũng",
+          "startFrame": 9,
+          "endFrame": 18
+        },
+        {
+          "word": "giống",
+          "startFrame": 18,
+          "endFrame": 26
+        },
+        {
+          "word": "như",
+          "startFrame": 26,
+          "endFrame": 30
+        },
+        {
+          "word": "việc",
+          "startFrame": 30,
+          "endFrame": 36
+        },
+        {
+          "word": "thưởng",
+          "startFrame": 36,
+          "endFrame": 41
+        },
+        {
+          "word": "thức",
+          "startFrame": 41,
+          "endFrame": 48
+        },
+        {
+          "word": "Nửa",
+          "startFrame": 48,
+          "endFrame": 57
+        },
+        {
+          "word": "Chén",
+          "startFrame": 57,
+          "endFrame": 61
+        },
+        {
+          "word": "Trà.",
+          "startFrame": 61,
+          "endFrame": 70
+        },
+        {
+          "word": "Nếu",
+          "startFrame": 89,
+          "endFrame": 94
+        },
+        {
+          "word": "ta",
+          "startFrame": 94,
+          "endFrame": 100
+        },
+        {
+          "word": "cứ",
+          "startFrame": 100,
+          "endFrame": 105
+        },
+        {
+          "word": "đổ",
+          "startFrame": 105,
+          "endFrame": 112
+        },
+        {
+          "word": "đầy",
+          "startFrame": 112,
+          "endFrame": 119
+        },
+        {
+          "word": "vào",
+          "startFrame": 119,
+          "endFrame": 122
+        },
+        {
+          "word": "đó",
+          "startFrame": 122,
+          "endFrame": 128
+        },
+        {
+          "word": "những",
+          "startFrame": 128,
+          "endFrame": 133
+        },
+        {
+          "word": "kỳ",
+          "startFrame": 133,
+          "endFrame": 141
+        },
+        {
+          "word": "vọng",
+          "startFrame": 141,
+          "endFrame": 149
+        },
+        {
+          "word": "hoàn",
+          "startFrame": 149,
+          "endFrame": 155
+        },
+        {
+          "word": "hảo,,",
+          "startFrame": 155,
+          "endFrame": 161
+        },
+        {
+          "word": "những",
+          "startFrame": 161,
+          "endFrame": 173
+        },
+        {
+          "word": "đòi",
+          "startFrame": 173,
+          "endFrame": 182
+        },
+        {
+          "word": "hỏi",
+          "startFrame": 182,
+          "endFrame": 187
+        },
+        {
+          "word": "đối",
+          "startFrame": 187,
+          "endFrame": 192
+        },
+        {
+          "word": "phương",
+          "startFrame": 192,
+          "endFrame": 198
+        },
+        {
+          "word": "phải",
+          "startFrame": 198,
+          "endFrame": 211
+        },
+        {
+          "word": "tự",
+          "startFrame": 211,
+          "endFrame": 217
+        },
+        {
+          "word": "hiểu",
+          "startFrame": 217,
+          "endFrame": 224
+        },
+        {
+          "word": "ý",
+          "startFrame": 224,
+          "endFrame": 228
+        },
+        {
+          "word": "mình,,",
+          "startFrame": 228,
+          "endFrame": 233
+        },
+        {
+          "word": "chiếc",
+          "startFrame": 249,
+          "endFrame": 253
+        },
+        {
+          "word": "chén",
+          "startFrame": 253,
+          "endFrame": 258
+        },
+        {
+          "word": "sẽ",
+          "startFrame": 258,
+          "endFrame": 266
+        },
+        {
+          "word": "tràn",
+          "startFrame": 266,
+          "endFrame": 276
+        },
+        {
+          "word": "và",
+          "startFrame": 276,
+          "endFrame": 289
+        },
+        {
+          "word": "làm",
+          "startFrame": 289,
+          "endFrame": 294
+        },
+        {
+          "word": "bỏng",
+          "startFrame": 294,
+          "endFrame": 303
+        },
+        {
+          "word": "tay",
+          "startFrame": 303,
+          "endFrame": 305
+        },
+        {
+          "word": "cả",
+          "startFrame": 305,
+          "endFrame": 310
+        },
+        {
+          "word": "hai.",
+          "startFrame": 310,
+          "endFrame": 318
+        },
+        {
+          "word": "Chỉ",
+          "startFrame": 333,
+          "endFrame": 336
+        },
+        {
+          "word": "khi",
+          "startFrame": 336,
+          "endFrame": 341
+        },
+        {
+          "word": "ta",
+          "startFrame": 341,
+          "endFrame": 349
+        },
+        {
+          "word": "biết",
+          "startFrame": 349,
+          "endFrame": 356
+        },
+        {
+          "word": "chừa",
+          "startFrame": 356,
+          "endFrame": 362
+        },
+        {
+          "word": "lại",
+          "startFrame": 362,
+          "endFrame": 368
+        },
+        {
+          "word": "nửa",
+          "startFrame": 368,
+          "endFrame": 377
+        },
+        {
+          "word": "phần",
+          "startFrame": 396,
+          "endFrame": 400
+        },
+        {
+          "word": "vơi",
+          "startFrame": 400,
+          "endFrame": 408
+        },
+        {
+          "word": "của",
+          "startFrame": 408,
+          "endFrame": 414
+        },
+        {
+          "word": "sự",
+          "startFrame": 414,
+          "endFrame": 420
+        },
+        {
+          "word": "bao",
+          "startFrame": 420,
+          "endFrame": 425
+        },
+        {
+          "word": "dung",
+          "startFrame": 425,
+          "endFrame": 433
+        },
+        {
+          "word": "và",
+          "startFrame": 433,
+          "endFrame": 448
+        },
+        {
+          "word": "chấp",
+          "startFrame": 448,
+          "endFrame": 456
+        },
+        {
+          "word": "nhận",
+          "startFrame": 456,
+          "endFrame": 461
+        },
+        {
+          "word": "bất",
+          "startFrame": 461,
+          "endFrame": 467
+        },
+        {
+          "word": "toàn,,",
+          "startFrame": 467,
+          "endFrame": 476
+        },
+        {
+          "word": "hương",
+          "startFrame": 486,
+          "endFrame": 488
+        },
+        {
+          "word": "trà",
+          "startFrame": 488,
+          "endFrame": 498
+        },
+        {
+          "word": "mới",
+          "startFrame": 498,
+          "endFrame": 501
+        },
+        {
+          "word": "có",
+          "startFrame": 501,
+          "endFrame": 508
+        },
+        {
+          "word": "không",
+          "startFrame": 508,
+          "endFrame": 512
+        },
+        {
+          "word": "gian",
+          "startFrame": 512,
+          "endFrame": 521
+        },
+        {
+          "word": "để",
+          "startFrame": 521,
+          "endFrame": 527
+        },
+        {
+          "word": "đọng",
+          "startFrame": 527,
+          "endFrame": 533
+        },
+        {
+          "word": "lại.",
+          "startFrame": 533,
+          "endFrame": 538
+        }
+      ],
+      "video": "essay_ep12_broll_15.mp4",
+      "media_type": "video"
+    },
+    {
+      "scene": 16,
+      "tag": "Thực hành Sống Nhẹ: Quy tắc 3 phút mỗi tối (Bước 1)",
+      "text": "Để hàn gắn những vết nứt ấy,, bạn không cần phải đợi đến một chuyến du lịch đắt tiền. Hãy bắt đầu ngay tối nay bằng Quy tắc ba phút. Bước thứ nhất: Trong bữa cơm tối,, hãy chủ động đặt úp chiếc điện thoại của mình xuống mặt bàn. Tặng cho người đối diện một sự hiện diện trọn vẹn trong mười lăm phút ăn cơm.",
+      "highlight": "BƯỚC 1: ÚP ĐIỆN THOẠI · NHÌN VÀO MẮT NHAU",
+      "visual_type": "AI_IMAGE",
+      "visual": "essay_ep12_scene16.jpg",
+      "duration": 19.0,
+      "start": 288.0,
+      "end": 307.0,
+      "startFrame": 8543,
+      "durationInFrames": 536,
+      "words": [
+        {
+          "word": "Để",
+          "startFrame": 0,
+          "endFrame": 6
+        },
+        {
+          "word": "hàn",
+          "startFrame": 6,
+          "endFrame": 11
+        },
+        {
+          "word": "gắn",
+          "startFrame": 11,
+          "endFrame": 17
+        },
+        {
+          "word": "những",
+          "startFrame": 17,
+          "endFrame": 22
+        },
+        {
+          "word": "vết",
+          "startFrame": 22,
+          "endFrame": 33
+        },
+        {
+          "word": "nứt",
+          "startFrame": 33,
+          "endFrame": 35
+        },
+        {
+          "word": "ấy,,",
+          "startFrame": 33,
+          "endFrame": 40
+        },
+        {
+          "word": "bạn",
+          "startFrame": 56,
+          "endFrame": 60
+        },
+        {
+          "word": "không",
+          "startFrame": 60,
+          "endFrame": 66
+        },
+        {
+          "word": "cần",
+          "startFrame": 66,
+          "endFrame": 71
+        },
+        {
+          "word": "phải",
+          "startFrame": 71,
+          "endFrame": 78
+        },
+        {
+          "word": "đợi",
+          "startFrame": 78,
+          "endFrame": 85
+        },
+        {
+          "word": "đến",
+          "startFrame": 85,
+          "endFrame": 87
+        },
+        {
+          "word": "một",
+          "startFrame": 87,
+          "endFrame": 93
+        },
+        {
+          "word": "chuyến",
+          "startFrame": 93,
+          "endFrame": 100
+        },
+        {
+          "word": "du",
+          "startFrame": 100,
+          "endFrame": 105
+        },
+        {
+          "word": "lịch",
+          "startFrame": 105,
+          "endFrame": 112
+        },
+        {
+          "word": "đắt",
+          "startFrame": 112,
+          "endFrame": 117
+        },
+        {
+          "word": "tiền.",
+          "startFrame": 117,
+          "endFrame": 124
+        },
+        {
+          "word": "Hãy",
+          "startFrame": 142,
+          "endFrame": 148
+        },
+        {
+          "word": "bắt",
+          "startFrame": 148,
+          "endFrame": 154
+        },
+        {
+          "word": "đầu",
+          "startFrame": 154,
+          "endFrame": 159
+        },
+        {
+          "word": "ngay",
+          "startFrame": 159,
+          "endFrame": 165
+        },
+        {
+          "word": "tối",
+          "startFrame": 165,
+          "endFrame": 172
+        },
+        {
+          "word": "nay",
+          "startFrame": 172,
+          "endFrame": 177
+        },
+        {
+          "word": "bằng",
+          "startFrame": 177,
+          "endFrame": 184
+        },
+        {
+          "word": "Quy",
+          "startFrame": 184,
+          "endFrame": 190
+        },
+        {
+          "word": "tắc",
+          "startFrame": 190,
+          "endFrame": 195
+        },
+        {
+          "word": "ba",
+          "startFrame": 195,
+          "endFrame": 202
+        },
+        {
+          "word": "phút.",
+          "startFrame": 202,
+          "endFrame": 208
+        },
+        {
+          "word": "Bước",
+          "startFrame": 229,
+          "endFrame": 240
+        },
+        {
+          "word": "thứ",
+          "startFrame": 240,
+          "endFrame": 244
+        },
+        {
+          "word": "nhất:",
+          "startFrame": 244,
+          "endFrame": 250
+        },
+        {
+          "word": "Trong",
+          "startFrame": 256,
+          "endFrame": 259
+        },
+        {
+          "word": "bữa",
+          "startFrame": 259,
+          "endFrame": 265
+        },
+        {
+          "word": "cơm",
+          "startFrame": 265,
+          "endFrame": 270
+        },
+        {
+          "word": "tối,,",
+          "startFrame": 270,
+          "endFrame": 274
+        },
+        {
+          "word": "hãy",
+          "startFrame": 274,
+          "endFrame": 282
+        },
+        {
+          "word": "chủ",
+          "startFrame": 295,
+          "endFrame": 297
+        },
+        {
+          "word": "động",
+          "startFrame": 297,
+          "endFrame": 303
+        },
+        {
+          "word": "đặt",
+          "startFrame": 303,
+          "endFrame": 307
+        },
+        {
+          "word": "úp",
+          "startFrame": 307,
+          "endFrame": 316
+        },
+        {
+          "word": "chiếc",
+          "startFrame": 316,
+          "endFrame": 321
+        },
+        {
+          "word": "điện",
+          "startFrame": 321,
+          "endFrame": 327
+        },
+        {
+          "word": "thoại",
+          "startFrame": 327,
+          "endFrame": 329
+        },
+        {
+          "word": "của",
+          "startFrame": 327,
+          "endFrame": 332
+        },
+        {
+          "word": "mình",
+          "startFrame": 332,
+          "endFrame": 339
+        },
+        {
+          "word": "xuống",
+          "startFrame": 339,
+          "endFrame": 344
+        },
+        {
+          "word": "mặt",
+          "startFrame": 344,
+          "endFrame": 351
+        },
+        {
+          "word": "bàn.",
+          "startFrame": 361,
+          "endFrame": 366
+        },
+        {
+          "word": "Tặng",
+          "startFrame": 366,
+          "endFrame": 370
+        },
+        {
+          "word": "cho",
+          "startFrame": 370,
+          "endFrame": 379
+        },
+        {
+          "word": "người",
+          "startFrame": 379,
+          "endFrame": 397
+        },
+        {
+          "word": "đối",
+          "startFrame": 397,
+          "endFrame": 401
+        },
+        {
+          "word": "diện",
+          "startFrame": 401,
+          "endFrame": 406
+        },
+        {
+          "word": "một",
+          "startFrame": 406,
+          "endFrame": 414
+        },
+        {
+          "word": "sự",
+          "startFrame": 414,
+          "endFrame": 421
+        },
+        {
+          "word": "hiện",
+          "startFrame": 421,
+          "endFrame": 433
+        },
+        {
+          "word": "diện",
+          "startFrame": 433,
+          "endFrame": 441
+        },
+        {
+          "word": "trọn",
+          "startFrame": 441,
+          "endFrame": 448
+        },
+        {
+          "word": "vẹn",
+          "startFrame": 448,
+          "endFrame": 456
+        },
+        {
+          "word": "trong",
+          "startFrame": 456,
+          "endFrame": 464
+        },
+        {
+          "word": "mười",
+          "startFrame": 464,
+          "endFrame": 474
+        },
+        {
+          "word": "lăm",
+          "startFrame": 474,
+          "endFrame": 484
+        },
+        {
+          "word": "phút",
+          "startFrame": 484,
+          "endFrame": 496
+        },
+        {
+          "word": "ăn",
+          "startFrame": 496,
+          "endFrame": 507
+        },
+        {
+          "word": "cơm.",
+          "startFrame": 507,
+          "endFrame": 514
+        }
+      ],
+      "image": "essay_ep12_scene16.jpg",
+      "media_type": "image"
+    },
+    {
+      "scene": 17,
+      "tag": "Quy tắc 3 phút (Bước 2)",
+      "text": "Bước thứ hai: Hãy nhìn thấy một việc nhỏ mà người kia đã làm hôm nay và gọi tên nó ra. \"Cảm ơn em vì bát canh hôm nay rất ngọt\",, hay \"Cảm ơn anh đã nhớ đổ xăng giúp em sáng nay\". Một câu ghi nhận đúng lúc có sức mạnh xóa tan cả ngày dài mệt nhọc.",
+      "highlight": "BƯỚC 2: GỌI TÊN MỘT VIỆC · ĐỂ NÓI CẢM ƠN",
+      "visual_type": "B_ROLL",
+      "visual": "essay_ep12_broll_17.mp4",
+      "duration": 18.0,
+      "start": 307.0,
+      "end": 325.0,
+      "startFrame": 9089,
+      "durationInFrames": 432,
+      "words": [
+        {
+          "word": "Bước",
+          "startFrame": 0,
+          "endFrame": 6
+        },
+        {
+          "word": "thứ",
+          "startFrame": 6,
+          "endFrame": 10
+        },
+        {
+          "word": "hai:",
+          "startFrame": 10,
+          "endFrame": 19
+        },
+        {
+          "word": "Hãy",
+          "startFrame": 30,
+          "endFrame": 33
+        },
+        {
+          "word": "nhìn",
+          "startFrame": 33,
+          "endFrame": 39
+        },
+        {
+          "word": "thấy",
+          "startFrame": 39,
+          "endFrame": 45
+        },
+        {
+          "word": "một",
+          "startFrame": 45,
+          "endFrame": 51
+        },
+        {
+          "word": "việc",
+          "startFrame": 51,
+          "endFrame": 56
+        },
+        {
+          "word": "nhỏ",
+          "startFrame": 56,
+          "endFrame": 66
+        },
+        {
+          "word": "mà",
+          "startFrame": 66,
+          "endFrame": 72
+        },
+        {
+          "word": "người",
+          "startFrame": 72,
+          "endFrame": 76
+        },
+        {
+          "word": "kia",
+          "startFrame": 76,
+          "endFrame": 84
+        },
+        {
+          "word": "đã",
+          "startFrame": 84,
+          "endFrame": 88
+        },
+        {
+          "word": "làm",
+          "startFrame": 88,
+          "endFrame": 93
+        },
+        {
+          "word": "hôm",
+          "startFrame": 93,
+          "endFrame": 99
+        },
+        {
+          "word": "nay",
+          "startFrame": 99,
+          "endFrame": 104
+        },
+        {
+          "word": "và",
+          "startFrame": 104,
+          "endFrame": 120
+        },
+        {
+          "word": "gọi",
+          "startFrame": 120,
+          "endFrame": 126
+        },
+        {
+          "word": "tên",
+          "startFrame": 126,
+          "endFrame": 133
+        },
+        {
+          "word": "nó",
+          "startFrame": 133,
+          "endFrame": 138
+        },
+        {
+          "word": "ra.",
+          "startFrame": 138,
+          "endFrame": 144
+        },
+        {
+          "word": "\"Cảm",
+          "startFrame": 169,
+          "endFrame": 179
+        },
+        {
+          "word": "ơn",
+          "startFrame": 179,
+          "endFrame": 182
+        },
+        {
+          "word": "em",
+          "startFrame": 182,
+          "endFrame": 187
+        },
+        {
+          "word": "vì",
+          "startFrame": 187,
+          "endFrame": 193
+        },
+        {
+          "word": "bát",
+          "startFrame": 193,
+          "endFrame": 200
+        },
+        {
+          "word": "canh",
+          "startFrame": 200,
+          "endFrame": 204
+        },
+        {
+          "word": "hôm",
+          "startFrame": 204,
+          "endFrame": 209
+        },
+        {
+          "word": "nay",
+          "startFrame": 209,
+          "endFrame": 214
+        },
+        {
+          "word": "rất",
+          "startFrame": 214,
+          "endFrame": 219
+        },
+        {
+          "word": "ngọt\",,",
+          "startFrame": 219,
+          "endFrame": 234
+        },
+        {
+          "word": "hay",
+          "startFrame": 240,
+          "endFrame": 242
+        },
+        {
+          "word": "\"Cảm",
+          "startFrame": 242,
+          "endFrame": 249
+        },
+        {
+          "word": "ơn",
+          "startFrame": 249,
+          "endFrame": 253
+        },
+        {
+          "word": "anh",
+          "startFrame": 253,
+          "endFrame": 259
+        },
+        {
+          "word": "đã",
+          "startFrame": 259,
+          "endFrame": 265
+        },
+        {
+          "word": "nhớ",
+          "startFrame": 265,
+          "endFrame": 271
+        },
+        {
+          "word": "đổ",
+          "startFrame": 271,
+          "endFrame": 279
+        },
+        {
+          "word": "xăng",
+          "startFrame": 279,
+          "endFrame": 285
+        },
+        {
+          "word": "giúp",
+          "startFrame": 285,
+          "endFrame": 292
+        },
+        {
+          "word": "em",
+          "startFrame": 292,
+          "endFrame": 297
+        },
+        {
+          "word": "sáng",
+          "startFrame": 297,
+          "endFrame": 303
+        },
+        {
+          "word": "nay\".",
+          "startFrame": 303,
+          "endFrame": 309
+        },
+        {
+          "word": "Một",
+          "startFrame": 327,
+          "endFrame": 333
+        },
+        {
+          "word": "câu",
+          "startFrame": 333,
+          "endFrame": 342
+        },
+        {
+          "word": "ghi",
+          "startFrame": 342,
+          "endFrame": 345
+        },
+        {
+          "word": "nhận",
+          "startFrame": 345,
+          "endFrame": 351
+        },
+        {
+          "word": "đúng",
+          "startFrame": 351,
+          "endFrame": 357
+        },
+        {
+          "word": "lúc",
+          "startFrame": 357,
+          "endFrame": 362
+        },
+        {
+          "word": "có",
+          "startFrame": 362,
+          "endFrame": 367
+        },
+        {
+          "word": "sức",
+          "startFrame": 367,
+          "endFrame": 373
+        },
+        {
+          "word": "mạnh",
+          "startFrame": 373,
+          "endFrame": 376
+        },
+        {
+          "word": "xóa",
+          "startFrame": 376,
+          "endFrame": 390
+        },
+        {
+          "word": "tan",
+          "startFrame": 390,
+          "endFrame": 395
+        },
+        {
+          "word": "cả",
+          "startFrame": 395,
+          "endFrame": 401
+        },
+        {
+          "word": "ngày",
+          "startFrame": 401,
+          "endFrame": 409
+        },
+        {
+          "word": "dài",
+          "startFrame": 409,
+          "endFrame": 413
+        },
+        {
+          "word": "mệt",
+          "startFrame": 413,
+          "endFrame": 423
+        },
+        {
+          "word": "nhọc.",
+          "startFrame": 423,
+          "endFrame": 429
+        }
+      ],
+      "video": "essay_ep12_broll_17.mp4",
+      "media_type": "video"
+    },
+    {
+      "scene": 18,
+      "tag": "Quy tắc 3 phút (Bước 3)",
+      "text": "Và bước thứ ba: Trước khi tắt đèn đi ngủ,, hãy hỏi nhau một câu thật khẽ: \"Hôm nay đi làm,, mình có mệt lắm không?\". Đừng vội khuyên bảo hay phân tích đúng sai,, chỉ cần nắm lấy bàn tay đã vất vả vì gia đình suốt một ngày dài,, và lắng nghe họ thở phào.",
+      "highlight": "BƯỚC 3: HỎI \"HÔM NAY · MÌNH CÓ MỆT KHÔNG?\"",
+      "visual_type": "AI_IMAGE",
+      "visual": "essay_ep12_scene18.jpg",
+      "duration": 19.0,
+      "start": 325.0,
+      "end": 344.0,
+      "startFrame": 9531,
+      "durationInFrames": 434,
+      "words": [
+        {
+          "word": "Và",
+          "startFrame": 0,
+          "endFrame": 6
+        },
+        {
+          "word": "bước",
+          "startFrame": 6,
+          "endFrame": 11
+        },
+        {
+          "word": "thứ",
+          "startFrame": 11,
+          "endFrame": 15
+        },
+        {
+          "word": "ba:",
+          "startFrame": 15,
+          "endFrame": 23
+        },
+        {
+          "word": "Trước",
+          "startFrame": 33,
+          "endFrame": 37
+        },
+        {
+          "word": "khi",
+          "startFrame": 37,
+          "endFrame": 43
+        },
+        {
+          "word": "tắt",
+          "startFrame": 43,
+          "endFrame": 49
+        },
+        {
+          "word": "đèn",
+          "startFrame": 49,
+          "endFrame": 54
+        },
+        {
+          "word": "đi",
+          "startFrame": 54,
+          "endFrame": 59
+        },
+        {
+          "word": "ngủ,,",
+          "startFrame": 59,
+          "endFrame": 66
+        },
+        {
+          "word": "hãy",
+          "startFrame": 82,
+          "endFrame": 85
+        },
+        {
+          "word": "hỏi",
+          "startFrame": 85,
+          "endFrame": 91
+        },
+        {
+          "word": "nhau",
+          "startFrame": 91,
+          "endFrame": 97
+        },
+        {
+          "word": "một",
+          "startFrame": 97,
+          "endFrame": 102
+        },
+        {
+          "word": "câu",
+          "startFrame": 102,
+          "endFrame": 109
+        },
+        {
+          "word": "thật",
+          "startFrame": 109,
+          "endFrame": 113
+        },
+        {
+          "word": "khẽ:",
+          "startFrame": 113,
+          "endFrame": 120
+        },
+        {
+          "word": "\"Hôm",
+          "startFrame": 135,
+          "endFrame": 139
+        },
+        {
+          "word": "nay",
+          "startFrame": 139,
+          "endFrame": 144
+        },
+        {
+          "word": "đi",
+          "startFrame": 144,
+          "endFrame": 150
+        },
+        {
+          "word": "làm,,",
+          "startFrame": 150,
+          "endFrame": 156
+        },
+        {
+          "word": "mình",
+          "startFrame": 156,
+          "endFrame": 168
+        },
+        {
+          "word": "có",
+          "startFrame": 168,
+          "endFrame": 174
+        },
+        {
+          "word": "mệt",
+          "startFrame": 174,
+          "endFrame": 179
+        },
+        {
+          "word": "lắm",
+          "startFrame": 179,
+          "endFrame": 185
+        },
+        {
+          "word": "không?\".",
+          "startFrame": 185,
+          "endFrame": 190
+        },
+        {
+          "word": "Đừng",
+          "startFrame": 205,
+          "endFrame": 213
+        },
+        {
+          "word": "vội",
+          "startFrame": 213,
+          "endFrame": 219
+        },
+        {
+          "word": "khuyên",
+          "startFrame": 219,
+          "endFrame": 225
+        },
+        {
+          "word": "bảo",
+          "startFrame": 225,
+          "endFrame": 232
+        },
+        {
+          "word": "hay",
+          "startFrame": 232,
+          "endFrame": 237
+        },
+        {
+          "word": "phân",
+          "startFrame": 237,
+          "endFrame": 243
+        },
+        {
+          "word": "tích",
+          "startFrame": 243,
+          "endFrame": 249
+        },
+        {
+          "word": "đúng",
+          "startFrame": 249,
+          "endFrame": 254
+        },
+        {
+          "word": "sai,,",
+          "startFrame": 254,
+          "endFrame": 261
+        },
+        {
+          "word": "chỉ",
+          "startFrame": 261,
+          "endFrame": 277
+        },
+        {
+          "word": "cần",
+          "startFrame": 277,
+          "endFrame": 283
+        },
+        {
+          "word": "nắm",
+          "startFrame": 283,
+          "endFrame": 290
+        },
+        {
+          "word": "lấy",
+          "startFrame": 290,
+          "endFrame": 295
+        },
+        {
+          "word": "bàn",
+          "startFrame": 295,
+          "endFrame": 300
+        },
+        {
+          "word": "tay",
+          "startFrame": 300,
+          "endFrame": 306
+        },
+        {
+          "word": "đã",
+          "startFrame": 306,
+          "endFrame": 311
+        },
+        {
+          "word": "vất",
+          "startFrame": 311,
+          "endFrame": 317
+        },
+        {
+          "word": "vả",
+          "startFrame": 317,
+          "endFrame": 322
+        },
+        {
+          "word": "vì",
+          "startFrame": 336,
+          "endFrame": 340
+        },
+        {
+          "word": "gia",
+          "startFrame": 340,
+          "endFrame": 346
+        },
+        {
+          "word": "đình",
+          "startFrame": 346,
+          "endFrame": 351
+        },
+        {
+          "word": "suốt",
+          "startFrame": 351,
+          "endFrame": 359
+        },
+        {
+          "word": "một",
+          "startFrame": 359,
+          "endFrame": 364
+        },
+        {
+          "word": "ngày",
+          "startFrame": 364,
+          "endFrame": 369
+        },
+        {
+          "word": "dài,,",
+          "startFrame": 369,
+          "endFrame": 378
+        },
+        {
+          "word": "và",
+          "startFrame": 378,
+          "endFrame": 392
+        },
+        {
+          "word": "lắng",
+          "startFrame": 392,
+          "endFrame": 399
+        },
+        {
+          "word": "nghe",
+          "startFrame": 399,
+          "endFrame": 405
+        },
+        {
+          "word": "họ",
+          "startFrame": 405,
+          "endFrame": 409
+        },
+        {
+          "word": "thở",
+          "startFrame": 409,
+          "endFrame": 416
+        },
+        {
+          "word": "phào.",
+          "startFrame": 416,
+          "endFrame": 421
+        }
+      ],
+      "image": "essay_ep12_scene18.jpg",
+      "media_type": "image"
+    },
+    {
+      "scene": 19,
+      "tag": "Trở lại căn bếp của chị Lan",
+      "text": "Hạnh phúc trong hôn nhân thực ra chẳng nằm ở đâu xa. Nó nằm ở khoảnh khắc khi chị Lan đang rửa bát,, anh Tuấn tắt điện thoại,, bước vào bếp,, lặng lẽ đứng bên cạnh tráng lại từng chiếc đĩa. Không cần nói lời hoa mỹ,, chỉ cần không để người kia phải một mình.",
+      "highlight": "HẠNH PHÚC LÀ · KHÔNG ĐỂ NHAU MỘT MÌNH",
+      "visual_type": "AI_IMAGE",
+      "visual": "essay_ep12_scene19.jpg",
+      "duration": 18.0,
+      "start": 344.0,
+      "end": 362.0,
+      "startFrame": 10050,
+      "durationInFrames": 417,
+      "words": [
+        {
+          "word": "Hạnh",
+          "startFrame": 0,
+          "endFrame": 6
+        },
+        {
+          "word": "phúc",
+          "startFrame": 6,
+          "endFrame": 13
+        },
+        {
+          "word": "trong",
+          "startFrame": 13,
+          "endFrame": 18
+        },
+        {
+          "word": "hôn",
+          "startFrame": 18,
+          "endFrame": 23
+        },
+        {
+          "word": "nhân",
+          "startFrame": 23,
+          "endFrame": 28
+        },
+        {
+          "word": "thực",
+          "startFrame": 28,
+          "endFrame": 36
+        },
+        {
+          "word": "ra",
+          "startFrame": 36,
+          "endFrame": 44
+        },
+        {
+          "word": "chẳng",
+          "startFrame": 44,
+          "endFrame": 51
+        },
+        {
+          "word": "nằm",
+          "startFrame": 51,
+          "endFrame": 59
+        },
+        {
+          "word": "ở",
+          "startFrame": 59,
+          "endFrame": 62
+        },
+        {
+          "word": "đâu",
+          "startFrame": 62,
+          "endFrame": 66
+        },
+        {
+          "word": "xa.",
+          "startFrame": 66,
+          "endFrame": 75
+        },
+        {
+          "word": "Nó",
+          "startFrame": 89,
+          "endFrame": 91
+        },
+        {
+          "word": "nằm",
+          "startFrame": 90,
+          "endFrame": 96
+        },
+        {
+          "word": "ở",
+          "startFrame": 96,
+          "endFrame": 101
+        },
+        {
+          "word": "khoảnh",
+          "startFrame": 101,
+          "endFrame": 106
+        },
+        {
+          "word": "khắc",
+          "startFrame": 106,
+          "endFrame": 114
+        },
+        {
+          "word": "khi",
+          "startFrame": 114,
+          "endFrame": 120
+        },
+        {
+          "word": "chị",
+          "startFrame": 120,
+          "endFrame": 126
+        },
+        {
+          "word": "Lan",
+          "startFrame": 126,
+          "endFrame": 131
+        },
+        {
+          "word": "đang",
+          "startFrame": 131,
+          "endFrame": 138
+        },
+        {
+          "word": "rửa",
+          "startFrame": 138,
+          "endFrame": 146
+        },
+        {
+          "word": "bát,,",
+          "startFrame": 146,
+          "endFrame": 152
+        },
+        {
+          "word": "anh",
+          "startFrame": 164,
+          "endFrame": 167
+        },
+        {
+          "word": "Tuấn",
+          "startFrame": 167,
+          "endFrame": 174
+        },
+        {
+          "word": "tắt",
+          "startFrame": 174,
+          "endFrame": 179
+        },
+        {
+          "word": "điện",
+          "startFrame": 179,
+          "endFrame": 186
+        },
+        {
+          "word": "thoại,,",
+          "startFrame": 186,
+          "endFrame": 192
+        },
+        {
+          "word": "bước",
+          "startFrame": 207,
+          "endFrame": 209
+        },
+        {
+          "word": "vào",
+          "startFrame": 209,
+          "endFrame": 215
+        },
+        {
+          "word": "bếp,,",
+          "startFrame": 215,
+          "endFrame": 224
+        },
+        {
+          "word": "lặng",
+          "startFrame": 232,
+          "endFrame": 236
+        },
+        {
+          "word": "lẽ",
+          "startFrame": 236,
+          "endFrame": 239
+        },
+        {
+          "word": "đứng",
+          "startFrame": 239,
+          "endFrame": 248
+        },
+        {
+          "word": "bên",
+          "startFrame": 248,
+          "endFrame": 251
+        },
+        {
+          "word": "cạnh",
+          "startFrame": 251,
+          "endFrame": 257
+        },
+        {
+          "word": "tráng",
+          "startFrame": 257,
+          "endFrame": 265
+        },
+        {
+          "word": "lại",
+          "startFrame": 265,
+          "endFrame": 271
+        },
+        {
+          "word": "từng",
+          "startFrame": 271,
+          "endFrame": 281
+        },
+        {
+          "word": "chiếc",
+          "startFrame": 281,
+          "endFrame": 286
+        },
+        {
+          "word": "đĩa.",
+          "startFrame": 286,
+          "endFrame": 291
+        },
+        {
+          "word": "Không",
+          "startFrame": 308,
+          "endFrame": 315
+        },
+        {
+          "word": "cần",
+          "startFrame": 315,
+          "endFrame": 321
+        },
+        {
+          "word": "nói",
+          "startFrame": 321,
+          "endFrame": 327
+        },
+        {
+          "word": "lời",
+          "startFrame": 327,
+          "endFrame": 334
+        },
+        {
+          "word": "hoa",
+          "startFrame": 334,
+          "endFrame": 339
+        },
+        {
+          "word": "mỹ,,",
+          "startFrame": 339,
+          "endFrame": 344
+        },
+        {
+          "word": "chỉ",
+          "startFrame": 356,
+          "endFrame": 358
+        },
+        {
+          "word": "cần",
+          "startFrame": 358,
+          "endFrame": 365
+        },
+        {
+          "word": "không",
+          "startFrame": 365,
+          "endFrame": 372
+        },
+        {
+          "word": "để",
+          "startFrame": 372,
+          "endFrame": 377
+        },
+        {
+          "word": "người",
+          "startFrame": 377,
+          "endFrame": 383
+        },
+        {
+          "word": "kia",
+          "startFrame": 383,
+          "endFrame": 390
+        },
+        {
+          "word": "phải",
+          "startFrame": 390,
+          "endFrame": 395
+        },
+        {
+          "word": "một",
+          "startFrame": 395,
+          "endFrame": 399
+        },
+        {
+          "word": "mình.",
+          "startFrame": 399,
+          "endFrame": 406
+        }
+      ],
+      "image": "essay_ep12_scene19.jpg",
+      "media_type": "image"
+    },
+    {
+      "scene": 20,
+      "tag": "Lời kết & Kêu gọi bình luận",
+      "text": "Lần cuối cùng bạn nói lời cảm ơn người bạn đời của mình là khi nào? Nếu đã lâu rồi chưa nói,, hãy để lại một lời nhắn dưới phần bình luận của video này,, như một lời nhắc nhở cho chính mình vào tối nay nhé. Cảm ơn bạn đã ngồi lại cùng Nửa Chén Trà. Chúc cho mái nhà của bạn đêm nay luôn ấm đèn.",
+      "highlight": "NHÌN SÂU ĐỂ HIỂU · BUÔNG TÔI ĐỂ NHẸ",
+      "visual_type": "USER_VIDEO",
+      "visual": "essay_ep12_broll_20.mp4",
+      "duration": 20.0,
+      "start": 362.0,
+      "end": 382.0,
+      "startFrame": 10477,
+      "durationInFrames": 534,
+      "words": [
+        {
+          "word": "Lần",
+          "startFrame": 2,
+          "endFrame": 6
+        },
+        {
+          "word": "cuối",
+          "startFrame": 6,
+          "endFrame": 12
+        },
+        {
+          "word": "cùng",
+          "startFrame": 12,
+          "endFrame": 18
+        },
+        {
+          "word": "bạn",
+          "startFrame": 27,
+          "endFrame": 30
+        },
+        {
+          "word": "nói",
+          "startFrame": 30,
+          "endFrame": 36
+        },
+        {
+          "word": "lời",
+          "startFrame": 36,
+          "endFrame": 43
+        },
+        {
+          "word": "cảm",
+          "startFrame": 43,
+          "endFrame": 48
+        },
+        {
+          "word": "ơn",
+          "startFrame": 48,
+          "endFrame": 55
+        },
+        {
+          "word": "người",
+          "startFrame": 55,
+          "endFrame": 61
+        },
+        {
+          "word": "bạn",
+          "startFrame": 61,
+          "endFrame": 65
+        },
+        {
+          "word": "đời",
+          "startFrame": 65,
+          "endFrame": 72
+        },
+        {
+          "word": "của",
+          "startFrame": 72,
+          "endFrame": 77
+        },
+        {
+          "word": "mình",
+          "startFrame": 77,
+          "endFrame": 83
+        },
+        {
+          "word": "là",
+          "startFrame": 93,
+          "endFrame": 96
+        },
+        {
+          "word": "khi",
+          "startFrame": 96,
+          "endFrame": 101
+        },
+        {
+          "word": "nào?",
+          "startFrame": 101,
+          "endFrame": 108
+        },
+        {
+          "word": "Nếu",
+          "startFrame": 133,
+          "endFrame": 142
+        },
+        {
+          "word": "đã",
+          "startFrame": 142,
+          "endFrame": 147
+        },
+        {
+          "word": "lâu",
+          "startFrame": 147,
+          "endFrame": 155
+        },
+        {
+          "word": "rồi",
+          "startFrame": 155,
+          "endFrame": 159
+        },
+        {
+          "word": "chưa",
+          "startFrame": 159,
+          "endFrame": 165
+        },
+        {
+          "word": "nói,,",
+          "startFrame": 165,
+          "endFrame": 172
+        },
+        {
+          "word": "hãy",
+          "startFrame": 172,
+          "endFrame": 191
+        },
+        {
+          "word": "để",
+          "startFrame": 191,
+          "endFrame": 195
+        },
+        {
+          "word": "lại",
+          "startFrame": 195,
+          "endFrame": 200
+        },
+        {
+          "word": "một",
+          "startFrame": 200,
+          "endFrame": 206
+        },
+        {
+          "word": "lời",
+          "startFrame": 206,
+          "endFrame": 212
+        },
+        {
+          "word": "nhắn",
+          "startFrame": 212,
+          "endFrame": 217
+        },
+        {
+          "word": "dưới",
+          "startFrame": 217,
+          "endFrame": 225
+        },
+        {
+          "word": "phần",
+          "startFrame": 225,
+          "endFrame": 230
+        },
+        {
+          "word": "bình",
+          "startFrame": 230,
+          "endFrame": 236
+        },
+        {
+          "word": "luận",
+          "startFrame": 236,
+          "endFrame": 242
+        },
+        {
+          "word": "của",
+          "startFrame": 242,
+          "endFrame": 247
+        },
+        {
+          "word": "video",
+          "startFrame": 247,
+          "endFrame": 255
+        },
+        {
+          "word": "này,,",
+          "startFrame": 255,
+          "endFrame": 262
+        },
+        {
+          "word": "như",
+          "startFrame": 273,
+          "endFrame": 275
+        },
+        {
+          "word": "một",
+          "startFrame": 275,
+          "endFrame": 282
+        },
+        {
+          "word": "lời",
+          "startFrame": 282,
+          "endFrame": 288
+        },
+        {
+          "word": "nhắc",
+          "startFrame": 288,
+          "endFrame": 294
+        },
+        {
+          "word": "nhở",
+          "startFrame": 294,
+          "endFrame": 299
+        },
+        {
+          "word": "cho",
+          "startFrame": 299,
+          "endFrame": 304
+        },
+        {
+          "word": "chính",
+          "startFrame": 304,
+          "endFrame": 310
+        },
+        {
+          "word": "mình",
+          "startFrame": 310,
+          "endFrame": 316
+        },
+        {
+          "word": "vào",
+          "startFrame": 316,
+          "endFrame": 330
+        },
+        {
+          "word": "tối",
+          "startFrame": 330,
+          "endFrame": 338
+        },
+        {
+          "word": "nay",
+          "startFrame": 338,
+          "endFrame": 343
+        },
+        {
+          "word": "nhé.",
+          "startFrame": 343,
+          "endFrame": 349
+        },
+        {
+          "word": "Cảm",
+          "startFrame": 369,
+          "endFrame": 380
+        },
+        {
+          "word": "ơn",
+          "startFrame": 380,
+          "endFrame": 386
+        },
+        {
+          "word": "bạn",
+          "startFrame": 386,
+          "endFrame": 391
+        },
+        {
+          "word": "đã",
+          "startFrame": 391,
+          "endFrame": 396
+        },
+        {
+          "word": "ngồi",
+          "startFrame": 396,
+          "endFrame": 402
+        },
+        {
+          "word": "lại",
+          "startFrame": 402,
+          "endFrame": 407
+        },
+        {
+          "word": "cùng",
+          "startFrame": 407,
+          "endFrame": 413
+        },
+        {
+          "word": "Nửa",
+          "startFrame": 413,
+          "endFrame": 421
+        },
+        {
+          "word": "Chén",
+          "startFrame": 421,
+          "endFrame": 425
+        },
+        {
+          "word": "Trà.",
+          "startFrame": 425,
+          "endFrame": 434
+        },
+        {
+          "word": "Chúc",
+          "startFrame": 449,
+          "endFrame": 452
+        },
+        {
+          "word": "cho",
+          "startFrame": 452,
+          "endFrame": 458
+        },
+        {
+          "word": "mái",
+          "startFrame": 458,
+          "endFrame": 466
+        },
+        {
+          "word": "nhà",
+          "startFrame": 466,
+          "endFrame": 470
+        },
+        {
+          "word": "của",
+          "startFrame": 470,
+          "endFrame": 475
+        },
+        {
+          "word": "bạn",
+          "startFrame": 475,
+          "endFrame": 481
+        },
+        {
+          "word": "đêm",
+          "startFrame": 481,
+          "endFrame": 488
+        },
+        {
+          "word": "nay",
+          "startFrame": 488,
+          "endFrame": 494
+        },
+        {
+          "word": "luôn",
+          "startFrame": 494,
+          "endFrame": 509
+        },
+        {
+          "word": "ấm",
+          "startFrame": 509,
+          "endFrame": 517
+        },
+        {
+          "word": "đèn.",
+          "startFrame": 517,
+          "endFrame": 524
+        }
+      ],
+      "video": "essay_ep12_broll_20.mp4",
+      "media_type": "video"
+    }
+  ],
+  "durationInFrames": 11131,
+  "fps": 30,
+  "music": "Touching Moments Two - Higher",
+  "musicFile": "touching_moments.mp3",
+  "musicMood": "nostalgic",
+  "audioFile": "voiceover_essay_ep12.wav"
+}
