@@ -302,7 +302,10 @@ def render_long_video_via_github(video_id, auto_cleanup=True, download_local=Fal
     print(f"\n📦 Đang đóng gói nguyên liệu và chuẩn bị đẩy lên nhánh: {branch_name}...")
     rel_paths = [str(fp.relative_to(BASE_DIR)).replace("\\", "/") for fp in files_to_push]
     run_git(["add", "-f"] + rel_paths)
-    run_git(["commit", "-m", f"render: upload assets for {video_id}"])
+    try:
+        run_git(["commit", "--allow-empty", "-m", f"render: upload assets for {video_id}"])
+    except Exception:
+        pass
 
     head_sha = run_git(["rev-parse", "HEAD"])
     print(f"🚀 Đang đẩy nguyên liệu lên GitHub (Commit: {head_sha[:7]})...")
@@ -310,7 +313,10 @@ def render_long_video_via_github(video_id, auto_cleanup=True, download_local=Fal
     print(f"✓ Đã đẩy nhánh {branch_name} lên GitHub thành công!")
 
     # 4. Trả lại trạng thái commit ban đầu cho Local (giữ nguyên 100% file nguyên liệu trên máy)
-    run_git(["reset", "HEAD~1"])
+    try:
+        run_git(["reset", "HEAD~1"])
+    except Exception:
+        pass
     print(f"🔒 Local đã được giữ nguyên vẹn trên 'main', không bị mất file.")
 
     # 5. Theo dõi tiến trình GitHub Actions
