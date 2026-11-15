@@ -800,7 +800,11 @@ const ExactWordKaraokeCaption: React.FC<{
           }}
         >
           {activeGroup.words.map((item, idx) => {
-            const isCurrent = frame >= item.startFrame && frame < item.endFrame;
+            // Bù trừ độ trễ nhận diện giọng nói (Voice Onset Lead ~ 4 frames / 133ms)
+            // Giúp chữ nảy sáng đồng thời ngay khi âm thanh đầu tiên vừa phát ra
+            const VOICE_LEAD_FRAMES = 4;
+            const effectiveStart = Math.max(0, item.startFrame - VOICE_LEAD_FRAMES);
+            const isCurrent = frame >= effectiveStart && frame < item.endFrame;
             const isPast = frame >= item.endFrame;
 
             let scale = 1.0;
@@ -810,8 +814,8 @@ const ExactWordKaraokeCaption: React.FC<{
 
             if (isCurrent) {
               const progress =
-                (frame - item.startFrame) /
-                Math.max(item.endFrame - item.startFrame, 1);
+                (frame - effectiveStart) /
+                Math.max(item.endFrame - effectiveStart, 1);
               scale = interpolate(progress, [0, 0.3, 1], [1.02, 1.08, 1.04], {
                 extrapolateLeft: "clamp",
                 extrapolateRight: "clamp",
@@ -839,7 +843,7 @@ const ExactWordKaraokeCaption: React.FC<{
                   transition: "color 0.1s ease, transform 0.1s ease",
                 }}
               >
-                {item.word}
+                {item.word.replace(/,,+/g, ",")}
               </span>
             );
           })}
