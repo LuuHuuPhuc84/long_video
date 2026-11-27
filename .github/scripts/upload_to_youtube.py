@@ -83,6 +83,17 @@ def upload_video_to_youtube(video_path, video_id):
             description = d.get("description") or description
             tags = d.get("tags") or tags
             schedule_str = d.get("schedule") or d.get("schedule_time")
+
+            # QUY CHUẨN BẢN QUYỀN CC BY 4.0: Đảm bảo luôn có attribution trong Description
+            music_val = str(d.get("music") or d.get("musicFile") or "").lower()
+            if ("heartbreaking" in music_val or "gymnopedie" in music_val or "incompetech" in music_val) and ("incompetech.com" not in description):
+                if "heartbreaking" in music_val:
+                    attr = '"Heartbreaking" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/'
+                elif "gymnopedie" in music_val:
+                    attr = '"Gymnopedie No. 1" Erik Satie / Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/'
+                else:
+                    attr = 'Music by Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0 License\nhttp://creativecommons.org/licenses/by/4.0/'
+                description = f"{description.strip()}\n\n{attr}"
             if isinstance(d.get("status"), dict):
                 privacy_status = d["status"].get("privacyStatus", "private")
             elif d.get("privacyStatus"):

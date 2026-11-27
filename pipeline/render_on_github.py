@@ -264,6 +264,13 @@ def render_long_video_via_github(video_id, auto_cleanup=True, download_local=Fal
         else:
             print(f"⚠️ Cảnh báo: Không thấy audio {audio_path}")
 
+    # Thu thập BGM nếu có
+    music_file = meta_data.get("musicFile") or meta_data.get("music_file")
+    if music_file:
+        m_path = PUBLIC_DIR / music_file
+        if m_path.exists() and m_path not in files_to_push:
+            files_to_push.append(m_path)
+
     # Thu thập B-roll / Images từ scenes
     scenes = meta_data.get("scenes", [])
     for sc in scenes:

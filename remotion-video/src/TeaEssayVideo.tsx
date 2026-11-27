@@ -800,9 +800,8 @@ const ExactWordKaraokeCaption: React.FC<{
           }}
         >
           {activeGroup.words.map((item, idx) => {
-            // Bù trừ độ trễ nhận diện giọng nói (Voice Onset Lead ~ 4 frames / 133ms)
-            // Giúp chữ nảy sáng đồng thời ngay khi âm thanh đầu tiên vừa phát ra
-            const VOICE_LEAD_FRAMES = 4;
+            // Bù trừ độ trễ nhận diện giọng nói tự nhiên (1 frame ~ 33ms chuẩn xác, chống sáng chữ sớm)
+            const VOICE_LEAD_FRAMES = 1;
             const effectiveStart = Math.max(0, item.startFrame - VOICE_LEAD_FRAMES);
             const isCurrent = frame >= effectiveStart && frame < item.endFrame;
             const isPast = frame >= item.endFrame;
